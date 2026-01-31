@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - K Terra Group | Civil Testing Laboratory</title>
+<meta name="description" content="Get in touch with K Terra Group for comprehensive civil material testing services in Tezpur, Assam. Reach out via phone, email, or our contact form.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  line-height: 1.6;
+  color: #333;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+h1, h2, h3 {
+  margin-bottom: 15px;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #0a6ebd;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.btn-primary:hover {
+  background: #084f8c;
+}
+/* ========== HEADER ========== */
+.header {
+  padding: 8px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  height: 50px;
+}
+.logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0a6ebd;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.nav-links li {
+  margin-left: 25px;
+}
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  padding-bottom: 4px;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #0a6ebd;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #0a6ebd;
+  transition: 0.3s;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+/* ========== HERO ========== */
+.hero {
+  min-height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url("images/contact-hero.png") center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.hero p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+/* ========== CONTACT ========== */
+.contact-section {
+  padding: 60px 0;
+}
+.section-title {
+  font-size: 34px;
+  color: #1f2d3d;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.section-subtitle {
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+.contact-form {
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 6px;
+  background: #e6f2ff; /* Light blue color box */
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact-form button {
+  width: 100%;
+}
+.contact-info {
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 6px;
+}
+.contact-info i {
+  color: #0a6ebd;
+  margin-right: 10px;
+}
+.contact-info p {
+  margin-bottom: 15px;
+}
+.contact-map {
+  margin-top: 20px;
+}
+.contact-map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 6px;
+}
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.social-links a {
+  font-size: 24px;
+  color: #0a6ebd;
+  text-decoration: none;
+}
+.social-links a:hover {
+  color: #084f8c;
+}
+/* ========== FOOTER (MATCHING INDEX.HTML) ========== */
+.lab-footer{
+  background: linear-gradient(135deg,#0b3c5d,#0f766e);
+  color:#ffffff;
+}
+/* ABOUT US TOP */
+.lab-footer-about{
+  padding:50px 0 30px;
+  border-bottom:1px solid rgba(255,255,255,0.15);
+}
+.lab-footer-about h4{
+  font-size:16px;
+  margin-bottom:12px;
+}
+.lab-footer-about h4::after{
+  content:"";
+  width:40px;
+  height:2px;
+  background:#22d3ee;
+  display:block;
+  margin-top:6px;
+}
+.lab-footer-about p{
+  max-width:900px;
+  font-size:15px;
+  line-height:1.7;
+  color:#e0f2fe;
+}
+/* BELOW LINKS */
+.lab-footer-top{
+  padding:45px 10%;
+}
+.lab-footer-container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+.lab-footer-box h4{
+  font-size:15px;
+  margin-bottom:12px;
+}
+.lab-footer-box h4::after{
+  content:"";
+  width:32px;
+  height:2px;
+  background:#22d3ee;
+  display:block;
+  margin-top:6px;
+}
+.lab-footer-box ul{
+  list-style:none;
+}
+.lab-footer-box li,
+.lab-footer-box p{
+  font-size:14.5px;
+  color:#e0f2fe;
+  margin-bottom:8px;
+}
+.lab-footer-box a{
+  color:#e0f2fe;
+  text-decoration:none;
+}
+.lab-footer-box a:hover{
+  color:#ffffff;
+  padding-left:4px;
+}
+/* SOCIAL */
+.lab-social{
+  display:flex;
+  gap:10px;
+  margin-top:12px;
+}
+.lab-social a{
+  width:34px;
+  height:34px;
+  background:#22d3ee;
+  color:#083344;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+/* MAP */
+.lab-footer-map{
+  padding:30px 10%;
+  background:#062a40;
+}
+.lab-footer-map iframe{
+  width:100%;
+  height:250px;
+  border:0;
+  border-radius:12px;
+}
+/* COPYRIGHT */
+.lab-footer-bottom{
+  background:#041f2e;
+  text-align:center;
+  padding:14px;
+  font-size:13.5px;
+  color:#bae6fd;
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+  .lab-footer-container{
+    grid-template-columns:1fr;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+<!-- ========== HEADER ========== -->
+<header class="header">
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="images/logo.png" alt="K Terra Group Logo">
+      <span>K Terra Group</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</header>
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>We're here to assist with your civil material testing needs. Get in touch today!</p>
+    <a href="#contact-form" class="btn-primary">Send Message</a>
+  </div>
+</section>
+<!-- ========== CONTACT ========== -->
+<section class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">
+      Reach out to us for inquiries, quotes, or to schedule testing services. Our team responds promptly.
+    </p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p><i class="fas fa-map-marker-alt"></i>Opp. Indian Oil Petrol Pump, Thelamara, Tezpur, Assam 784149</p>
+        <p><i class="fas fa-phone"></i>+91 70023 71094</p>
+        <p><i class="fas fa-envelope"></i>kterragroup@gmail.com</p>
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="contact-map">
+          <h4>Our Location</h4>
+          <iframe src="https://www.google.com/maps?q=Thelamara,Tezpur,Assam&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="contact-form" id="contact-form">
+        <h3>Send Us a Message</h3>
+        <form action="#" method="POST">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email (Optional)</label>
+          <input type="email" id="email" name="email">
+          
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required>
+          
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+          
+          <button type="submit" class="btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="lab-footer">
+  <!-- ABOUT US (FULL WIDTH TOP) -->
+  <div class="lab-footer-about">
+    <div class="container">
+      <h4>ABOUT US</h4>
+      <p>
+        K Terra Group is a professional civil testing laboratory providing
+        accurate, reliable, and standard-compliant material testing services.
+        We support safe and durable construction through scientific testing
+        and expert analysis.
+      </p>
+    </div>
+  </div>
+  <!-- LINKS SECTION -->
+  <div class="lab-footer-top">
+    <div class="lab-footer-container">
+      <!-- QUICK LINKS -->
+      <div class="lab-footer-box">
+        <h4>QUICK LINKS</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <!-- OUR SERVICES -->
+      <div class="lab-footer-box">
+        <h4>OUR SERVICES</h4>
+        <ul>
+          <li>Soil Testing</li>
+          <li>Sand Testing</li>
+          <li>Concrete Testing</li>
+          <li>Aggregate Testing</li>
+          <li>Water Testing</li>
+        </ul>
+      </div>
+      <!-- CONTACT INFO -->
+      <div class="lab-footer-box">
+        <h4>CONTACT INFO</h4>
+        <p>📍 Opp. Indian Oil Petrol Pump,<br>Thelamara, Tezpur, Assam 784149</p>
+        <p>📞 +91 70023 71094</p>
+        <p>✉️ kterragroup@gmail.com</p>
+        <div class="lab-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MAP -->
+  <div class="lab-footer-map">
+    <h4>OUR LOCATION</h4>
+    <iframe
+      src="https://www.google.com/maps?q=Thelamara,Tezpur,Assam&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+  <!-- COPYRIGHT -->
+  <div class="lab-footer-bottom">
+    © 2026 K Terra Group Laboratory. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
