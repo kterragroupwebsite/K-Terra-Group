@@ -13,18 +13,22 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 body {
   line-height: 1.6;
   color: #333;
 }
+
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
+
 h1, h2, h3 {
   margin-bottom: 15px;
 }
+
 .btn-primary {
   display: inline-block;
   padding: 12px 25px;
@@ -32,10 +36,13 @@ h1, h2, h3 {
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
+  transition: background 0.3s ease;
 }
+
 .btn-primary:hover {
   background: #084f8c;
 }
+
 /* ========== HEADER ========== */
 .header {
   padding: 8px 0;
@@ -45,43 +52,53 @@ h1, h2, h3 {
   top: 0;
   z-index: 1000;
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .logo img {
   height: 50px;
 }
+
 .logo span {
   font-size: 20px;
   font-weight: bold;
   color: #0a6ebd;
 }
+
 .nav-links {
   list-style: none;
   display: flex;
   align-items: center;
 }
+
 .nav-links li {
   margin-left: 25px;
 }
+
 .nav-links a {
   text-decoration: none;
   font-weight: 600;
   color: #333;
   position: relative;
   padding-bottom: 4px;
+  transition: color 0.3s ease;
 }
+
 .nav-links a:hover,
 .nav-links a.active {
   color: #0a6ebd;
 }
+
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -92,10 +109,28 @@ h1, h2, h3 {
   background: #0a6ebd;
   transition: 0.3s;
 }
+
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
 }
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #0a6ebd;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
 /* ========== HERO ========== */
 .hero {
   min-height: 60vh;
@@ -106,190 +141,460 @@ h1, h2, h3 {
   align-items: center;
   text-align: center;
 }
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
 .hero p {
   margin: 20px 0;
   font-size: 18px;
 }
+
 /* ========== PRICING ========== */
 .pricing-overview {
   padding: 60px 0;
-  background: #f9f9f9; /* New background color */
+  background: #f9f9f9;
 }
+
 .section-title {
   font-size: 34px;
   color: #1f2d3d;
   text-align: center;
   margin-bottom: 8px;
-  text-transform: uppercase; /* New uppercase */
-  letter-spacing: 1px; /* New spacing */
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
+
 .section-subtitle {
   font-size: 16px;
   color: #555;
   text-align: center;
   margin-bottom: 40px;
-  font-style: italic; /* New italic */
+  font-style: italic;
 }
+
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
   margin-top: 40px;
 }
+
 .pricing-card {
   border: 1px solid #ddd;
-  padding: 25px;
+  padding: 30px;
   text-align: left;
-  border-radius: 6px;
+  border-radius: 8px;
   transition: 0.3s;
-  background: #fff; /* Ensure white background */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* New subtle shadow */
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
+
 .pricing-card:hover {
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transform: translateY(-5px); /* New hover lift */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
 }
+
 .pricing-card i {
-  font-size: 35px;
+  font-size: 40px;
   color: #0a6ebd;
   margin-bottom: 15px;
+  display: block;
 }
+
+.pricing-card h3 {
+  font-size: 22px;
+  color: #1f2d3d;
+  margin-bottom: 10px;
+}
+
+.pricing-card > p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* Table Styling */
 .pricing-card table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
 }
-.pricing-card th, .pricing-card td {
-  padding: 12px; /* Increased padding */
-  border-bottom: 1px solid #ddd;
+
+.pricing-card th,
+.pricing-card td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #e0e0e0;
   text-align: left;
 }
+
 .pricing-card th {
-  background: #0a6ebd; /* New header background */
-  color: #fff; /* New header text color */
+  background: #0a6ebd;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
 }
-.pricing-card tr:nth-child(even) {
-  background: #f1f1f1; /* New striped rows */
+
+.pricing-card td {
+  font-size: 14px;
+  color: #333;
 }
-.pricing-card tr:hover {
-  background: #e0f2fe; /* New hover color */
+
+.pricing-card td:last-child {
+  font-weight: 600;
+  color: #0a6ebd;
+  text-align: right;
 }
+
+.pricing-card tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.pricing-card tbody tr:hover {
+  background: #e0f2fe;
+  transition: background 0.2s ease;
+}
+
+.pricing-card tr:last-child td {
+  border-bottom: none;
+}
+
 /* ========== CTA ========== */
 .cta {
   padding: 60px 0;
   text-align: center;
-  background: #f1f1f1;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
 }
-/* ========== FOOTER (MATCHING INDEX.HTML) ========== */
-.lab-footer{
-  background: linear-gradient(135deg,#0b3c5d,#0f766e);
-  color:#ffffff;
+
+.cta h2 {
+  font-size: 32px;
+  color: #1f2d3d;
+  margin-bottom: 15px;
 }
-/* ABOUT US TOP */
-.lab-footer-about{
-  padding:50px 0 30px;
-  border-bottom:1px solid rgba(255,255,255,0.15);
+
+.cta p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 25px;
 }
-.lab-footer-about h4{
-  font-size:16px;
-  margin-bottom:12px;
+
+/* ========== FOOTER ========== */
+.lab-footer {
+  background: linear-gradient(135deg, #0b3c5d, #0f766e);
+  color: #ffffff;
 }
-.lab-footer-about h4::after{
-  content:"";
-  width:40px;
-  height:2px;
-  background:#22d3ee;
-  display:block;
-  margin-top:6px;
+
+.lab-footer-about {
+  padding: 50px 0 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
-.lab-footer-about p{
-  max-width:900px;
-  font-size:15px;
-  line-height:1.7;
-  color:#e0f2fe;
+
+.lab-footer-about h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
 }
-/* BELOW LINKS */
-.lab-footer-top{
-  padding:45px 10%;
+
+.lab-footer-about h4::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: #22d3ee;
+  display: block;
+  margin-top: 6px;
 }
-.lab-footer-container{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:40px;
+
+.lab-footer-about p {
+  max-width: 900px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #e0f2fe;
 }
-.lab-footer-box h4{
-  font-size:15px;
-  margin-bottom:12px;
+
+.lab-footer-top {
+  padding: 45px 5%;
 }
-.lab-footer-box h4::after{
-  content:"";
-  width:32px;
-  height:2px;
-  background:#22d3ee;
-  display:block;
-  margin-top:6px;
+
+.lab-footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
-.lab-footer-box ul{
-  list-style:none;
+
+.lab-footer-box h4 {
+  font-size: 15px;
+  margin-bottom: 12px;
 }
+
+.lab-footer-box h4::after {
+  content: "";
+  width: 32px;
+  height: 2px;
+  background: #22d3ee;
+  display: block;
+  margin-top: 6px;
+}
+
+.lab-footer-box ul {
+  list-style: none;
+}
+
 .lab-footer-box li,
-.lab-footer-box p{
-  font-size:14.5px;
-  color:#e0f2fe;
-  margin-bottom:8px;
+.lab-footer-box p {
+  font-size: 14.5px;
+  color: #e0f2fe;
+  margin-bottom: 8px;
 }
-.lab-footer-box a{
-  color:#e0f2fe;
-  text-decoration:none;
+
+.lab-footer-box a {
+  color: #e0f2fe;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
-.lab-footer-box a:hover{
-  color:#ffffff;
-  padding-left:4px;
+
+.lab-footer-box a:hover {
+  color: #ffffff;
+  padding-left: 4px;
 }
-/* SOCIAL */
-.lab-social{
-  display:flex;
-  gap:10px;
-  margin-top:12px;
+
+.lab-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
 }
-.lab-social a{
-  width:34px;
-  height:34px;
-  background:#22d3ee;
-  color:#083344;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+
+.lab-social a {
+  width: 34px;
+  height: 34px;
+  background: #22d3ee;
+  color: #083344;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
 }
-/* MAP */
-.lab-footer-map{
-  padding:30px 10%;
-  background:#062a40;
+
+.lab-social a:hover {
+  background: #ffffff;
+  transform: translateY(-3px);
 }
-.lab-footer-map iframe{
-  width:100%;
-  height:250px;
-  border:0;
-  border-radius:12px;
+
+.lab-footer-map {
+  padding: 30px 5%;
+  background: #062a40;
 }
-/* COPYRIGHT */
-.lab-footer-bottom{
-  background:#041f2e;
-  text-align:center;
-  padding:14px;
-  font-size:13.5px;
-  color:#bae6fd;
+
+.lab-footer-map h4 {
+  margin-bottom: 15px;
 }
-/* RESPONSIVE */
-@media(max-width:768px){
-  .lab-footer-container{
-    grid-template-columns:1fr;
+
+.lab-footer-map iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 12px;
+}
+
+.lab-footer-bottom {
+  background: #041f2e;
+  text-align: center;
+  padding: 14px;
+  font-size: 13.5px;
+  color: #bae6fd;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .hero h1 {
+    font-size: 32px;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Navigation */
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: none;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 8px 0;
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+  }
+  
+  /* Hero */
+  .hero {
+    min-height: 50vh;
+    padding: 40px 0;
+  }
+  
+  .hero h1 {
+    font-size: 26px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+  }
+  
+  /* Pricing */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .pricing-card {
+    padding: 25px;
+  }
+  
+  .pricing-card i {
+    font-size: 35px;
+  }
+  
+  .pricing-card h3 {
+    font-size: 20px;
+  }
+  
+  /* Make tables scrollable on mobile */
+  .pricing-card table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .pricing-card th,
+  .pricing-card td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+  
+  /* CTA */
+  .cta h2 {
+    font-size: 26px;
+  }
+  
+  /* Footer */
+  .lab-footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .lab-footer-map iframe {
+    height: 200px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 550px) {
+  .section-title {
+    font-size: 24px;
+    letter-spacing: 0.5px;
+  }
+  
+  .section-subtitle {
+    font-size: 14px;
+  }
+  
+  .logo span {
+    font-size: 16px;
+  }
+  
+  .hero h1 {
+    font-size: 22px;
+  }
+  
+  .pricing-card {
+    padding: 20px;
+  }
+  
+  .pricing-card i {
+    font-size: 32px;
+  }
+  
+  .pricing-card h3 {
+    font-size: 18px;
+  }
+  
+  .pricing-card > p {
+    font-size: 14px;
+  }
+  
+  .pricing-card th,
+  .pricing-card td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+  
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .cta h2 {
+    font-size: 22px;
+  }
+  
+  .cta p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .section-title {
+    font-size: 22px;
+  }
+  
+  .hero h1 {
+    font-size: 20px;
+  }
+  
+  .pricing-card {
+    padding: 18px;
+  }
+  
+  .pricing-grid {
+    gap: 20px;
   }
 }
 </style>
 </head>
 <body>
+
 <!-- ========== HEADER ========== -->
 <header class="header">
   <div class="container nav-container">
@@ -297,7 +602,12 @@ h1, h2, h3 {
       <img src="images/logo.png" alt="K Terra Group Logo">
       <span>K Terra Group</span>
     </div>
-    <ul class="nav-links">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="pricing.html" class="active">Pricing</a></li>
@@ -305,6 +615,7 @@ h1, h2, h3 {
     </ul>
   </div>
 </header>
+
 <!-- ========== HERO ========== -->
 <section class="hero">
   <div class="container">
@@ -313,6 +624,7 @@ h1, h2, h3 {
     <a href="contact.html" class="btn-primary">Get a Quote</a>
   </div>
 </section>
+
 <!-- ========== PRICING ========== -->
 <section class="pricing-overview">
   <div class="container">
@@ -320,83 +632,223 @@ h1, h2, h3 {
     <p class="section-subtitle">
       Our prices are competitive and based on standard testing procedures. Contact us for bulk discounts or custom packages.
     </p>
+
     <div class="pricing-grid">
       <div class="pricing-card">
         <i class="fas fa-mountain"></i>
         <h3>Soil Testing</h3>
         <p>Pricing for soil investigation tests.</p>
         <table>
-          <tr><th>Test</th><th>Price (INR)</th></tr>
-          <tr><td>Grain Size Analysis (Sieve Analysis)</td><td>800</td></tr>
-          <tr><td>Atterberg Limits (Liquid Limit, Plastic Limit)</td><td>1200</td></tr>
-          <tr><td>Specific Gravity</td><td>600</td></tr>
-          <tr><td>Proctor Compaction Test</td><td>1500</td></tr>
-          <tr><td>California Bearing Ratio (CBR)</td><td>2500</td></tr>
-          <tr><td>Direct Shear Test</td><td>1800</td></tr>
-          <tr><td>Triaxial Shear Test</td><td>3000</td></tr>
+          <thead>
+            <tr>
+              <th>Test</th>
+              <th>Price (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Grain Size Analysis (Sieve Analysis)</td>
+              <td>800</td>
+            </tr>
+            <tr>
+              <td>Atterberg Limits (LL, PL)</td>
+              <td>1,200</td>
+            </tr>
+            <tr>
+              <td>Specific Gravity</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Proctor Compaction Test</td>
+              <td>1,500</td>
+            </tr>
+            <tr>
+              <td>California Bearing Ratio (CBR)</td>
+              <td>2,500</td>
+            </tr>
+            <tr>
+              <td>Direct Shear Test</td>
+              <td>1,800</td>
+            </tr>
+            <tr>
+              <td>Triaxial Shear Test</td>
+              <td>3,000</td>
+            </tr>
+          </tbody>
         </table>
       </div>
+
       <div class="pricing-card">
         <i class="fas fa-layer-group"></i>
         <h3>Sand Testing</h3>
         <p>Pricing for fine aggregate quality tests.</p>
         <table>
-          <tr><th>Test</th><th>Price (INR)</th></tr>
-          <tr><td>Sieve Analysis</td><td>700</td></tr>
-          <tr><td>Silt Content Test</td><td>500</td></tr>
-          <tr><td>Bulking of Sand</td><td>600</td></tr>
-          <tr><td>Specific Gravity</td><td>600</td></tr>
-          <tr><td>Moisture Content</td><td>400</td></tr>
-          <tr><td>Organic Impurities Test</td><td>800</td></tr>
+          <thead>
+            <tr>
+              <th>Test</th>
+              <th>Price (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sieve Analysis</td>
+              <td>700</td>
+            </tr>
+            <tr>
+              <td>Silt Content Test</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>Bulking of Sand</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Specific Gravity</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Moisture Content</td>
+              <td>400</td>
+            </tr>
+            <tr>
+              <td>Organic Impurities Test</td>
+              <td>800</td>
+            </tr>
+          </tbody>
         </table>
       </div>
+
       <div class="pricing-card">
         <i class="fas fa-cubes"></i>
         <h3>Concrete Testing</h3>
         <p>Pricing for concrete strength and quality tests.</p>
         <table>
-          <tr><th>Test</th><th>Price (INR)</th></tr>
-          <tr><td>Compressive Strength Test</td><td>1000</td></tr>
-          <tr><td>Slump Test</td><td>500</td></tr>
-          <tr><td>Cube Testing</td><td>800</td></tr>
-          <tr><td>Flexural Strength</td><td>1200</td></tr>
-          <tr><td>Water Absorption</td><td>700</td></tr>
-          <tr><td>Rebound Hammer Test</td><td>1500</td></tr>
+          <thead>
+            <tr>
+              <th>Test</th>
+              <th>Price (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Compressive Strength Test</td>
+              <td>1,000</td>
+            </tr>
+            <tr>
+              <td>Slump Test</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>Cube Testing</td>
+              <td>800</td>
+            </tr>
+            <tr>
+              <td>Flexural Strength</td>
+              <td>1,200</td>
+            </tr>
+            <tr>
+              <td>Water Absorption</td>
+              <td>700</td>
+            </tr>
+            <tr>
+              <td>Rebound Hammer Test</td>
+              <td>1,500</td>
+            </tr>
+          </tbody>
         </table>
       </div>
+
       <div class="pricing-card">
         <i class="fas fa-industry"></i>
         <h3>Aggregate Testing</h3>
         <p>Pricing for coarse aggregate durability tests.</p>
         <table>
-          <tr><th>Test</th><th>Price (INR)</th></tr>
-          <tr><td>Crushing Value Test</td><td>900</td></tr>
-          <tr><td>Impact Value Test</td><td>900</td></tr>
-          <tr><td>Abrasion Value (Los Angeles)</td><td>1200</td></tr>
-          <tr><td>Flakiness and Elongation Index</td><td>800</td></tr>
-          <tr><td>Specific Gravity</td><td>600</td></tr>
-          <tr><td>Water Absorption</td><td>600</td></tr>
-          <tr><td>Soundness Test</td><td>1000</td></tr>
+          <thead>
+            <tr>
+              <th>Test</th>
+              <th>Price (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Crushing Value Test</td>
+              <td>900</td>
+            </tr>
+            <tr>
+              <td>Impact Value Test</td>
+              <td>900</td>
+            </tr>
+            <tr>
+              <td>Abrasion Value (Los Angeles)</td>
+              <td>1,200</td>
+            </tr>
+            <tr>
+              <td>Flakiness and Elongation Index</td>
+              <td>800</td>
+            </tr>
+            <tr>
+              <td>Specific Gravity</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Water Absorption</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Soundness Test</td>
+              <td>1,000</td>
+            </tr>
+          </tbody>
         </table>
       </div>
+
       <div class="pricing-card">
         <i class="fas fa-tint"></i>
         <h3>Water Testing</h3>
         <p>Pricing for construction water chemical tests.</p>
         <table>
-          <tr><th>Test</th><th>Price (INR)</th></tr>
-          <tr><td>pH Value</td><td>300</td></tr>
-          <tr><td>Hardness</td><td>500</td></tr>
-          <tr><td>Chloride Content</td><td>600</td></tr>
-          <tr><td>Sulphate Content</td><td>600</td></tr>
-          <tr><td>Alkalinity</td><td>500</td></tr>
-          <tr><td>Organic Matter</td><td>700</td></tr>
-          <tr><td>Turbidity</td><td>400</td></tr>
+          <thead>
+            <tr>
+              <th>Test</th>
+              <th>Price (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>pH Value</td>
+              <td>300</td>
+            </tr>
+            <tr>
+              <td>Hardness</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>Chloride Content</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Sulphate Content</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Alkalinity</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>Organic Matter</td>
+              <td>700</td>
+            </tr>
+            <tr>
+              <td>Turbidity</td>
+              <td>400</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
   </div>
 </section>
+
 <!-- ========== CTA ========== -->
 <section class="cta">
   <div class="container">
@@ -405,8 +857,9 @@ h1, h2, h3 {
     <a href="contact.html" class="btn-primary">Contact Us</a>
   </div>
 </section>
+
+<!-- ========== FOOTER ========== -->
 <footer class="lab-footer">
-  <!-- ABOUT US (FULL WIDTH TOP) -->
   <div class="lab-footer-about">
     <div class="container">
       <h4>ABOUT US</h4>
@@ -418,20 +871,19 @@ h1, h2, h3 {
       </p>
     </div>
   </div>
-  <!-- LINKS SECTION -->
+
   <div class="lab-footer-top">
     <div class="lab-footer-container">
-      <!-- QUICK LINKS -->
       <div class="lab-footer-box">
         <h4>QUICK LINKS</h4>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
-      <!-- OUR SERVICES -->
+
       <div class="lab-footer-box">
         <h4>OUR SERVICES</h4>
         <ul>
@@ -442,11 +894,11 @@ h1, h2, h3 {
           <li>Water Testing</li>
         </ul>
       </div>
-      <!-- CONTACT INFO -->
+
       <div class="lab-footer-box">
         <h4>CONTACT INFO</h4>
         <p>📍 Opp. Indian Oil Petrol Pump,<br>Thelamara, Tezpur, Assam 784149</p>
-       <p>📞 +91 70023 71094</p>
+        <p>📞 +91 70023 71094</p>
         <p>✉️ kterragroup@gmail.com</p>
         <div class="lab-social">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -457,18 +909,46 @@ h1, h2, h3 {
       </div>
     </div>
   </div>
-  <!-- MAP -->
+
   <div class="lab-footer-map">
-    <h4>OUR LOCATION</h4>
-    <iframe
-      src="https://www.google.com/maps?q=Thelamara,Tezpur,Assam&output=embed"
-      loading="lazy">
-    </iframe>
+    <div class="container">
+      <h4>OUR LOCATION</h4>
+      <iframe
+        src="https://www.google.com/maps?q=Thelamara,Tezpur,Assam&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
   </div>
-  <!-- COPYRIGHT -->
+
   <div class="lab-footer-bottom">
     © 2026 K Terra Group Laboratory. All rights reserved.
   </div>
 </footer>
+
+<script>
+function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active');
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+  const navLinks = document.getElementById('navLinks');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navContainer = document.querySelector('.nav-container');
+  
+  if (!navContainer.contains(event.target)) {
+    navLinks.classList.remove('active');
+  }
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function() {
+    document.getElementById('navLinks').classList.remove('active');
+  });
+});
+</script>
+
 </body>
 </html>
