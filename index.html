@@ -5,16 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>K Terra Group | Civil Testing Laboratory</title>
 <meta name="description" content="K Terra Group is a professional civil testing laboratory providing soil testing, sand testing and material testing services in Tezpur, Assam.">
+<meta name="keywords" content="civil testing laboratory, soil testing, sand testing, concrete testing, aggregate testing, water testing, Tezpur, Assam">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   line-height: 1.6;
   color: #333;
+  background: #f8f9fa;
 }
 .container {
   width: 90%;
@@ -23,6 +28,7 @@ body {
 }
 h1, h2, h3 {
   margin-bottom: 15px;
+  font-weight: 700;
 }
 .btn-primary {
   display: inline-block;
@@ -31,10 +37,12 @@ h1, h2, h3 {
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
 }
 .btn-primary:hover {
   background: #084f8c;
+  transform: translateY(-2px);
 }
 .btn-secondary {
   display: inline-block;
@@ -44,10 +52,12 @@ h1, h2, h3 {
   text-decoration: none;
   border-radius: 4px;
   transition: all 0.3s ease;
+  font-weight: 500;
 }
 .btn-secondary:hover {
   background: #0a6ebd;
   color: #fff;
+  transform: translateY(-2px);
 }
 .header {
   padding: 8px 0;
@@ -56,6 +66,7 @@ h1, h2, h3 {
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 .nav-container {
   display: flex;
@@ -69,6 +80,7 @@ h1, h2, h3 {
 }
 .logo img {
   height: 50px;
+  border-radius: 50%;
 }
 .logo span {
   font-size: 20px;
@@ -132,15 +144,15 @@ h1, h2, h3 {
   text-align: center;
 }
 .hero h1 {
-  font-size: 48px;
+  font-size: 56px;
   margin-bottom: 20px;
 }
 .hero p {
   margin: 20px 0;
-  font-size: 18px;
+  font-size: 20px;
 }
 .services-overview {
-  padding: 60px 0;
+  padding: 80px 0;
   background: #f9f9f9;
 }
 .services-overview h2 {
@@ -158,10 +170,11 @@ h1, h2, h3 {
   padding: 25px;
   text-align: center;
   border-radius: 6px;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 .service-card:hover {
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   transform: translateY(-5px);
 }
 .service-card i {
@@ -174,19 +187,19 @@ h1, h2, h3 {
   margin-top: 40px;
 }
 .section-title {
-  font-size: 34px;
+  font-size: 40px;
   color: #1f2d3d;
   text-align: center;
   margin-bottom: 8px;
 }
 .section-subtitle {
-  font-size: 16px;
+  font-size: 18px;
   color: #555;
   text-align: center;
   margin-bottom: 40px;
 }
 .lab-trust {
-  padding: 60px 0;
+  padding: 80px 0;
   background: #ffffff;
 }
 .lab-trust-container {
@@ -197,7 +210,7 @@ h1, h2, h3 {
 }
 .lab-heading {
   position: relative;
-  font-size: 34px;
+  font-size: 40px;
   color: #1f2d3d;
   margin-bottom: 12px;
   padding-top: 18px;
@@ -215,7 +228,7 @@ h1, h2, h3 {
   border-radius: 2px;
 }
 .lab-subtext {
-  font-size: 16px;
+  font-size: 18px;
   color: #555;
   max-width: 700px;
   margin: 0 auto 50px;
@@ -231,19 +244,20 @@ h1, h2, h3 {
   padding: 25px 20px;
   border: 1px solid #e5e7eb;
   border-radius: 14px;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 .lab-stat:hover {
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transform: translateY(-5px);
 }
 .lab-stat h3 {
-  font-size: 30px;
+  font-size: 36px;
   color: #0a6ebd;
   margin-bottom: 6px;
 }
 .lab-stat p {
-  font-size: 14.5px;
+  font-size: 16px;
   color: #555;
 }
 .trust-content {
@@ -258,7 +272,7 @@ h1, h2, h3 {
   flex: 1;
 }
 .why-title {
-  font-size: 24px;
+  font-size: 28px;
   color: #0a6ebd;
   margin-bottom: 20px;
 }
@@ -268,7 +282,7 @@ h1, h2, h3 {
 }
 .trust-points li {
   margin-bottom: 15px;
-  font-size: 16px;
+  font-size: 18px;
   display: flex;
   align-items: flex-start;
   color: #333;
@@ -276,26 +290,28 @@ h1, h2, h3 {
 .trust-points li::before {
   content: "✔";
   color: #28a745;
-  font-size: 18px;
+  font-size: 20px;
   margin-right: 10px;
   flex-shrink: 0;
 }
 .lab-cta {
   margin-top: 20px;
   display: inline-block;
-  padding: 14px 36px;
+  padding: 16px 40px;
   background: #0a6ebd;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
   border-radius: 40px;
+  transition: 0.3s ease;
+  font-size: 18px;
 }
 .lab-cta:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(10,110,189,0.45);
 }
 .lab-different {
-  padding: 60px 0;
+  padding: 80px 0;
   background: #f9f9f9;
 }
 .lab-different-grid {
@@ -309,7 +325,7 @@ h1, h2, h3 {
   border-radius: 14px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 .lab-different-card:hover {
   transform: translateY(-8px);
@@ -319,14 +335,15 @@ h1, h2, h3 {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  loading: lazy;
 }
 .lab-different-card h3 {
-  font-size: 20px;
+  font-size: 24px;
   color: #003366;
   margin: 18px 20px 10px;
 }
 .lab-different-card p {
-  font-size: 14.5px;
+  font-size: 16px;
   color: #555;
   line-height: 1.6;
   margin: 0 20px 22px;
@@ -340,7 +357,7 @@ h1, h2, h3 {
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 .lab-footer-about h4 {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 12px;
 }
 .lab-footer-about h4::after {
@@ -353,7 +370,7 @@ h1, h2, h3 {
 }
 .lab-footer-about p {
   max-width: 900px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
   color: #e0f2fe;
 }
@@ -366,7 +383,7 @@ h1, h2, h3 {
   gap: 40px;
 }
 .lab-footer-box h4 {
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: 12px;
 }
 .lab-footer-box h4::after {
@@ -382,7 +399,7 @@ h1, h2, h3 {
 }
 .lab-footer-box li,
 .lab-footer-box p {
-  font-size: 14.5px;
+  font-size: 15px;
   color: #e0f2fe;
   margin-bottom: 8px;
 }
@@ -421,6 +438,7 @@ h1, h2, h3 {
 }
 .lab-footer-map h4 {
   margin-bottom: 15px;
+  font-size: 18px;
 }
 .lab-footer-map iframe {
   width: 100%;
@@ -432,18 +450,80 @@ h1, h2, h3 {
   background: #041f2e;
   text-align: center;
   padding: 14px;
-  font-size: 13.5px;
+  font-size: 14px;
   color: #bae6fd;
 }
+/* Partner Services Styles */
+.partner-services {
+  padding: 80px 0 20px;
+  background: #fff;
+}
+.partner-services .section-title h2 {
+  font-size: 40px;
+  color: #0a6ebd;
+}
+.partner-services p.intro {
+  text-align: center;
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.partner-card {
+  background: #f9f9f9;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.partner-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  loading: lazy;
+}
+.partner-card-content {
+  padding: 20px;
+}
+.partner-card h3 {
+  font-size: 24px;
+  color: #7a0000; /* RPAA's color theme */
+  margin-bottom: 10px;
+}
+.partner-card p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+.partner-card .btn-primary {
+  background: #7a0000; /* RPAA's color */
+  font-size: 16px;
+}
+.partner-card .btn-primary:hover {
+  background: #5a0000;
+}
+/* Media Queries */
 @media (max-width: 900px) {
   .section-title {
-    font-size: 28px;
+    font-size: 32px;
   }
   .hero h1 {
-    font-size: 36px;
+    font-size: 40px;
   }
   .lab-heading {
-    font-size: 28px;
+    font-size: 32px;
   }
 }
 @media (max-width: 768px) {
@@ -479,10 +559,10 @@ h1, h2, h3 {
     padding: 40px 0;
   }
   .hero h1 {
-    font-size: 28px;
+    font-size: 32px;
   }
   .hero p {
-    font-size: 16px;
+    font-size: 18px;
   }
   .services-grid {
     grid-template-columns: 1fr;
@@ -508,25 +588,28 @@ h1, h2, h3 {
   .lab-footer-map iframe {
     height: 200px;
   }
+  .partner-grid {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 550px) {
   .section-title {
-    font-size: 24px;
+    font-size: 28px;
   }
   .section-subtitle {
-    font-size: 14px;
-  }
-  .logo span {
     font-size: 16px;
   }
+  .logo span {
+    font-size: 18px;
+  }
   .hero h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
   .lab-heading {
-    font-size: 24px;
+    font-size: 28px;
   }
   .lab-subtext {
-    font-size: 14.5px;
+    font-size: 16px;
   }
   .lab-stats {
     grid-template-columns: repeat(2, 1fr);
@@ -535,22 +618,21 @@ h1, h2, h3 {
   .btn-primary,
   .lab-cta {
     padding: 12px 20px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 @media (max-width: 400px) {
   .section-title {
-    font-size: 22px;
+    font-size: 24px;
   }
   .hero h1 {
-    font-size: 20px;
+    font-size: 24px;
   }
   .lab-stats {
     grid-template-columns: 1fr;
   }
 }
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 <header class="header">
@@ -565,7 +647,7 @@ h1, h2, h3 {
       <span></span>
     </div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -614,6 +696,57 @@ h1, h2, h3 {
     </div>
     <div class="center-btn">
       <a href="services.html" class="btn-secondary">View All Services</a>
+    </div>
+  </div>
+</section>
+<!-- Updated Partner Construction Services Section with Images -->
+<section class="partner-services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Partner Construction Services</h2>
+    </div>
+    <p class="intro">We partner with RPAA Construction & Engineering Works to provide comprehensive construction solutions. If you need construction services alongside our testing, we can refer you to our trusted partner.</p>
+    <div class="partner-grid">
+      <div class="partner-card">
+        <img src="images/projects/residential.png" alt="Residential Construction Site" loading="lazy">
+        <div class="partner-card-content">
+          <h3>Residential Construction</h3>
+          <p>Building quality homes with modern designs and durable materials.</p>
+          <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+        </div>
+      </div>
+      <div class="partner-card">
+        <img src="images/projects/commercial.png" alt="Commercial Building Construction" loading="lazy">
+        <div class="partner-card-content">
+          <h3>Commercial Construction</h3>
+          <p>Developing commercial spaces including offices, shops, and complexes.</p>
+          <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+        </div>
+      </div>
+      <div class="partner-card">
+        <img src="images/projects/interior-work.png" alt="Interior and Exterior Renovation Work" loading="lazy">
+        <div class="partner-card-content">
+          <h3>Interior & Exterior Work</h3>
+          <p>Professional interior design and exterior renovation services.</p>
+          <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+        </div>
+      </div>
+      <div class="partner-card">
+        <img src="images/projects/road-drainage.png" alt="Road and Drainage Construction" loading="lazy">
+        <div class="partner-card-content">
+          <h3>Road & Drainage Work</h3>
+          <p>Infrastructure development including roads and drainage systems.</p>
+          <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+        </div>
+      </div>
+      <div class="partner-card">
+        <img src="images/projects/repair-renovation.png" alt="Building Repair and Renovation" loading="lazy">
+        <div class="partner-card-content">
+          <h3>Repair & Renovation</h3>
+          <p>Expert repair and renovation services for existing structures.</p>
+          <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -668,7 +801,7 @@ h1, h2, h3 {
     </p>
     <div class="lab-different-grid">
       <div class="lab-different-card">
-        <img src="images/lab-testing.png" alt="Standard Based Testing">
+        <img src="images/lab-testing.png" alt="Standard Based Testing" loading="lazy">
         <h3>Standard-Based Testing</h3>
         <p>
           All tests are conducted strictly as per IS codes and standard laboratory
@@ -676,7 +809,7 @@ h1, h2, h3 {
         </p>
       </div>
       <div class="lab-different-card">
-        <img src="images/lab-planning.png" alt="Accurate Analysis & Reporting">
+        <img src="images/lab-planning.png" alt="Accurate Analysis & Reporting" loading="lazy">
         <h3>Accurate Analysis & Reporting</h3>
         <p>
           Our detailed testing methods and precise analysis help engineers
@@ -684,7 +817,7 @@ h1, h2, h3 {
         </p>
       </div>
       <div class="lab-different-card">
-        <img src="images/lab-team.png" alt="Experienced Laboratory Team">
+        <img src="images/lab-team.png" alt="Experienced Laboratory Team" loading="lazy">
         <h3>Experienced Laboratory Team</h3>
         <p>
           Skilled laboratory professionals ensure quality control,
@@ -692,7 +825,7 @@ h1, h2, h3 {
         </p>
       </div>
       <div class="lab-different-card">
-        <img src="images/lab-reporting.png" alt="Transparent & Timely Reports">
+        <img src="images/lab-reporting.png" alt="Transparent & Timely Reports" loading="lazy">
         <h3>Transparent & Timely Reports</h3>
         <p>
           Clear documentation, transparent processes, and timely delivery
@@ -738,7 +871,7 @@ h1, h2, h3 {
       <div class="lab-footer-box">
         <h4>CONTACT INFO</h4>
         <p>📍 Kataki Chuburi,<br>Dekargaon, Tezpur, 784501</p>
-        <p>📞 +91 70023 71094</p>
+        <p>📞 +91 94351 99270, +91 98549 82955</p>
         <p>✉️ kterragroup@gmail.com</p>
         <div class="lab-social">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -759,7 +892,7 @@ h1, h2, h3 {
     </div>
   </div>
   <div class="lab-footer-bottom">
-    © 2026 K Terra Group Laboratory. All rights reserved.
+    © 2026 K Terra Group Laboratory. All rights reserved. | <a href="#" style="color: #bae6fd; text-decoration: none;">Privacy Policy</a>
   </div>
 </footer>
 <script>

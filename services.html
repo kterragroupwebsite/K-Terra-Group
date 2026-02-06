@@ -5,30 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services - K Terra Group | Civil Testing Laboratory</title>
 <meta name="description" content="Explore our comprehensive civil testing services including soil testing, sand testing, concrete testing, aggregate testing, and water testing at K Terra Group in Tezpur, Assam.">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
-
 body {
   line-height: 1.6;
   color: #333;
+  background: #f8f9fa;
 }
-
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
-
 h1, h2, h3 {
   margin-bottom: 15px;
+  font-weight: 700;
 }
-
 .btn-primary {
   display: inline-block;
   padding: 12px 25px;
@@ -36,14 +35,28 @@ h1, h2, h3 {
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
 }
-
 .btn-primary:hover {
   background: #084f8c;
+  transform: translateY(-2px);
 }
-
-/* ========== HEADER ========== */
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #0a6ebd;
+  color: #0a6ebd;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+.btn-secondary:hover {
+  background: #0a6ebd;
+  color: #fff;
+  transform: translateY(-2px);
+}
 .header {
   padding: 8px 0;
   background: #ffffff;
@@ -51,40 +64,35 @@ h1, h2, h3 {
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
-
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .logo img {
   height: 50px;
+  border-radius: 50%;
 }
-
 .logo span {
   font-size: 20px;
   font-weight: bold;
   color: #0a6ebd;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
   align-items: center;
 }
-
 .nav-links li {
   margin-left: 25px;
 }
-
 .nav-links a {
   text-decoration: none;
   font-weight: 600;
@@ -93,12 +101,10 @@ h1, h2, h3 {
   padding-bottom: 4px;
   transition: color 0.3s ease;
 }
-
 .nav-links a:hover,
 .nav-links a.active {
   color: #0a6ebd;
 }
-
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -109,20 +115,16 @@ h1, h2, h3 {
   background: #0a6ebd;
   transition: 0.3s;
 }
-
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
 }
-
-/* Mobile Menu Toggle */
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
 }
-
 .menu-toggle span {
   width: 25px;
   height: 3px;
@@ -130,8 +132,6 @@ h1, h2, h3 {
   border-radius: 2px;
   transition: 0.3s;
 }
-
-/* ========== HERO ========== */
 .hero {
   min-height: 60vh;
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
@@ -141,83 +141,69 @@ h1, h2, h3 {
   align-items: center;
   text-align: center;
 }
-
 .hero h1 {
   font-size: 42px;
   margin-bottom: 15px;
 }
-
 .hero p {
   margin: 20px 0;
   font-size: 18px;
 }
-
-/* ========== SERVICES ========== */
 .services-overview {
-  padding: 60px 0;
+  padding: 80px 0;
   background: #f9f9f9;
 }
-
 .section-title {
   font-size: 34px;
   color: #1f2d3d;
   text-align: center;
   margin-bottom: 8px;
 }
-
 .section-subtitle {
   font-size: 16px;
   color: #555;
   text-align: center;
   margin-bottom: 40px;
 }
-
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  margin-top: 40px;
 }
-
 .service-card {
   background: #fff;
-  border: 1px solid #ddd;
-  padding: 30px;
-  text-align: left;
   border-radius: 8px;
-  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
-
 .service-card:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
-
-.service-card i {
-  font-size: 40px;
-  color: #0a6ebd;
-  margin-bottom: 15px;
-  display: block;
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
-
+.service-card-content {
+  padding: 20px;
+}
 .service-card h3 {
   font-size: 22px;
   color: #1f2d3d;
   margin-bottom: 12px;
 }
-
-.service-card > p {
+.service-card p {
   color: #666;
   margin-bottom: 15px;
   line-height: 1.7;
 }
-
 .service-card ul {
   list-style-type: none;
   margin-left: 0;
   margin-top: 15px;
 }
-
 .service-card li {
   margin-bottom: 10px;
   padding-left: 25px;
@@ -225,7 +211,6 @@ h1, h2, h3 {
   color: #555;
   font-size: 15px;
 }
-
 .service-card li::before {
   content: "✓";
   position: absolute;
@@ -234,43 +219,34 @@ h1, h2, h3 {
   font-weight: bold;
   font-size: 16px;
 }
-
-/* ========== CTA ========== */
 .cta {
   padding: 60px 0;
   text-align: center;
   background: #fff;
   border-top: 1px solid #e5e5e5;
 }
-
 .cta h2 {
   font-size: 32px;
   color: #1f2d3d;
   margin-bottom: 15px;
 }
-
 .cta p {
   font-size: 16px;
   color: #666;
   margin-bottom: 25px;
 }
-
-/* ========== FOOTER ========== */
 .lab-footer {
   background: linear-gradient(135deg, #0b3c5d, #0f766e);
   color: #ffffff;
 }
-
 .lab-footer-about {
   padding: 50px 0 30px;
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
-
 .lab-footer-about h4 {
   font-size: 16px;
   margin-bottom: 12px;
 }
-
 .lab-footer-about h4::after {
   content: "";
   width: 40px;
@@ -279,29 +255,24 @@ h1, h2, h3 {
   display: block;
   margin-top: 6px;
 }
-
 .lab-footer-about p {
   max-width: 900px;
   font-size: 15px;
   line-height: 1.7;
   color: #e0f2fe;
 }
-
 .lab-footer-top {
   padding: 45px 5%;
 }
-
 .lab-footer-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
-
 .lab-footer-box h4 {
   font-size: 15px;
   margin-bottom: 12px;
 }
-
 .lab-footer-box h4::after {
   content: "";
   width: 32px;
@@ -310,35 +281,29 @@ h1, h2, h3 {
   display: block;
   margin-top: 6px;
 }
-
 .lab-footer-box ul {
   list-style: none;
 }
-
 .lab-footer-box li,
 .lab-footer-box p {
   font-size: 14.5px;
   color: #e0f2fe;
   margin-bottom: 8px;
 }
-
 .lab-footer-box a {
   color: #e0f2fe;
   text-decoration: none;
   transition: all 0.3s ease;
 }
-
 .lab-footer-box a:hover {
   color: #ffffff;
   padding-left: 4px;
 }
-
 .lab-social {
   display: flex;
   gap: 10px;
   margin-top: 12px;
 }
-
 .lab-social a {
   width: 34px;
   height: 34px;
@@ -350,28 +315,23 @@ h1, h2, h3 {
   justify-content: center;
   transition: 0.3s;
 }
-
 .lab-social a:hover {
   background: #ffffff;
   transform: translateY(-3px);
 }
-
 .lab-footer-map {
   padding: 30px 5%;
   background: #062a40;
 }
-
 .lab-footer-map h4 {
   margin-bottom: 15px;
 }
-
 .lab-footer-map iframe {
   width: 100%;
   height: 250px;
   border: 0;
   border-radius: 12px;
 }
-
 .lab-footer-bottom {
   background: #041f2e;
   text-align: center;
@@ -379,31 +339,19 @@ h1, h2, h3 {
   font-size: 13.5px;
   color: #bae6fd;
 }
-
-/* ========== RESPONSIVE DESIGN ========== */
-
-/* Tablet */
+/* Responsive Design */
 @media (max-width: 900px) {
   .section-title {
     font-size: 28px;
   }
-  
   .hero h1 {
     font-size: 32px;
   }
-  
-  .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
 }
-
-/* Mobile */
 @media (max-width: 768px) {
-  /* Navigation */
   .menu-toggle {
     display: flex;
   }
-  
   .nav-links {
     position: absolute;
     top: 100%;
@@ -416,135 +364,84 @@ h1, h2, h3 {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     display: none;
   }
-  
   .nav-links.active {
     display: flex;
   }
-  
   .nav-links li {
     margin: 8px 0;
     margin-left: 0;
     width: 100%;
   }
-  
   .nav-links a {
     display: block;
     padding: 10px 0;
   }
-  
-  /* Hero */
   .hero {
     min-height: 50vh;
     padding: 40px 0;
   }
-  
   .hero h1 {
     font-size: 26px;
   }
-  
   .hero p {
     font-size: 16px;
   }
-  
-  /* Services */
   .services-grid {
     grid-template-columns: 1fr;
     gap: 25px;
   }
-  
-  .service-card {
+  .service-card-content {
     padding: 25px;
   }
-  
-  .service-card i {
-    font-size: 35px;
-  }
-  
-  .service-card h3 {
-    font-size: 20px;
-  }
-  
-  .service-card li {
-    font-size: 14px;
-  }
-  
-  /* CTA */
-  .cta h2 {
-    font-size: 26px;
-  }
-  
-  /* Footer */
   .lab-footer-container {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
   .lab-footer-map iframe {
     height: 200px;
   }
 }
-
-/* Small Mobile */
 @media (max-width: 550px) {
   .section-title {
     font-size: 24px;
   }
-  
   .section-subtitle {
     font-size: 14px;
   }
-  
-  .logo span {
-    font-size: 16px;
-  }
-  
   .hero h1 {
     font-size: 22px;
   }
-  
-  .service-card {
+  .service-card img {
+    height: 180px;
+  }
+  .service-card-content {
     padding: 20px;
   }
-  
-  .service-card i {
-    font-size: 32px;
-  }
-  
   .service-card h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
-  
+  .service-card li {
+    font-size: 14px;
+  }
   .btn-primary {
     padding: 10px 20px;
     font-size: 14px;
   }
-  
   .cta h2 {
-    font-size: 22px;
-  }
-  
-  .cta p {
-    font-size: 14px;
+    font-size: 26px;
   }
 }
-
 @media (max-width: 400px) {
   .section-title {
     font-size: 22px;
   }
-  
   .hero h1 {
     font-size: 20px;
-  }
-  
-  .service-card {
-    padding: 18px;
   }
 }
 </style>
 </head>
 <body>
-
 <!-- ========== HEADER ========== -->
 <header class="header">
   <div class="container nav-container">
@@ -565,7 +462,6 @@ h1, h2, h3 {
     </ul>
   </div>
 </header>
-
 <!-- ========== HERO ========== -->
 <section class="hero">
   <div class="container">
@@ -574,7 +470,6 @@ h1, h2, h3 {
     <a href="contact.html" class="btn-primary">Request a Test</a>
   </div>
 </section>
-
 <!-- ========== SERVICES ========== -->
 <section class="services-overview">
   <div class="container">
@@ -582,84 +477,88 @@ h1, h2, h3 {
     <p class="section-subtitle">
       We provide accurate and reliable testing following IS standards to ensure quality and safety in construction.
     </p>
-
     <div class="services-grid">
       <div class="service-card">
-        <i class="fas fa-mountain"></i>
-        <h3>Soil Testing</h3>
-        <p>Detailed soil investigation for foundation safety and stability analysis.</p>
-        <ul>
-          <li>Grain Size Analysis (Sieve Analysis)</li>
-          <li>Atterberg Limits (Liquid Limit, Plastic Limit)</li>
-          <li>Specific Gravity</li>
-          <li>Proctor Compaction Test</li>
-          <li>California Bearing Ratio (CBR)</li>
-          <li>Direct Shear Test</li>
-          <li>Triaxial Shear Test</li>
-        </ul>
+        <img src="https://prosoils.co.uk/media/dt3homsr/effective-stress-machine-9t5a7779.jpg?rxy=0.49999968361959435,0.4088294826224329&width=1200&height=630&quality=70&v=1d8c9e028a021f0" alt="Soil Testing Equipment">
+        <div class="service-card-content">
+          <h3>Soil Testing</h3>
+          <p>Detailed soil investigation for foundation safety and stability analysis.</p>
+          <ul>
+            <li>Grain Size Analysis (Sieve Analysis)</li>
+            <li>Atterberg Limits (Liquid Limit, Plastic Limit)</li>
+            <li>Specific Gravity</li>
+            <li>Proctor Compaction Test</li>
+            <li>California Bearing Ratio (CBR)</li>
+            <li>Direct Shear Test</li>
+            <li>Triaxial Shear Test</li>
+          </ul>
+        </div>
       </div>
-
       <div class="service-card">
-        <i class="fas fa-layer-group"></i>
-        <h3>Sand Testing</h3>
-        <p>Quality analysis of fine aggregates to ensure suitability for construction.</p>
-        <ul>
-          <li>Sieve Analysis</li>
-          <li>Silt Content Test</li>
-          <li>Bulking of Sand</li>
-          <li>Specific Gravity</li>
-          <li>Moisture Content</li>
-          <li>Organic Impurities Test</li>
-        </ul>
+        <img src="images/sand-testing.png" alt="Sand Testing Process">
+        <div class="service-card-content">
+          <h3>Sand Testing</h3>
+          <p>Quality analysis of fine aggregates to ensure suitability for construction.</p>
+          <ul>
+            <li>Sieve Analysis</li>
+            <li>Silt Content Test</li>
+            <li>Bulking of Sand</li>
+            <li>Specific Gravity</li>
+            <li>Moisture Content</li>
+            <li>Organic Impurities Test</li>
+          </ul>
+        </div>
       </div>
-
       <div class="service-card">
-        <i class="fas fa-cubes"></i>
-        <h3>Concrete Testing</h3>
-        <p>Strength and quality testing of concrete for structural integrity.</p>
-        <ul>
-          <li>Compressive Strength Test</li>
-          <li>Slump Test</li>
-          <li>Cube Testing</li>
-          <li>Flexural Strength</li>
-          <li>Water Absorption</li>
-          <li>Rebound Hammer Test</li>
-        </ul>
+        <img src="images/concrete.png" alt="Concrete Compression Testing">
+        <div class="service-card-content">
+          <h3>Concrete Testing</h3>
+          <p>Strength and quality testing of concrete for structural integrity.</p>
+          <ul>
+            <li>Compressive Strength Test</li>
+            <li>Slump Test</li>
+            <li>Cube Testing</li>
+            <li>Flexural Strength</li>
+            <li>Water Absorption</li>
+            <li>Rebound Hammer Test</li>
+          </ul>
+        </div>
       </div>
-
       <div class="service-card">
-        <i class="fas fa-industry"></i>
-        <h3>Aggregate Testing</h3>
-        <p>Durability testing of coarse aggregates for long-term performance.</p>
-        <ul>
-          <li>Crushing Value Test</li>
-          <li>Impact Value Test</li>
-          <li>Abrasion Value (Los Angeles)</li>
-          <li>Flakiness and Elongation Index</li>
-          <li>Specific Gravity</li>
-          <li>Water Absorption</li>
-          <li>Soundness Test</li>
-        </ul>
+        <img src="images/aggregate.png" alt="Aggregate Testing Equipment">
+        <div class="service-card-content">
+          <h3>Aggregate Testing</h3>
+          <p>Durability testing of coarse aggregates for long-term performance.</p>
+          <ul>
+            <li>Crushing Value Test</li>
+            <li>Impact Value Test</li>
+            <li>Abrasion Value (Los Angeles)</li>
+            <li>Flakiness and Elongation Index</li>
+            <li>Specific Gravity</li>
+            <li>Water Absorption</li>
+            <li>Soundness Test</li>
+          </ul>
+        </div>
       </div>
-
       <div class="service-card">
-        <i class="fas fa-tint"></i>
-        <h3>Water Testing</h3>
-        <p>Chemical testing of construction water to meet quality standards.</p>
-        <ul>
-          <li>pH Value</li>
-          <li>Hardness</li>
-          <li>Chloride Content</li>
-          <li>Sulphate Content</li>
-          <li>Alkalinity</li>
-          <li>Organic Matter</li>
-          <li>Turbidity</li>
-        </ul>
+        <img src="https://www.canr.msu.edu/drainage/uploads/inline-images/IMG_3005.JPG" alt="Water Testing Lab">
+        <div class="service-card-content">
+          <h3>Water Testing</h3>
+          <p>Chemical testing of construction water to meet quality standards.</p>
+          <ul>
+            <li>pH Value</li>
+            <li>Hardness</li>
+            <li>Chloride Content</li>
+            <li>Sulphate Content</li>
+            <li>Alkalinity</li>
+            <li>Organic Matter</li>
+            <li>Turbidity</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ========== CTA ========== -->
 <section class="cta">
   <div class="container">
@@ -668,7 +567,6 @@ h1, h2, h3 {
     <a href="contact.html" class="btn-primary">Contact Us</a>
   </div>
 </section>
-
 <!-- ========== FOOTER ========== -->
 <footer class="lab-footer">
   <div class="lab-footer-about">
@@ -682,7 +580,6 @@ h1, h2, h3 {
       </p>
     </div>
   </div>
-
   <div class="lab-footer-top">
     <div class="lab-footer-container">
       <div class="lab-footer-box">
@@ -694,7 +591,6 @@ h1, h2, h3 {
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
-
       <div class="lab-footer-box">
         <h4>OUR SERVICES</h4>
         <ul>
@@ -705,11 +601,10 @@ h1, h2, h3 {
           <li>Water Testing</li>
         </ul>
       </div>
-
       <div class="lab-footer-box">
         <h4>CONTACT INFO</h4>
         <p>📍 Kataki Chuburi,<br>Dekargaon, Tezpur, 784501</p>
-        <p>📞 +91 70023 71094</p>
+        <p>📞 +91 94351 99270, +91 98549 82955</p>
         <p>✉️ kterragroup@gmail.com</p>
         <div class="lab-social">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -720,7 +615,6 @@ h1, h2, h3 {
       </div>
     </div>
   </div>
-
   <div class="lab-footer-map">
     <div class="container">
       <h4>OUR LOCATION</h4>
@@ -730,18 +624,15 @@ h1, h2, h3 {
       </iframe>
     </div>
   </div>
-
   <div class="lab-footer-bottom">
     © 2026 K Terra Group Laboratory. All rights reserved.
   </div>
 </footer>
-
 <script>
 function toggleMenu() {
   const navLinks = document.getElementById('navLinks');
   navLinks.classList.toggle('active');
 }
-
 // Close menu when clicking outside
 document.addEventListener('click', function(event) {
   const navLinks = document.getElementById('navLinks');
@@ -752,7 +643,6 @@ document.addEventListener('click', function(event) {
     navLinks.classList.remove('active');
   }
 });
-
 // Close menu when clicking on a link
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', function() {
@@ -760,6 +650,5 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 </script>
-
 </body>
 </html>
