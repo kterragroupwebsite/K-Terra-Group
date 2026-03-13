@@ -1,921 +1,922 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>K Terra North East Infra | Civil Testing Laboratory</title>
-<meta name="description" content="K Terra North East Infra is a professional civil testing laboratory providing soil testing, sand testing and material testing services in Tezpur, Assam.">
-<meta name="keywords" content="civil testing laboratory, soil testing, sand testing, concrete testing, aggregate testing, water testing, Tezpur, Assam">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
-body {
-  line-height: 1.6;
-  color: #333;
-  background: #f8f9fa;
-}
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-h1, h2, h3 {
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-.btn-primary {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #0a6ebd;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background 0.3s ease, transform 0.2s ease;
-  font-weight: 500;
-}
-.btn-primary:hover {
-  background: #084f8c;
-  transform: translateY(-2px);
-}
-.btn-secondary {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #0a6ebd;
-  color: #0a6ebd;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-.btn-secondary:hover {
-  background: #0a6ebd;
-  color: #fff;
-  transform: translateY(-2px);
-}
-.header {
-  padding: 8px 0;
-  background: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.logo img {
-  height: 50px;
-  border-radius: 50%;
-}
-.logo span {
-  font-size: 20px;
-  font-weight: bold;
-  color: #0a6ebd;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-.nav-links li {
-  margin-left: 25px;
-}
-.nav-links a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #333;
-  position: relative;
-  padding-bottom: 4px;
-  transition: color 0.3s ease;
-}
-.nav-links a:hover,
-.nav-links a.active {
-  color: #0a6ebd;
-}
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: #0a6ebd;
-  transition: 0.3s;
-}
-.nav-links a:hover::after,
-.nav-links a.active::after {
-  width: 100%;
-}
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: #0a6ebd;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-.hero {
-  min-height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-              url("images/hero.png") center/cover no-repeat;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-.hero h1 {
-  font-size: 56px;
-  margin-bottom: 20px;
-}
-.hero p {
-  margin: 20px 0;
-  font-size: 20px;
-}
-.services-overview {
-  padding: 80px 0;
-  background: #f9f9f9;
-}
-.services-overview h2 {
-  text-align: center;
-}
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
-}
-.service-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 25px;
-  text-align: center;
-  border-radius: 6px;
-  transition: 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-.service-card:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transform: translateY(-5px);
-}
-.service-card i {
-  font-size: 35px;
-  color: #0a6ebd;
-  margin-bottom: 15px;
-}
-.center-btn {
-  text-align: center;
-  margin-top: 40px;
-}
-.section-title {
-  font-size: 40px;
-  color: #1f2d3d;
-  text-align: center;
-  margin-bottom: 8px;
-}
-.section-subtitle {
-  font-size: 18px;
-  color: #555;
-  text-align: center;
-  margin-bottom: 40px;
-}
-.lab-trust {
-  padding: 80px 0;
-  background: #ffffff;
-}
-.lab-trust-container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
-}
-.lab-heading {
-  position: relative;
-  font-size: 40px;
-  color: #1f2d3d;
-  margin-bottom: 12px;
-  padding-top: 18px;
-  text-align: center;
-}
-.heading-line::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 3px;
-  background: #ff7a00;
-  border-radius: 2px;
-}
-.lab-subtext {
-  font-size: 18px;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto 50px;
-  line-height: 1.6;
-}
-.lab-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px;
-  margin-bottom: 45px;
-}
-.lab-stat {
-  padding: 25px 20px;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  transition: 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-.lab-stat:hover {
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transform: translateY(-5px);
-}
-.lab-stat h3 {
-  font-size: 36px;
-  color: #0a6ebd;
-  margin-bottom: 6px;
-}
-.lab-stat p {
-  font-size: 16px;
-  color: #555;
-}
-.trust-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  margin: 40px 0;
-  text-align: left;
-}
-.trust-left {
-  flex: 1;
-}
-.why-title {
-  font-size: 28px;
-  color: #0a6ebd;
-  margin-bottom: 20px;
-}
-.trust-points {
-  list-style: none;
-  padding: 0;
-}
-.trust-points li {
-  margin-bottom: 15px;
-  font-size: 18px;
-  display: flex;
-  align-items: flex-start;
-  color: #333;
-}
-.trust-points li::before {
-  content: "✔";
-  color: #28a745;
-  font-size: 20px;
-  margin-right: 10px;
-  flex-shrink: 0;
-}
-.lab-cta {
-  margin-top: 20px;
-  display: inline-block;
-  padding: 16px 40px;
-  background: #0a6ebd;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 40px;
-  transition: 0.3s ease;
-  font-size: 18px;
-}
-.lab-cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(10,110,189,0.45);
-}
-.lab-different {
-  padding: 80px 0;
-  background: #f9f9f9;
-}
-.lab-different-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-.lab-different-card {
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  overflow: hidden;
-  transition: 0.3s ease;
-}
-.lab-different-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
-}
-.lab-different-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.lab-different-card h3 {
-  font-size: 24px;
-  color: #003366;
-  margin: 18px 20px 10px;
-}
-.lab-different-card p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-  margin: 0 20px 22px;
-}
-.lab-footer {
-  background: linear-gradient(135deg, #0b3c5d, #0f766e);
-  color: #ffffff;
-}
-.lab-footer-about {
-  padding: 50px 0 30px;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-}
-.lab-footer-about h4 {
-  font-size: 18px;
-  margin-bottom: 12px;
-}
-.lab-footer-about h4::after {
-  content: "";
-  width: 40px;
-  height: 2px;
-  background: #22d3ee;
-  display: block;
-  margin-top: 6px;
-}
-.lab-footer-about p {
-  max-width: 900px;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #e0f2fe;
-}
-.lab-footer-top {
-  padding: 45px 5%;
-}
-.lab-footer-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-.lab-footer-box h4 {
-  font-size: 16px;
-  margin-bottom: 12px;
-}
-.lab-footer-box h4::after {
-  content: "";
-  width: 32px;
-  height: 2px;
-  background: #22d3ee;
-  display: block;
-  margin-top: 6px;
-}
-.lab-footer-box ul {
-  list-style: none;
-}
-.lab-footer-box li,
-.lab-footer-box p {
-  font-size: 15px;
-  color: #e0f2fe;
-  margin-bottom: 8px;
-}
-.lab-footer-box a {
-  color: #e0f2fe;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.lab-footer-box a:hover {
-  color: #ffffff;
-  padding-left: 4px;
-}
-.lab-social {
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-}
-.lab-social a {
-  width: 34px;
-  height: 34px;
-  background: #22d3ee;
-  color: #083344;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-}
-.lab-social a:hover {
-  background: #ffffff;
-  transform: translateY(-3px);
-}
-.lab-footer-map {
-  padding: 30px 5%;
-  background: #062a40;
-}
-.lab-footer-map h4 {
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-.lab-footer-map iframe {
-  width: 100%;
-  height: 250px;
-  border: 0;
-  border-radius: 12px;
-}
-.lab-footer-bottom {
-  background: #041f2e;
-  text-align: center;
-  padding: 14px;
-  font-size: 14px;
-  color: #bae6fd;
-}
-/* Partner Services Styles */
-.partner-services {
-  padding: 80px 0 20px;
-  background: #fff;
-}
-.partner-services .section-title h2 {
-  font-size: 40px;
-  color: #0a6ebd;
-}
-.partner-services p.intro {
-  text-align: center;
-  font-size: 20px;
-  color: #555;
-  margin-bottom: 40px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.partner-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-.partner-card {
-  background: #f9f9f9;
-  padding: 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-}
-.partner-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-.partner-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.partner-card-content {
-  padding: 20px;
-}
-.partner-card h3 {
-  font-size: 24px;
-  color: #7a0000; /* RPAA's color theme */
-  margin-bottom: 10px;
-}
-.partner-card p {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 15px;
-}
-.partner-card .btn-primary {
-  background: #7a0000; /* RPAA's color */
-  font-size: 16px;
-}
-.partner-card .btn-primary:hover {
-  background: #5a0000;
-}
-/* Media Queries */
-@media (max-width: 900px) {
-  .section-title {
-    font-size: 32px;
-  }
-  .hero h1 {
-    font-size: 40px;
-  }
-  .lab-heading {
-    font-size: 32px;
-  }
-}
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #ffffff;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    display: none;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .nav-links li {
-    margin: 8px 0;
-    margin-left: 0;
-    width: 100%;
-  }
-  .nav-links a {
-    display: block;
-    padding: 10px 0;
-  }
-  .hero {
-    min-height: 70vh;
-    padding: 40px 0;
-  }
-  .hero h1 {
-    font-size: 32px;
-  }
-  .hero p {
-    font-size: 18px;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  .trust-content {
-    flex-direction: column;
-  }
-  .lab-cta {
-    display: block;
-    margin: 30px auto 0;
-    text-align: center;
-  }
-  .lab-different-grid {
-    grid-template-columns: 1fr;
-  }
-  .lab-different-card img {
-    height: 180px;
-  }
-  .lab-footer-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .lab-footer-map iframe {
-    height: 200px;
-  }
-  .partner-grid {
-    grid-template-columns: 1fr;
-  }
-  .nav-container {
-    position: relative;
-  }
-  .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .menu-toggle {
-    margin-left: auto;
-  }
-}
-@media (max-width: 550px) {
-  .section-title {
-    font-size: 28px;
-  }
-  .section-subtitle {
-    font-size: 16px;
-  }
-  .logo span {
-    font-size: 18px;
-  }
-  .hero h1 {
-    font-size: 28px;
-  }
-  .lab-heading {
-    font-size: 28px;
-  }
-  .lab-subtext {
-    font-size: 16px;
-  }
-  .lab-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  .btn-primary,
-  .lab-cta {
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-}
-@media (max-width: 400px) {
-  .section-title {
-    font-size: 24px;
-  }
-  .hero h1 {
-    font-size: 24px;
-  }
-  .lab-stats {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K Terra North East Infra | Civil Testing Laboratory</title>
+    <meta name="description" content="K Terra North East Infra is a professional civil testing laboratory providing soil testing, sand testing and material testing services in Tezpur, Assam.">
+    <meta name="keywords" content="civil testing laboratory, soil testing, sand testing, concrete testing, aggregate testing, water testing, Tezpur, Assam">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h1, h2, h3 {
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #0a6ebd;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            font-weight: 500;
+        }
+        .btn-primary:hover {
+            background: #084f8c;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #0a6ebd;
+            color: #0a6ebd;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .btn-secondary:hover {
+            background: #0a6ebd;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .header {
+            padding: 8px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img {
+            height: 50px;
+            border-radius: 50%;
+        }
+        .logo span {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0a6ebd;
+            white-space: nowrap;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        .nav-links li {
+            margin-left: 25px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #333;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #0a6ebd;
+        }
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: #0a6ebd;
+            transition: 0.3s;
+        }
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #0a6ebd;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                        url("images/hero.png") center/cover no-repeat;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+        .services-overview {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        .services-overview h2 {
+            text-align: center;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .service-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 25px;
+            text-align: center;
+            border-radius: 6px;
+            transition: 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .service-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        .service-card i {
+            font-size: 35px;
+            color: #0a6ebd;
+            margin-bottom: 15px;
+        }
+        .center-btn {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .section-title {
+            font-size: 40px;
+            color: #1f2d3d;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .section-subtitle {
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .lab-trust {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+        .lab-trust-container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+        .lab-heading {
+            position: relative;
+            font-size: 40px;
+            color: #1f2d3d;
+            margin-bottom: 12px;
+            padding-top: 18px;
+            text-align: center;
+        }
+        .heading-line::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: #ff7a00;
+            border-radius: 2px;
+        }
+        .lab-subtext {
+            font-size: 18px;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            line-height: 1.6;
+        }
+        .lab-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            margin-bottom: 45px;
+        }
+        .lab-stat {
+            padding: 25px 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            transition: 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .lab-stat:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+        }
+        .lab-stat h3 {
+            font-size: 36px;
+            color: #0a6ebd;
+            margin-bottom: 6px;
+        }
+        .lab-stat p {
+            font-size: 16px;
+            color: #555;
+        }
+        .trust-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            margin: 40px 0;
+            text-align: left;
+        }
+        .trust-left {
+            flex: 1;
+        }
+        .why-title {
+            font-size: 28px;
+            color: #0a6ebd;
+            margin-bottom: 20px;
+        }
+        .trust-points {
+            list-style: none;
+            padding: 0;
+        }
+        .trust-points li {
+            margin-bottom: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: flex-start;
+            color: #333;
+        }
+        .trust-points li::before {
+            content: "✔";
+            color: #28a745;
+            font-size: 20px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        .lab-cta {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 16px 40px;
+            background: #0a6ebd;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 40px;
+            transition: 0.3s ease;
+            font-size: 18px;
+        }
+        .lab-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(10,110,189,0.45);
+        }
+        .lab-different {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        .lab-different-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .lab-different-card {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+        .lab-different-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+        }
+        .lab-different-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .lab-different-card h3 {
+            font-size: 24px;
+            color: #003366;
+            margin: 18px 20px 10px;
+        }
+        .lab-different-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin: 0 20px 22px;
+        }
+        .lab-footer {
+            background: linear-gradient(135deg, #0b3c5d, #0f766e);
+            color: #ffffff;
+            text-align: center; /* Center all footer content */
+        }
+        .lab-footer-about {
+            padding: 50px 0 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+        .lab-footer-about h4 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        .lab-footer-about h4::after {
+            content: "";
+            width: 40px;
+            height: 2px;
+            background: #22d3ee;
+            display: block;
+            margin: 6px auto 0; /* Center the underline */
+        }
+        .lab-footer-about p {
+            max-width: 900px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #e0f2fe;
+            margin: 0 auto; /* Center paragraph */
+        }
+        .lab-footer-top {
+            padding: 45px 5%;
+        }
+        .lab-footer-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        .lab-footer-box {
+            text-align: center; /* Center box content */
+        }
+        .lab-footer-box h4 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .lab-footer-box h4::after {
+            content: "";
+            width: 32px;
+            height: 2px;
+            background: #22d3ee;
+            display: block;
+            margin: 6px auto 0; /* Center the underline */
+        }
+        .lab-footer-box ul {
+            list-style: none;
+        }
+        .lab-footer-box li, .lab-footer-box p {
+            font-size: 15px;
+            color: #e0f2fe;
+            margin-bottom: 8px;
+        }
+        .lab-footer-box a {
+            color: #e0f2fe;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .lab-footer-box a:hover {
+            color: #ffffff;
+            padding-left: 4px;
+        }
+        .lab-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+            justify-content: center; /* Center social icons */
+        }
+        .lab-social a {
+            width: 34px;
+            height: 34px;
+            background: #22d3ee;
+            color: #083344;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+        .lab-social a:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+        }
+        .lab-footer-map {
+            padding: 30px 5%;
+            background: #062a40;
+        }
+        .lab-footer-map h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .lab-footer-map iframe {
+            width: 100%;
+            height: 250px;
+            border: 0;
+            border-radius: 12px;
+        }
+        .lab-footer-bottom {
+            background: #041f2e;
+            text-align: center;
+            padding: 14px;
+            font-size: 14px;
+            color: #bae6fd;
+        }
+        /* Partner Services Styles */
+        .partner-services {
+            padding: 80px 0 20px;
+            background: #fff;
+        }
+        .partner-services .section-title h2 {
+            font-size: 40px;
+            color: #0a6ebd;
+        }
+        .partner-services p.intro {
+            text-align: center;
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .partner-card {
+            background: #f9f9f9;
+            padding: 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+        .partner-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .partner-card-content {
+            padding: 20px;
+        }
+        .partner-card h3 {
+            font-size: 24px;
+            color: #7a0000;
+            margin-bottom: 10px;
+        }
+        .partner-card p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .partner-card .btn-primary {
+            background: #7a0000;
+            font-size: 16px;
+        }
+        .partner-card .btn-primary:hover {
+            background: #5a0000;
+        }
+        /* ==================== MOBILE FIX FOR LOGO & NAME ==================== */
+        @media (max-width: 900px) {
+            .section-title {
+                font-size: 32px;
+            }
+            .hero h1 {
+                font-size: 40px;
+            }
+            .lab-heading {
+                font-size: 32px;
+            }
+        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                flex-direction: column;
+                align-items: center; /* Center mobile menu items */
+                padding: 20px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                display: none;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links li {
+                margin: 8px 0;
+                margin-left: 0;
+                width: auto; /* Adjust width for centering */
+            }
+            .nav-links a {
+                display: block;
+                padding: 10px 0;
+                text-align: center; /* Center link text */
+            }
+            .hero {
+                min-height: 70vh;
+                padding: 40px 0;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .trust-content {
+                flex-direction: column;
+            }
+            .lab-cta {
+                display: block;
+                margin: 30px auto 0;
+                text-align: center;
+            }
+            .lab-different-grid {
+                grid-template-columns: 1fr;
+            }
+            .lab-different-card img {
+                height: 180px;
+            }
+            .lab-footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .lab-footer-map iframe {
+                height: 200px;
+            }
+            .partner-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-container {
+                position: relative;
+            }
+            /* MODIFIED: Logo on left side, not centered */
+            .logo {
+                max-width: 68%; /* prevents overflow */
+            }
+            .logo img {
+                height: 38px;
+            }
+            .logo span {
+                font-size: 15px; /* smaller font so full name fits */
+            }
+            .menu-toggle {
+                margin-left: auto;
+            }
+        }
+        @media (max-width: 550px) {
+            .section-title {
+                font-size: 28px;
+            }
+            .section-subtitle {
+                font-size: 16px;
+            }
+            .logo img {
+                height: 34px;
+            }
+            .logo span {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 400px) {
+            .section-title {
+                font-size: 24px;
+            }
+            .hero h1 {
+                font-size: 24px;
+            }
+            .logo img {
+                height: 32px;
+            }
+            .logo span {
+                font-size: 13px;
+            }
+            .lab-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-<header class="header">
-  <div class="container nav-container">
-    <div class="logo">
-      <img src="images/logo.jpg" alt="K Terra North East Infra Logo">
-      <span>K Terra North East Infra</span>
-    </div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-</header>
-<section class="hero">
-  <div class="container">
-    <h1>Professional Civil Testing Laboratory</h1>
-    <p>Accurate & reliable testing services for construction projects</p>
-    <a href="contact.html" class="btn-primary">Get a Quote</a>
-  </div>
-</section>
-<section class="services-overview">
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-subtitle">
-      Accurate and reliable material testing services to support safe construction
-    </p>
-    <div class="services-grid">
-      <div class="service-card">
-        <i class="fas fa-mountain"></i>
-        <h3>Soil Testing</h3>
-        <p>Detailed soil investigation for foundation safety.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-layer-group"></i>
-        <h3>Sand Testing</h3>
-        <p>Quality analysis of fine aggregates.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-cubes"></i>
-        <h3>Concrete Testing</h3>
-        <p>Strength and quality testing of concrete.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-industry"></i>
-        <h3>Aggregate Testing</h3>
-        <p>Durability testing of coarse aggregates.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-tint"></i>
-        <h3>Water Testing</h3>
-        <p>Chemical testing of construction water.</p>
-      </div>
-    </div>
-    <div class="center-btn">
-      <a href="services.html" class="btn-secondary">View All Services</a>
-    </div>
-  </div>
-</section>
-<!-- Updated Partner Construction Services Section with Images -->
-<section class="partner-services">
-  <div class="container">
-    <div class="section-title">
-      <h2>Our Partner Construction Services</h2>
-    </div>
-    <p class="intro">We partner with RPAA Construction & Engineering Works to provide comprehensive construction solutions. If you need construction services alongside our testing, we can refer you to our trusted partner.</p>
-    <div class="partner-grid">
-      <div class="partner-card">
-        <img src="images/projects/residential.png" alt="Residential Construction Site" loading="lazy">
-        <div class="partner-card-content">
-          <h3>Residential Construction</h3>
-          <p>Building quality homes with modern designs and durable materials.</p>
-          <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="K Terra North East Infra Logo">
+                <span>K Terra North East Infra</span>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
-      </div>
-      <div class="partner-card">
-        <img src="images/projects/commercial.png" alt="Commercial Building Construction" loading="lazy">
-        <div class="partner-card-content">
-          <h3>Commercial Construction</h3>
-          <p>Developing commercial spaces including offices, shops, and complexes.</p>
-          <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>Professional Civil Testing Laboratory</h1>
+            <p>Accurate & reliable testing services for construction projects</p>
+            <a href="contact.html" class="btn-primary">Get a Quote</a>
         </div>
-      </div>
-      <div class="partner-card">
-        <img src="images/projects/interior-work.png" alt="Interior and Exterior Renovation Work" loading="lazy">
-        <div class="partner-card-content">
-          <h3>Interior & Exterior Work</h3>
-          <p>Professional interior design and exterior renovation services.</p>
-          <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+    </section>
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">
+                Accurate and reliable material testing services to support safe construction
+            </p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-mountain"></i>
+                    <h3>Soil Testing</h3>
+                    <p>Detailed soil investigation for foundation safety.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Sand Testing</h3>
+                    <p>Quality analysis of fine aggregates.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cubes"></i>
+                    <h3>Concrete Testing</h3>
+                    <p>Strength and quality testing of concrete.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-industry"></i>
+                    <h3>Aggregate Testing</h3>
+                    <p>Durability testing of coarse aggregates.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>Water Testing</h3>
+                    <p>Chemical testing of construction water.</p>
+                </div>
+            </div>
+            <div class="center-btn">
+                <a href="services.html" class="btn-secondary">View All Services</a>
+            </div>
         </div>
-      </div>
-      <div class="partner-card">
-        <img src="images/projects/road-drainage.png" alt="Road and Drainage Construction" loading="lazy">
-        <div class="partner-card-content">
-          <h3>Road & Drainage Work</h3>
-          <p>Infrastructure development including roads and drainage systems.</p>
-          <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+    </section>
+    <!-- Partner Construction Services Section -->
+    <section class="partner-services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Partner Construction Services</h2>
+            </div>
+            <p class="intro">We partner with RPAA Construction & Engineering Works to provide comprehensive construction solutions. If you need construction services alongside our testing, we can refer you to our trusted partner.</p>
+            <div class="partner-grid">
+                <div class="partner-card">
+                    <img src="images/projects/residential.png" alt="Residential Construction Site" loading="lazy">
+                    <div class="partner-card-content">
+                        <h3>Residential Construction</h3>
+                        <p>Building quality homes with modern designs and durable materials.</p>
+                        <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+                    </div>
+                </div>
+                <div class="partner-card">
+                    <img src="images/projects/commercial.png" alt="Commercial Building Construction" loading="lazy">
+                    <div class="partner-card-content">
+                        <h3>Commercial Construction</h3>
+                        <p>Developing commercial spaces including offices, shops, and complexes.</p>
+                        <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+                    </div>
+                </div>
+                <div class="partner-card">
+                    <img src="images/projects/interior-work.png" alt="Interior and Exterior Renovation Work" loading="lazy">
+                    <div class="partner-card-content">
+                        <h3>Interior & Exterior Work</h3>
+                        <p>Professional interior design and exterior renovation services.</p>
+                        <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+                    </div>
+                </div>
+                <div class="partner-card">
+                    <img src="images/projects/road-drainage.png" alt="Road and Drainage Construction" loading="lazy">
+                    <div class="partner-card-content">
+                        <h3>Road & Drainage Work</h3>
+                        <p>Infrastructure development including roads and drainage systems.</p>
+                        <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+                    </div>
+                </div>
+                <div class="partner-card">
+                    <img src="images/projects/repair-renovation.png" alt="Building Repair and Renovation" loading="lazy">
+                    <div class="partner-card-content">
+                        <h3>Repair & Renovation</h3>
+                        <p>Expert repair and renovation services for existing structures.</p>
+                        <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="partner-card">
-        <img src="images/projects/repair-renovation.png" alt="Building Repair and Renovation" loading="lazy">
-        <div class="partner-card-content">
-          <h3>Repair & Renovation</h3>
-          <p>Expert repair and renovation services for existing structures.</p>
-          <a href="https://rpaaconstructions.github.io/RPAA-Construction-and-Engineering-Works/" class="btn-primary" target="_blank">Learn More</a>
+    </section>
+    <section class="lab-trust">
+        <div class="lab-trust-container">
+            <h2 class="lab-heading heading-line">
+                Most Trusted in Civil Material Testing
+            </h2>
+            <p class="lab-subtext">
+                K Terra North East Infra provides accurate, standard-compliant testing services
+                supporting safe and durable construction projects.
+            </p>
+            <div class="lab-stats">
+                <div class="lab-stat">
+                    <h3>1+</h3>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="lab-stat">
+                    <h3>50+</h3>
+                    <p>Tests Conducted</p>
+                </div>
+                <div class="lab-stat">
+                    <h3>100%</h3>
+                    <p>Standard Compliance</p>
+                </div>
+                <div class="lab-stat">
+                    <h3>24–48 Hrs</h3>
+                    <p>Report Turnaround</p>
+                </div>
+            </div>
+            <div class="trust-content">
+                <div class="trust-left">
+                    <h3 class="why-title">Why Choose K Terra North East Infra?</h3>
+                    <ul class="trust-points">
+                        <li>ISO & IS Standard Testing Procedures</li>
+                        <li>Accurate & Reliable Test Reports</li>
+                        <li>Experienced Laboratory Professionals</li>
+                        <li>Modern Testing Equipment & Methods</li>
+                        <li>Timely Delivery of Reports</li>
+                        <li>Trusted by Engineers & Contractors</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="contact.html" class="lab-cta">Request Testing Service</a>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="lab-trust">
-  <div class="lab-trust-container">
-    <h2 class="lab-heading heading-line">
-      Most Trusted in Civil Material Testing
-    </h2>
-    <p class="lab-subtext">
-      K Terra North East Infra provides accurate, standard-compliant testing services
-      supporting safe and durable construction projects.
-    </p>
-    <div class="lab-stats">
-      <div class="lab-stat">
-        <h3>1+</h3>
-        <p>Years of Experience</p>
-      </div>
-      <div class="lab-stat">
-        <h3>50+</h3>
-        <p>Tests Conducted</p>
-      </div>
-      <div class="lab-stat">
-        <h3>100%</h3>
-        <p>Standard Compliance</p>
-      </div>
-      <div class="lab-stat">
-        <h3>24–48 Hrs</h3>
-        <p>Report Turnaround</p>
-      </div>
-    </div>
-    <div class="trust-content">
-      <div class="trust-left">
-        <h3 class="why-title">Why Choose K Terra North East Infra?</h3>
-        <ul class="trust-points">
-          <li>ISO & IS Standard Testing Procedures</li>
-          <li>Accurate & Reliable Test Reports</li>
-          <li>Experienced Laboratory Professionals</li>
-          <li>Modern Testing Equipment & Methods</li>
-          <li>Timely Delivery of Reports</li>
-          <li>Trusted by Engineers & Contractors</li>
-        </ul>
-      </div>
-    </div>
-    <a href="contact.html" class="lab-cta">Request Testing Service</a>
-  </div>
-</section>
-<section class="lab-different">
-  <div class="container">
-    <h2 class="section-title">How We Are Different</h2>
-    <p class="section-subtitle">
-      Reliable civil material testing built on accuracy, standards, and trust
-    </p>
-    <div class="lab-different-grid">
-      <div class="lab-different-card">
-        <img src="images/lab-testing.png" alt="Standard Based Testing" loading="lazy">
-        <h3>Standard-Based Testing</h3>
-        <p>
-          All tests are conducted strictly as per IS codes and standard laboratory
-          procedures to ensure reliable and accurate results.
-        </p>
-      </div>
-      <div class="lab-different-card">
-        <img src="images/lab-planning.png" alt="Accurate Analysis & Reporting" loading="lazy">
-        <h3>Accurate Analysis & Reporting</h3>
-        <p>
-          Our detailed testing methods and precise analysis help engineers
-          make informed and confident decisions.
-        </p>
-      </div>
-      <div class="lab-different-card">
-        <img src="images/lab-team.png" alt="Experienced Laboratory Team" loading="lazy">
-        <h3>Experienced Laboratory Team</h3>
-        <p>
-          Skilled laboratory professionals ensure quality control,
-          consistency, and technical reliability in every test.
-        </p>
-      </div>
-      <div class="lab-different-card">
-        <img src="images/lab-reporting.png" alt="Transparent & Timely Reports" loading="lazy">
-        <h3>Transparent & Timely Reports</h3>
-        <p>
-          Clear documentation, transparent processes, and timely delivery
-          of test reports without delays.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<footer class="lab-footer">
-  <div class="lab-footer-about">
-    <div class="container">
-      <h4>ABOUT US</h4>
-      <p>
-        K Terra North East Infra is a professional civil testing laboratory providing
-        accurate, reliable, and standard-compliant material testing services.
-        We support safe and durable construction through scientific testing
-        and expert analysis.
-      </p>
-    </div>
-  </div>
-  <div class="lab-footer-top">
-    <div class="lab-footer-container">
-      <div class="lab-footer-box">
-        <h4>QUICK LINKS</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="lab-footer-box">
-        <h4>OUR SERVICES</h4>
-        <ul>
-          <li>Soil Testing</li>
-          <li>Sand Testing</li>
-          <li>Concrete Testing</li>
-          <li>Aggregate Testing</li>
-          <li>Water Testing</li>
-        </ul>
-      </div>
-      <div class="lab-footer-box">
-        <h4>CONTACT INFO</h4>
-        <p>📍 Kataki Chuburi,<br>Dekargaon, Tezpur, 784501</p>
-        <p>📞 +91 94351 99270, +91 98549 82955,<br>+91 70023 71094</p>
-        <p>✉️ kterragroup@gmail.com</p>
-        <div class="lab-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-x-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+    </section>
+    <section class="lab-different">
+        <div class="container">
+            <h2 class="section-title">How We Are Different</h2>
+            <p class="section-subtitle">
+                Reliable civil material testing built on accuracy, standards, and trust
+            </p>
+            <div class="lab-different-grid">
+                <div class="lab-different-card">
+                    <img src="images/lab-testing.png" alt="Standard Based Testing" loading="lazy">
+                    <h3>Standard-Based Testing</h3>
+                    <p>
+                        All tests are conducted strictly as per IS codes and standard laboratory
+                        procedures to ensure reliable and accurate results.
+                    </p>
+                </div>
+                <div class="lab-different-card">
+                    <img src="images/lab-planning.png" alt="Accurate Analysis & Reporting" loading="lazy">
+                    <h3>Accurate Analysis & Reporting</h3>
+                    <p>
+                        Our detailed testing methods and precise analysis help engineers
+                        make informed and confident decisions.
+                    </p>
+                </div>
+                <div class="lab-different-card">
+                    <img src="images/lab-team.png" alt="Experienced Laboratory Team" loading="lazy">
+                    <h3>Experienced Laboratory Team</h3>
+                    <p>
+                        Skilled laboratory professionals ensure quality control,
+                        consistency, and technical reliability in every test.
+                    </p>
+                </div>
+                <div class="lab-different-card">
+                    <img src="images/lab-reporting.png" alt="Transparent & Timely Reports" loading="lazy">
+                    <h3>Transparent & Timely Reports</h3>
+                    <p>
+                        Clear documentation, transparent processes, and timely delivery
+                        of test reports without delays.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="lab-footer-map">
-    <div class="container">
-      <h4>OUR LOCATION</h4>
-      <iframe
-        src="https://www.google.com/maps?q=Kataki+Chuburi%2CDekargaon%2CTezpur%2C784501%2CAssam&output=embed"
-        loading="lazy">
-      </iframe>
-    </div>
-  </div>
-  <div class="lab-footer-bottom">
-    © 2026 K Terra North East Infra Laboratory. All rights reserved. | <a href="#" style="color: #bae6fd; text-decoration: none;">Privacy Policy</a>
-  </div>
-</footer>
-<script>
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  navLinks.classList.toggle('active');
-}
-document.addEventListener('click', function(event) {
-  const navLinks = document.getElementById('navLinks');
-  const navContainer = document.querySelector('.nav-container');
-  if (!navContainer.contains(event.target)) {
-    navLinks.classList.remove('active');
-  }
-});
-</script>
+    </section>
+    <footer class="lab-footer">
+        <div class="lab-footer-about">
+            <div class="container">
+                <h4>ABOUT US</h4>
+                <p>
+                    K Terra North East Infra is a professional civil testing laboratory providing
+                    accurate, reliable, and standard-compliant material testing services.
+                    We support safe and durable construction through scientific testing
+                    and expert analysis.
+                </p>
+            </div>
+        </div>
+        <div class="lab-footer-top">
+            <div class="lab-footer-container">
+                <div class="lab-footer-box">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="lab-footer-box">
+                    <h4>OUR SERVICES</h4>
+                    <ul>
+                        <li>Soil Testing</li>
+                        <li>Sand Testing</li>
+                        <li>Concrete Testing</li>
+                        <li>Aggregate Testing</li>
+                        <li>Water Testing</li>
+                    </ul>
+                </div>
+                <div class="lab-footer-box">
+                    <h4>CONTACT INFO</h4>
+                    <p>📍 Kataki Chuburi,<br>Dekargaon, Tezpur, 784501</p>
+                    <p>📞 +91 94351 99270, +91 98549 82955,<br>+91 70023 71094</p>
+                    <p>✉️ kterragroup@gmail.com</p>
+                    <div class="lab-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lab-footer-map">
+            <div class="container">
+                <h4>OUR LOCATION</h4>
+                <iframe
+                    src="https://www.google.com/maps?q=Kataki+Chuburi%2CDekargaon%2CTezpur%2C784501%2CAssam&output=embed"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <div class="lab-footer-bottom">
+            © 2026 K Terra North East Infra Laboratory. All rights reserved. | <a href="#" style="color: #bae6fd; text-decoration: none;">Privacy Policy</a>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+        document.addEventListener('click', function(event) {
+            const navLinks = document.getElementById('navLinks');
+            const navContainer = document.querySelector('.nav-container');
+            if (!navContainer.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
