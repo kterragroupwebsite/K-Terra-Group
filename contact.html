@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - K Terra North East Infra | Civil Testing Laboratory</title>
-    <meta name="description" content="Get in touch with K Terra North East Infra for comprehensive civil material testing services in Tezpur, Assam. Reach out via phone, email, or our contact form.">
+    <title>Contact Us - Kterra North East Infra | Civil Engineering & Construction</title>
+    <meta name="description" content="Get in touch with Kterra North East Infra for soil testing, material testing, structural design, consultancy, supervision or turnkey construction services in Tezpur, Assam.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
@@ -17,6 +17,7 @@
         body {
             line-height: 1.6;
             color: #333;
+            background: #f8f9fa;
         }
         .container {
             width: 90%;
@@ -36,14 +37,16 @@
             border-radius: 4px;
             border: none;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.2s ease;
             font-size: 16px;
             font-weight: 600;
         }
         .btn-primary:hover {
             background: #084f8c;
+            transform: translateY(-2px);
         }
-        /* ========== HEADER ========== */
+
+        /* HEADER */
         .header {
             padding: 8px 0;
             background: #ffffff;
@@ -107,7 +110,6 @@
         .nav-links a.active::after {
             width: 100%;
         }
-        /* Mobile Menu Toggle */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -121,7 +123,8 @@
             border-radius: 2px;
             transition: 0.3s;
         }
-        /* ========== HERO ========== */
+
+        /* HERO */
         .hero {
             min-height: 60vh;
             background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
@@ -139,7 +142,8 @@
             margin: 20px 0;
             font-size: 18px;
         }
-        /* ========== CONTACT ========== */
+
+        /* CONTACT SECTION */
         .contact-section {
             padding: 60px 0;
             background: #f9f9f9;
@@ -162,7 +166,6 @@
             gap: 30px;
             margin-top: 40px;
         }
-        /* Contact Info */
         .contact-info {
             background: #fff;
             border: 1px solid #e0e0e0;
@@ -194,31 +197,6 @@
             margin-bottom: 15px;
             color: #1f2d3d;
         }
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: #0a6ebd;
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-        .social-links a:hover {
-            background: #084f8c;
-            transform: translateY(-3px);
-        }
-        .contact-map {
-            margin-top: 25px;
-        }
         .contact-map iframe {
             width: 100%;
             height: 300px;
@@ -226,7 +204,6 @@
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        /* Contact Form */
         .contact-form {
             background: #e6f2ff;
             border: 1px solid #b3d9ff;
@@ -269,85 +246,88 @@
         .contact-form button {
             width: 100%;
         }
-        /* ========== FOOTER ========== */
+
+        /* FOOTER */
         .lab-footer {
             background: linear-gradient(135deg, #0b3c5d, #0f766e);
             color: #ffffff;
-            text-align: center; /* Center all footer content */
+            text-align: center;
         }
         .lab-footer-about {
-            padding: 50px 0 30px;
+            padding: 60px 0 35px;
             border-bottom: 1px solid rgba(255,255,255,0.15);
         }
         .lab-footer-about h4 {
-            font-size: 16px;
-            margin-bottom: 12px;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
         .lab-footer-about h4::after {
             content: "";
-            width: 40px;
-            height: 2px;
+            width: 50px;
+            height: 3px;
             background: #22d3ee;
             display: block;
-            margin: 6px auto 0; /* Center the underline */
+            margin: 8px auto 0;
         }
         .lab-footer-about p {
-            max-width: 900px;
-            font-size: 15px;
-            line-height: 1.7;
+            max-width: 950px;
+            font-size: 18px;
+            line-height: 1.8;
             color: #e0f2fe;
-            margin: 0 auto; /* Center paragraph */
+            margin: 0 auto;
         }
         .lab-footer-top {
-            padding: 45px 5%;
+            padding: 55px 5%;
         }
         .lab-footer-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-        .lab-footer-box {
-            text-align: center; /* Center box content */
+            gap: 50px;
         }
         .lab-footer-box h4 {
-            font-size: 15px;
-            margin-bottom: 12px;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
         }
         .lab-footer-box h4::after {
             content: "";
-            width: 32px;
-            height: 2px;
+            width: 40px;
+            height: 3px;
             background: #22d3ee;
             display: block;
-            margin: 6px auto 0; /* Center the underline */
+            margin: 8px auto 0;
         }
         .lab-footer-box ul {
             list-style: none;
         }
         .lab-footer-box li,
         .lab-footer-box p {
-            font-size: 14.5px;
+            font-size: 17px;
             color: #e0f2fe;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            line-height: 1.7;
         }
         .lab-footer-box a {
             color: #e0f2fe;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
         .lab-footer-box a:hover {
             color: #ffffff;
-            padding-left: 4px;
+            padding-left: 6px;
         }
         .lab-social {
             display: flex;
-            gap: 10px;
-            margin-top: 12px;
-            justify-content: center; /* Center social icons */
+            gap: 12px;
+            margin-top: 15px;
+            justify-content: center;
         }
         .lab-social a {
-            width: 34px;
-            height: 34px;
+            width: 40px;
+            height: 40px;
             background: #22d3ee;
             color: #083344;
             border-radius: 50%;
@@ -355,53 +335,52 @@
             align-items: center;
             justify-content: center;
             transition: 0.3s;
+            font-size: 16px;
         }
         .lab-social a:hover {
             background: #ffffff;
-            transform: translateY(-3px);
+            transform: translateY(-4px) scale(1.05);
         }
         .lab-footer-map {
-            padding: 30px 5%;
+            padding: 40px 5%;
             background: #062a40;
         }
         .lab-footer-map h4 {
+            font-size: 22px;
             margin-bottom: 15px;
         }
         .lab-footer-map iframe {
             width: 100%;
-            height: 250px;
+            height: 280px;
             border: 0;
-            border-radius: 12px;
+            border-radius: 14px;
         }
         .lab-footer-bottom {
             background: #041f2e;
-            text-align: center;
-            padding: 14px;
-            font-size: 13.5px;
+            padding: 16px;
+            font-size: 16px;
             color: #bae6fd;
         }
-        /* ========== RESPONSIVE DESIGN ========== */
-        /* Tablet */
+
+        /* ───────────────────────────────────────────────
+           RESPONSIVE STYLES
+        ─────────────────────────────────────────────── */
         @media (max-width: 900px) {
-            .section-title {
-                font-size: 32px;
-            }
-           
-            .hero h1 {
-                font-size: 36px;
-            }
-           
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+            .section-title {
+                font-size: 30px;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
         }
-        /* Mobile */
+
         @media (max-width: 768px) {
-            /* Navigation */
             .menu-toggle {
                 display: flex;
             }
-           
             .nav-links {
                 position: absolute;
                 top: 100%;
@@ -409,167 +388,89 @@
                 right: 0;
                 background: #ffffff;
                 flex-direction: column;
-                align-items: center; /* Center mobile menu items */
+                align-items: center;
                 padding: 20px;
                 box-shadow: 0 4px 6px rgba(0,0,0,0.1);
                 display: none;
             }
-           
             .nav-links.active {
                 display: flex;
             }
-           
             .nav-links li {
                 margin: 8px 0;
                 margin-left: 0;
-                width: auto; /* Adjust width for centering */
             }
-           
-            .nav-links a {
-                display: block;
-                padding: 10px 0;
-                text-align: center; /* Center link text */
-            }
-           
-            /* Hero */
             .hero {
                 min-height: 50vh;
                 padding: 40px 0;
             }
-           
             .hero h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
-           
             .hero p {
                 font-size: 16px;
+                padding: 0 15px;
             }
-           
-            /* Contact Grid */
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-           
             .contact-info,
             .contact-form {
                 padding: 25px;
             }
-           
-            .contact-info h3,
-            .contact-form h3 {
-                font-size: 20px;
-            }
-           
             .contact-map iframe {
                 height: 250px;
             }
-           
-            /* Footer */
             .lab-footer-container {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 35px;
             }
-           
             .lab-footer-map iframe {
-                height: 200px;
-            }
-            /* FIXED LOGO & NAME ON MOBILE */
-            .nav-container {
-                position: relative;
-            }
-            .logo {
-                max-width: 68%; /* prevents overflow */
-            }
-            .logo img {
-                height: 50px;
-            }
-            .logo span {
-                font-size: 20px;
-            }
-            .menu-toggle {
-                margin-left: auto;
+                height: 220px;
             }
         }
-        /* Small Mobile */
+
         @media (max-width: 550px) {
-            .section-title {
-                font-size: 30px;
-            }
-           
-            .section-subtitle {
-                font-size: 14px;
-            }
-           
-            .hero h1 {
-                font-size: 32px;
-            }
-           
-            .contact-info,
-            .contact-form {
-                padding: 20px;
-            }
-           
-            .contact-info h3,
-            .contact-form h3 {
-                font-size: 18px;
-            }
-           
-            .contact-info p {
-                font-size: 14px;
-            }
-           
-            .contact-form input,
-            .contact-form textarea {
-                padding: 10px;
-                font-size: 14px;
-            }
-           
-            .btn-primary {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-           
-            .social-links a {
-                width: 36px;
-                height: 36px;
-                font-size: 16px;
-            }
             .logo img {
                 height: 45px;
             }
             .logo span {
                 font-size: 18px;
             }
-        }
-        @media (max-width: 400px) {
             .section-title {
                 font-size: 28px;
             }
-           
-            .hero h1 {
-                font-size: 28px;
+            .contact-info p,
+            .contact-form label {
+                font-size: 14px;
             }
-           
+            .contact-map iframe {
+                height: 220px;
+            }
+            .hero {
+                min-height: 45vh;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                width: 94%;
+            }
+            .btn-primary {
+                padding: 12px 30px;
+                font-size: 15px;
+            }
             .contact-info,
             .contact-form {
-                padding: 18px;
-            }
-            .logo img {
-                height: 40px;
-            }
-            .logo span {
-                font-size: 16px;
+                padding: 20px 15px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- ========== HEADER ========== -->
+    <!-- HEADER -->
     <header class="header">
         <div class="container nav-container">
             <div class="logo">
-                <img src="images/logo.jpg" alt="K Terra North East Infra Logo">
-                <span>K Terra North East Infra</span>
+                <img src="images/logo.jpg" alt="Kterra North East Infra Logo">
+                <span>Kterra North East Infra</span>
             </div>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span></span>
@@ -580,24 +481,27 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </div>
     </header>
-    <!-- ========== HERO ========== -->
+
+    <!-- HERO -->
     <section class="hero">
         <div class="container">
             <h1>Contact Us</h1>
-            <p>We're here to assist with your civil material testing needs. Get in touch today!</p>
+            <p>We're here to assist with your civil engineering, material testing, design, consultancy or construction needs. Get in touch today!</p>
             <a href="#contact-form" class="btn-primary">Send Message</a>
         </div>
     </section>
-    <!-- ========== CONTACT ========== -->
+
+    <!-- CONTACT SECTION -->
     <section class="contact-section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p class="section-subtitle">
-                Reach out to us for inquiries, quotes, or to schedule testing services. Our team responds promptly.
+                Reach out to us for inquiries, quotes, soil/material testing, structural design, supervision or turnkey projects. Our team responds promptly.
             </p>
             <div class="contact-grid">
                 <!-- Contact Information -->
@@ -605,57 +509,62 @@
                     <h3>Contact Information</h3>
                     <p>
                         <i class="fas fa-map-marker-alt"></i>
-                        📍 Kataki Chuburi,<br>Dekargaon, Tezpur, 784501
+                        Kataki Chuburi, Dekargaon, Tezpur, Assam - 784501
                     </p>
                     <p>
                         <i class="fas fa-phone"></i>
-                        <span>+91 70023 71094, +91 94351 99270,<br>+91 98549 82955</span>
+                        +91 94351 99270<br>
+                        +91 98549 82955<br>
+                        +91 70023 71094
                     </p>
                     <p>
                         <i class="fas fa-envelope"></i>
-                        <span>kterragroup@gmail.com</span>
+                        <a href="mailto:kterragroup@gmail.com">kterragroup@gmail.com</a>
                     </p>
+
                     <div class="contact-map">
                         <h4>Our Location</h4>
                         <iframe
-                            src="https://www.google.com/maps?q=Kataki+Chuburi%2CDekargaon%2CTezpur%2C784501%2CAssam&output=embed"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.0!2d92.794!3d26.629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3744f0e0e0e0e0e0%3A0x0!2sKataki+Chuburi%2C+Dekargaon%2C+Tezpur%2C+Assam+784501!5e0!3m2!1sen!2sin!4v1730000000000"
                             loading="lazy"
-                            title="K Terra North East Infra Location">
+                            title="Kterra North East Infra Location"
+                            referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
+
                 <!-- Contact Form -->
                 <div class="contact-form" id="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form action="#" method="POST">
+                    <form action="https://formspree.io/f/xqeyrknv" method="POST">
                         <label for="name">Name *</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
-                       
+
                         <label for="email">Email (Optional)</label>
                         <input type="email" id="email" name="email" placeholder="your@email.com">
-                       
+
                         <label for="phone">Phone *</label>
                         <input type="tel" id="phone" name="phone" placeholder="+91 xxxxx xxxxx" required>
-                       
+
                         <label for="message">Message *</label>
                         <textarea id="message" name="message" rows="6" placeholder="Your message here..." required></textarea>
-                       
+
                         <button type="submit" class="btn-primary">Submit Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ========== FOOTER ========== -->
+
+    <!-- FOOTER -->
     <footer class="lab-footer">
         <div class="lab-footer-about">
             <div class="container">
                 <h4>ABOUT US</h4>
                 <p>
-                    K Terra North East Infra is a professional civil testing laboratory providing
-                    accurate, reliable, and standard-compliant material testing services.
-                    We support safe and durable construction through scientific testing
-                    and expert analysis.
+                    Kterra North East Infra is a forward-thinking civil engineering company based in Tezpur, Assam.
+                    We provide integrated solutions – from soil & material testing to structural design, consultancy,
+                    supervision and full project execution – with strong emphasis on safety, quality and affordability.
                 </p>
             </div>
         </div>
@@ -667,17 +576,19 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="lab-footer-box">
                     <h4>OUR SERVICES</h4>
                     <ul>
-                        <li>Soil Testing</li>
-                        <li>Sand Testing</li>
-                        <li>Concrete Testing</li>
-                        <li>Aggregate Testing</li>
-                        <li>Water Testing</li>
+                        <li>Soil & Geotechnical Investigation</li>
+                        <li>Material Testing Laboratory</li>
+                        <li>Structural Design & Drawings</li>
+                        <li>Civil Engineering Consultancy</li>
+                        <li>Construction Supervision & Management</li>
+                        <li>Turnkey Project Execution</li>
                     </ul>
                 </div>
                 <div class="lab-footer-box">
@@ -687,7 +598,9 @@
                     <p>✉️ kterragroup@gmail.com</p>
                     <div class="lab-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://wa.me/919435199270" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -698,38 +611,38 @@
             <div class="container">
                 <h4>OUR LOCATION</h4>
                 <iframe
-                    src="https://www.google.com/maps?q=Kataki+Chuburi%2CDekargaon%2CTezpur%2C784501%2CAssam&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.0!2d92.794!3d26.629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3744f0e0e0e0e0e0%3A0x0!2sKataki+Chuburi%2C+Dekargaon%2C+Tezpur%2C+Assam+784501!5e0!3m2!1sen!2sin!4v1730000000000"
                     loading="lazy"
-                    title="K Terra North East Infra Location Map">
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
         </div>
         <div class="lab-footer-bottom">
-            © 2026 K Terra North East Infra Laboratory. All rights reserved.
+            © 2026 Kterra North East Infra. All rights reserved.
         </div>
     </footer>
+
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
-        // Close menu when clicking outside
+
         document.addEventListener('click', function(event) {
             const navLinks = document.getElementById('navLinks');
-            const menuToggle = document.querySelector('.menu-toggle');
             const navContainer = document.querySelector('.nav-container');
-           
             if (!navContainer.contains(event.target)) {
                 navLinks.classList.remove('active');
             }
         });
-        // Close menu when clicking on a link
+
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', function() {
                 document.getElementById('navLinks').classList.remove('active');
             });
         });
-        // Smooth scroll to form when clicking hero button
+
+        // Smooth scroll to form
         document.querySelector('.hero .btn-primary').addEventListener('click', function(e) {
             e.preventDefault();
             document.getElementById('contact-form').scrollIntoView({

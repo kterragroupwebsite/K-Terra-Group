@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - K Terra North East Infra | Civil Testing Laboratory</title>
-    <meta name="description" content="Explore our comprehensive civil testing services including soil testing, sand testing, concrete testing, aggregate testing, and water testing at K Terra North East Infra in Tezpur, Assam.">
+    <title>Services - Kterra North East Infra | Civil Engineering & Construction</title>
+    <meta name="description" content="Complete civil engineering services in Tezpur, Assam: soil & material testing, structural design & drawings, civil consultancy, construction supervision, project execution, turnkey construction.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
@@ -40,21 +40,6 @@
         }
         .btn-primary:hover {
             background: #084f8c;
-            transform: translateY(-2px);
-        }
-        .btn-secondary {
-            display: inline-block;
-            padding: 10px 20px;
-            border: 2px solid #0a6ebd;
-            color: #0a6ebd;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        .btn-secondary:hover {
-            background: #0a6ebd;
-            color: #fff;
             transform: translateY(-2px);
         }
         .header {
@@ -150,6 +135,26 @@
             margin: 20px 0;
             font-size: 18px;
         }
+        /* Special Offer Banner Style */
+        .special-offer {
+            background: linear-gradient(135deg, #e63946, #f48c96);
+            color: white;
+            text-align: center;
+            padding: 18px 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 12px rgba(230,57,70,0.3);
+        }
+        .special-offer span {
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
         .services-overview {
             padding: 80px 0;
             background: #f9f9f9;
@@ -232,88 +237,102 @@
             margin-bottom: 15px;
         }
         .cta p {
-            font-size: 16px;
+            font-size: 18px;
             color: #666;
             margin-bottom: 25px;
+        }
+        /* Special offer in CTA */
+        .cta-offer {
+            background: #fff3e0;
+            border: 2px dashed #f57c00;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px auto;
+            max-width: 700px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #e65100;
         }
         .lab-footer {
             background: linear-gradient(135deg, #0b3c5d, #0f766e);
             color: #ffffff;
-            text-align: center; /* Center all footer content */
+            text-align: center;
         }
         .lab-footer-about {
-            padding: 50px 0 30px;
+            padding: 60px 0 35px;
             border-bottom: 1px solid rgba(255,255,255,0.15);
         }
         .lab-footer-about h4 {
-            font-size: 16px;
-            margin-bottom: 12px;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
         .lab-footer-about h4::after {
             content: "";
-            width: 40px;
-            height: 2px;
+            width: 50px;
+            height: 3px;
             background: #22d3ee;
             display: block;
-            margin: 6px auto 0; /* Center the underline */
+            margin: 8px auto 0;
         }
         .lab-footer-about p {
-            max-width: 900px;
-            font-size: 15px;
-            line-height: 1.7;
+            max-width: 950px;
+            font-size: 18px;
+            line-height: 1.8;
             color: #e0f2fe;
-            margin: 0 auto; /* Center paragraph */
+            margin: 0 auto;
         }
         .lab-footer-top {
-            padding: 45px 5%;
+            padding: 55px 5%;
         }
         .lab-footer-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-        .lab-footer-box {
-            text-align: center; /* Center box content */
+            gap: 50px;
         }
         .lab-footer-box h4 {
-            font-size: 15px;
-            margin-bottom: 12px;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
         }
         .lab-footer-box h4::after {
             content: "";
-            width: 32px;
-            height: 2px;
+            width: 40px;
+            height: 3px;
             background: #22d3ee;
             display: block;
-            margin: 6px auto 0; /* Center the underline */
+            margin: 8px auto 0;
         }
         .lab-footer-box ul {
             list-style: none;
         }
         .lab-footer-box li,
         .lab-footer-box p {
-            font-size: 14.5px;
+            font-size: 17px;
             color: #e0f2fe;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            line-height: 1.7;
         }
         .lab-footer-box a {
             color: #e0f2fe;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
         .lab-footer-box a:hover {
             color: #ffffff;
-            padding-left: 4px;
+            padding-left: 6px;
         }
         .lab-social {
             display: flex;
-            gap: 10px;
-            margin-top: 12px;
-            justify-content: center; /* Center social icons */
+            gap: 12px;
+            margin-top: 15px;
+            justify-content: center;
         }
         .lab-social a {
-            width: 34px;
-            height: 34px;
+            width: 40px;
+            height: 40px;
             background: #22d3ee;
             color: #083344;
             border-radius: 50%;
@@ -321,38 +340,45 @@
             align-items: center;
             justify-content: center;
             transition: 0.3s;
+            font-size: 16px;
         }
         .lab-social a:hover {
             background: #ffffff;
-            transform: translateY(-3px);
+            transform: translateY(-4px) scale(1.05);
         }
         .lab-footer-map {
-            padding: 30px 5%;
+            padding: 40px 5%;
             background: #062a40;
         }
         .lab-footer-map h4 {
+            font-size: 22px;
             margin-bottom: 15px;
         }
         .lab-footer-map iframe {
             width: 100%;
-            height: 250px;
+            height: 280px;
             border: 0;
-            border-radius: 12px;
+            border-radius: 14px;
         }
         .lab-footer-bottom {
             background: #041f2e;
-            text-align: center;
-            padding: 14px;
-            font-size: 13.5px;
+            padding: 16px;
+            font-size: 16px;
             color: #bae6fd;
         }
-        /* Responsive Design */
+        /* ==================== MOBILE OPTIMIZATIONS ==================== */
         @media (max-width: 900px) {
             .section-title {
-                font-size: 32px;
+                font-size: 28px;
+            }
+            .section-subtitle {
+                font-size: 15px;
             }
             .hero h1 {
                 font-size: 36px;
+            }
+            .hero p {
+                font-size: 16px;
             }
         }
         @media (max-width: 768px) {
@@ -366,8 +392,8 @@
                 right: 0;
                 background: #ffffff;
                 flex-direction: column;
-                align-items: center; /* Center mobile menu items */
-                padding: 20px;
+                align-items: center;
+                padding: 20px 0;
                 box-shadow: 0 4px 6px rgba(0,0,0,0.1);
                 display: none;
             }
@@ -375,72 +401,60 @@
                 display: flex;
             }
             .nav-links li {
-                margin: 8px 0;
-                margin-left: 0;
-                width: auto; /* Adjust width for centering */
+                margin: 12px 0;
             }
             .nav-links a {
-                display: block;
-                padding: 10px 0;
-                text-align: center; /* Center link text */
+                font-size: 1.1rem;
             }
             .hero {
                 min-height: 50vh;
                 padding: 40px 0;
             }
             .hero h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
             .hero p {
                 font-size: 16px;
+                padding: 0 15px;
+            }
+            .special-offer {
+                font-size: 1.1rem;
+                padding: 14px 10px;
             }
             .services-grid {
                 grid-template-columns: 1fr;
-                gap: 25px;
-            }
-            .service-card-content {
-                padding: 25px;
-            }
-            .lab-footer-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            .lab-footer-map iframe {
-                height: 200px;
-            }
-            /* FIXED LOGO & NAME ON MOBILE */
-            .nav-container {
-                position: relative;
-            }
-            .logo {
-                max-width: 68%; /* prevents overflow */
-                justify-content: flex-start;
-            }
-            .logo img {
-                height: 50px;
-            }
-            .logo span {
-                font-size: 20px;
-            }
-            .menu-toggle {
-                margin-left: auto;
-            }
-        }
-        @media (max-width: 550px) {
-            .section-title {
-                font-size: 30px;
-            }
-            .section-subtitle {
-                font-size: 14px;
-            }
-            .hero h1 {
-                font-size: 32px;
             }
             .service-card img {
                 height: 180px;
             }
-            .service-card-content {
-                padding: 20px;
+            .cta {
+                padding: 50px 0;
+            }
+            .cta h2 {
+                font-size: 28px;
+            }
+            .cta-offer {
+                font-size: 1.1rem;
+                padding: 16px;
+                margin: 20px 15px;
+            }
+            .lab-footer-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            .lab-footer-map iframe {
+                height: 220px;
+            }
+        }
+        @media (max-width: 550px) {
+            .logo img {
+                height: 45px;
+            }
+            .logo span {
+                font-size: 18px;
+            }
+            .section-title {
+                font-size: 26px;
             }
             .service-card h3 {
                 font-size: 20px;
@@ -448,32 +462,23 @@
             .service-card li {
                 font-size: 14px;
             }
-            .btn-primary {
-                padding: 10px 20px;
-                font-size: 14px;
+            .service-card img {
+                height: 160px;
             }
-            .cta h2 {
-                font-size: 26px;
+            .hero {
+                min-height: 45vh;
             }
-            .logo img {
-                height: 45px;
-            }
-            .logo span {
-                font-size: 18px;
+            .special-offer span {
+                font-size: 1rem;
             }
         }
         @media (max-width: 400px) {
-            .section-title {
-                font-size: 28px;
+            .container {
+                width: 94%;
             }
-            .hero h1 {
-                font-size: 28px;
-            }
-            .logo img {
-                height: 40px;
-            }
-            .logo span {
-                font-size: 16px;
+            .btn-primary {
+                padding: 10px 20px;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -483,8 +488,8 @@
     <header class="header">
         <div class="container nav-container">
             <div class="logo">
-                <img src="images/logo.jpg" alt="K Terra North East Infra Logo">
-                <span>K Terra North East Infra</span>
+                <img src="images/logo.jpg" alt="Kterra Logo">
+                <span>Kterra North East Infra</span>
             </div>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span></span>
@@ -495,6 +500,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html" class="active">Services</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -502,94 +508,189 @@
     <!-- ========== HERO ========== -->
     <section class="hero">
         <div class="container">
-            <h1>Our Testing Services</h1>
-            <p>Comprehensive civil material testing solutions for construction projects</p>
-            <a href="contact.html" class="btn-primary">Request a Test</a>
+            <h1>Our Services</h1>
+            <p>From soil investigation and material testing to complete structural design, consultancy, construction supervision and turnkey project execution – we deliver end-to-end civil engineering solutions in North East India.</p>
         </div>
     </section>
+    <!-- SPECIAL OFFER NOTICE (after hero) -->
+    <div class="special-offer">
+        <span>🏠 Special Offer for Individual House Owners: Get Special Discount on Soil Testing & All Material Testing Services!</span>
+    </div>
     <!-- ========== SERVICES ========== -->
     <section class="services-overview">
         <div class="container">
-            <h2 class="section-title">Detailed Testing Services</h2>
-            <p class="section-subtitle">
-                We provide accurate and reliable testing following IS standards to ensure quality and safety in construction.
-            </p>
+            <h2 class="section-title">Complete Civil Engineering & Construction Services</h2>
+            <p class="section-subtitle">We offer full-spectrum services – accurate material testing, expert design & consultancy, and reliable construction delivery – tailored for residential, commercial, institutional and infrastructure projects in Assam and the North East.</p>
             <div class="services-grid">
+                <!-- Material Testing Services -->
                 <div class="service-card">
-                    <img src="images/soil-testing.png" alt="Soil Testing Equipment">
+                    <img src="images/soil-testing.png" alt="Soil Testing">
                     <div class="service-card-content">
-                        <h3>Soil Testing</h3>
-                        <p>Detailed soil investigation for foundation safety and stability analysis.</p>
+                        <h3>Soil Testing & Geotechnical Investigation</h3>
+                        <p>Foundation recommendation and site suitability studies.</p>
                         <ul>
-                            <li>Grain Size Analysis (Sieve Analysis)</li>
-                            <li>Atterberg Limits (Liquid Limit, Plastic Limit)</li>
-                            <li>Specific Gravity</li>
-                            <li>Proctor Compaction Test</li>
-                            <li>California Bearing Ratio (CBR)</li>
-                            <li>Direct Shear Test</li>
-                            <li>Triaxial Shear Test</li>
+                            <li>SPT (Standard Penetration Test)</li>
+                            <li>Atterberg Limits</li>
+                            <li>Grain Size Analysis</li>
+                            <li>Proctor Compaction</li>
+                            <li>CBR (California Bearing Ratio)</li>
                         </ul>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="images/sand-testing.png" alt="Sand Testing Process">
+                    <img src="images/sand-testing.png" alt="Sand Testing">
                     <div class="service-card-content">
-                        <h3>Sand Testing</h3>
-                        <p>Quality analysis of fine aggregates to ensure suitability for construction.</p>
+                        <h3>Sand & Fine Aggregate Testing</h3>
+                        <p>Quality checks for mortar and concrete works.</p>
                         <ul>
                             <li>Sieve Analysis</li>
-                            <li>Silt Content Test</li>
-                            <li>Bulking of Sand</li>
+                            <li>Bulking</li>
                             <li>Specific Gravity</li>
-                            <li>Moisture Content</li>
-                            <li>Organic Impurities Test</li>
+                            <li>Organic Impurities</li>
                         </ul>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="images/concrete.png" alt="Concrete Compression Testing">
+                    <img src="images/concrete.png" alt="Concrete Testing">
                     <div class="service-card-content">
                         <h3>Concrete Testing</h3>
-                        <p>Strength and quality testing of concrete for structural integrity.</p>
+                        <p>Fresh & hardened concrete quality verification.</p>
                         <ul>
-                            <li>Compressive Strength Test</li>
+                            <li>Compressive Strength</li>
                             <li>Slump Test</li>
-                            <li>Cube Testing</li>
                             <li>Flexural Strength</li>
-                            <li>Water Absorption</li>
-                            <li>Rebound Hammer Test</li>
+                            <li>Rebound Hammer</li>
                         </ul>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="images/aggregate.png" alt="Aggregate Testing Equipment">
+                    <img src="images/aggregate.png" alt="Aggregate Testing">
                     <div class="service-card-content">
-                        <h3>Aggregate Testing</h3>
-                        <p>Durability testing of coarse aggregates for long-term performance.</p>
+                        <h3>Coarse Aggregate Testing</h3>
+                        <p>Durability & strength properties testing.</p>
                         <ul>
-                            <li>Crushing Value Test</li>
-                            <li>Impact Value Test</li>
-                            <li>Abrasion Value (Los Angeles)</li>
-                            <li>Flakiness and Elongation Index</li>
-                            <li>Specific Gravity</li>
-                            <li>Water Absorption</li>
-                            <li>Soundness Test</li>
+                            <li>Crushing Value</li>
+                            <li>Impact Value</li>
+                            <li>Los Angeles Abrasion</li>
+                            <li>Flakiness Index</li>
                         </ul>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="https://www.canr.msu.edu/drainage/uploads/inline-images/IMG_3005.JPG" alt="Water Testing Lab">
+                    <img src="images/brick.png" alt="Brick Testing">
                     <div class="service-card-content">
-                        <h3>Water Testing</h3>
-                        <p>Chemical testing of construction water to meet quality standards.</p>
+                        <h3>Brick & Block Testing</h3>
+                        <p>Quality assessment of clay & fly ash bricks.</p>
                         <ul>
-                            <li>pH Value</li>
-                            <li>Hardness</li>
-                            <li>Chloride Content</li>
-                            <li>Sulphate Content</li>
+                            <li>Compressive Strength</li>
+                            <li>Water Absorption</li>
+                            <li>Efflorescence</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/bitumen.png" alt="Bitumen Testing">
+                    <div class="service-card-content">
+                        <h3>Bitumen Testing</h3>
+                        <p>Performance grading for roads & waterproofing.</p>
+                        <ul>
+                            <li>Penetration</li>
+                            <li>Softening Point</li>
+                            <li>Ductility</li>
+                            <li>Viscosity</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/rebar.png" alt="Rebar Testing">
+                    <div class="service-card-content">
+                        <h3>Reinforcement Steel (TMT/Rebar) Testing</h3>
+                        <p>Mechanical & chemical compliance check.</p>
+                        <ul>
+                            <li>Tensile Strength</li>
+                            <li>Elongation</li>
+                            <li>Bend & Rebend</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/paver.png" alt="Paver Block Testing">
+                    <div class="service-card-content">
+                        <h3>Paver Block Testing</h3>
+                        <p>Strength & durability of precast pavers.</p>
+                        <ul>
+                            <li>Compressive Strength</li>
+                            <li>Water Absorption</li>
+                            <li>Abrasion Resistance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/water.png" alt="Water Testing">
+                    <div class="service-card-content">
+                        <h3>Construction Water Testing</h3>
+                        <p>Chemical suitability for concrete mixing & curing.</p>
+                        <ul>
+                            <li>pH</li>
+                            <li>Chloride & Sulphate</li>
                             <li>Alkalinity</li>
-                            <li>Organic Matter</li>
-                            <li>Turbidity</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Design & Consultancy Services -->
+                <div class="service-card">
+                    <img src="images/design.png" alt="Structural Design">
+                    <div class="service-card-content">
+                        <h3>Structural Design & Drawings</h3>
+                        <p>Complete RCC / steel structural design and detailed working drawings as per latest IS codes & NBC.</p>
+                        <ul>
+                            <li>Residential & commercial buildings</li>
+                            <li>Foundation & superstructure design</li>
+                            <li>Seismic analysis & detailing</li>
+                            <li>Bar bending schedules (BBS)</li>
+                            <li>2D & 3D working drawings</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/consultancy.png" alt="Civil Consultancy">
+                    <div class="service-card-content">
+                        <h3>Civil Engineering Consultancy</h3>
+                        <p>Expert technical advice and third-party checking for quality & compliance.</p>
+                        <ul>
+                            <li>Feasibility studies</li>
+                            <li>Proof checking of designs</li>
+                            <li>Retrofitting & rehabilitation advice</li>
+                            <li>Cost estimation & BOQ preparation</li>
+                            <li>Statutory approvals assistance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/supervision.png" alt="Construction Supervision">
+                    <div class="service-card-content">
+                        <h3>Construction Supervision & Management</h3>
+                        <p>Site supervision, quality control and project monitoring from foundation to handover.</p>
+                        <ul>
+                            <li>Daily progress monitoring</li>
+                            <li>Material & workmanship quality checks</li>
+                            <li>Stage-wise certification</li>
+                            <li>Contractor coordination</li>
+                            <li>Safety & site management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="images/execution.png" alt="Project Execution">
+                    <div class="service-card-content">
+                        <h3>Project Execution & Turnkey Construction</h3>
+                        <p>Complete construction delivery – from planning to handover with full accountability.</p>
+                        <ul>
+                            <li>Residential houses & villas</li>
+                            <li>Commercial buildings</li>
+                            <li>Institutional projects</li>
+                            <li>Labour, material & machinery management</li>
+                            <li>Timely & budget-controlled delivery</li>
                         </ul>
                     </div>
                 </div>
@@ -599,9 +700,14 @@
     <!-- ========== CTA ========== -->
     <section class="cta">
         <div class="container">
-            <h2>Need Custom Testing?</h2>
-            <p>Contact us for specialized civil material testing solutions.</p>
-            <a href="contact.html" class="btn-primary">Contact Us</a>
+            <h2>Ready to Start Your Project?</h2>
+            <p>Contact us for material testing, structural design, consultancy, supervision or complete turnkey construction services.</p>
+           
+            <!-- Special offer in CTA section -->
+            <div class="cta-offer">
+                🏠 Special discount in soil and material testings for individual house owners!
+            </div>
+            <a href="contact.html" class="btn-primary">Get in Touch</a>
         </div>
     </section>
     <!-- ========== FOOTER ========== -->
@@ -610,10 +716,8 @@
             <div class="container">
                 <h4>ABOUT US</h4>
                 <p>
-                    K Terra North East Infra is a professional civil testing laboratory providing
-                    accurate, reliable, and standard-compliant material testing services.
-                    We support safe and durable construction through scientific testing
-                    and expert analysis.
+                    Kterra North East Infra is a forward-thinking civil engineering company based in Tezpur, Assam.
+                    We provide integrated solutions – from soil & material testing to structural design, consultancy, supervision and full project execution – with strong emphasis on safety, quality and affordability.
                 </p>
             </div>
         </div>
@@ -625,17 +729,19 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="lab-footer-box">
                     <h4>OUR SERVICES</h4>
                     <ul>
-                        <li>Soil Testing</li>
-                        <li>Sand Testing</li>
-                        <li>Concrete Testing</li>
-                        <li>Aggregate Testing</li>
-                        <li>Water Testing</li>
+                        <li>Soil & Geotechnical Investigation</li>
+                        <li>Material Testing Laboratory</li>
+                        <li>Structural Design & Drawings</li>
+                        <li>Civil Engineering Consultancy</li>
+                        <li>Construction Supervision & Management</li>
+                        <li>Turnkey Project Execution</li>
                     </ul>
                 </div>
                 <div class="lab-footer-box">
@@ -656,13 +762,14 @@
             <div class="container">
                 <h4>OUR LOCATION</h4>
                 <iframe
-                    src="https://www.google.com/maps?q=Kataki+Chuburi%2C+Dekargaon%2C+Tezpur%2C+784501%2C+Assam&output=embed"
-                    loading="lazy">
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.0000000000005!2d92.794!3d26.629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3744f0e0e0e0e0e0%3A0x0!2sKataki+Chuburi%2C+Dekargaon%2C+Tezpur%2C+Assam+784501!5e0!3m2!1sen!2sin!4v1730000000000"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
         </div>
         <div class="lab-footer-bottom">
-            © 2026 K Terra North East Infra Laboratory. All rights reserved.
+            © 2026 Kterra North East Infra. All rights reserved.
         </div>
     </footer>
     <script>
@@ -670,17 +777,13 @@
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
-        // Close menu when clicking outside
         document.addEventListener('click', function(event) {
             const navLinks = document.getElementById('navLinks');
-            const menuToggle = document.querySelector('.menu-toggle');
             const navContainer = document.querySelector('.nav-container');
-           
             if (!navContainer.contains(event.target)) {
                 navLinks.classList.remove('active');
             }
         });
-        // Close menu when clicking on a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', function() {
                 document.getElementById('navLinks').classList.remove('active');
