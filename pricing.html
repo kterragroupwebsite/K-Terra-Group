@@ -42,7 +42,6 @@
         .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
         .menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
         .menu-toggle span { width: 25px; height: 3px; background: #0a6ebd; border-radius: 2px; transition: 0.3s; }
-
         .hero {
             min-height: 60vh;
             background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("images/pricing-hero.png") center/cover no-repeat;
@@ -50,13 +49,10 @@
         }
         .hero h1 { font-size: 42px; margin-bottom: 15px; }
         .hero p { margin: 20px 0; font-size: 18px; }
-
         .pricing-overview { padding: 80px 0; background: #f9f9f9; }
         .section-title { font-size: 34px; color: #1f2d3d; text-align: center; margin-bottom: 8px; }
         .section-subtitle { font-size: 16px; color: #555; text-align: center; margin-bottom: 40px; }
-
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-
         .service-card {
             background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden;
@@ -66,12 +62,10 @@
         .service-card-content { padding: 20px; }
         .service-card h3 { font-size: 22px; color: #1f2d3d; margin-bottom: 12px; }
         .service-card p { color: #666; margin-bottom: 15px; line-height: 1.7; }
-
         .discount-note {
             background: #e6ffe6; padding: 12px; border-radius: 6px; margin: 15px 0;
             font-weight: 600; color: #006400; text-align: center;
         }
-
         .table-wrapper {
             overflow-x: auto;
             margin: 15px 0;
@@ -83,11 +77,9 @@
         th, td { padding: 12px; text-align: left; border: 1px solid #ddd; }
         th { background: #0a6ebd; color: white; font-weight: 600; white-space: nowrap; }
         tr:nth-child(even) { background: #f9f9f9; }
-
         .cta { padding: 60px 0; text-align: center; background: #fff; border-top: 1px solid #e5e5e5; }
         .cta h2 { font-size: 32px; color: #1f2d3d; margin-bottom: 15px; }
         .cta p { font-size: 18px; color: #666; margin-bottom: 25px; }
-
         .lab-footer { background: linear-gradient(135deg, #0b3c5d, #0f766e); color: #ffffff; text-align: center; }
         .lab-footer-about { padding: 60px 0 35px; border-bottom: 1px solid rgba(255,255,255,0.15); }
         .lab-footer-about h4 { font-size: 22px; margin-bottom: 15px; font-weight: 700; letter-spacing: 1px; }
@@ -111,7 +103,6 @@
         .lab-footer-map h4 { font-size: 22px; margin-bottom: 15px; }
         .lab-footer-map iframe { width: 100%; height: 280px; border: 0; border-radius: 14px; }
         .lab-footer-bottom { background: #041f2e; padding: 16px; font-size: 16px; color: #bae6fd; }
-
         /* ───────────────────────────────────────────────
            MOBILE RESPONSIVENESS
         ─────────────────────────────────────────────── */
@@ -121,7 +112,6 @@
             .hero h1 { font-size: 36px; }
             .hero p { font-size: 16px; }
         }
-
         @media (max-width: 768px) {
             .menu-toggle { display: flex; }
             .nav-links {
@@ -133,21 +123,16 @@
             .nav-links.active { display: flex; }
             .nav-links li { margin: 12px 0; }
             .nav-links a { font-size: 1.1rem; }
-
             .hero { min-height: 50vh; padding: 40px 0; }
             .hero h1 { font-size: 32px; }
             .hero p { font-size: 16px; padding: 0 15px; }
-
             .services-grid { grid-template-columns: 1fr; }
             .service-card img { height: 180px; }
-
             .cta { padding: 50px 0; }
             .cta h2 { font-size: 28px; }
-
             .lab-footer-container { grid-template-columns: 1fr; gap: 35px; }
             .lab-footer-map iframe { height: 220px; }
         }
-
         @media (max-width: 550px) {
             .logo img { height: 45px; }
             .logo span { font-size: 18px; }
@@ -158,7 +143,6 @@
             table { font-size: 14px; }
             th, td { padding: 10px; }
         }
-
         @media (max-width: 400px) {
             .container { width: 94%; }
             .btn-primary { padding: 10px 20px; font-size: 0.95rem; }
@@ -202,67 +186,54 @@
         <div class="container">
             <h2 class="section-title">Our Pricing Structure</h2>
             <p class="section-subtitle">All prices are indicative (GST extra as applicable). Final quotes after site/scope discussion. Special discounts for individual residential house owners on testing services.</p>
-
+            
             <div class="services-grid">
 
-                <!-- Soil Testing -->
+                <!-- 1. Cement Testing -->
                 <div class="service-card">
-                    <img src="images/soil-testing.png" alt="Soil Testing Lab">
+                    <img src="images/cement.png" alt="Cement Testing">
                     <div class="service-card-content">
-                        <h3>Soil Testing & Geotechnical Investigation</h3>
-                        <p class="discount-note">Special Discount: 20-30% off for individual house owners!</p>
+                        <h3>Cement Testing</h3>
+                        <p class="discount-note">Special Discount: Up to 25% off for house owners!</p>
                         <div class="table-wrapper">
                             <table>
                                 <tr><th>Test</th><th>Price (₹)</th></tr>
-                                <tr><td>Grain Size Analysis (Sieve Analysis)</td><td>800</td></tr>
-                                <tr><td>Atterberg Limits (LL, PL)</td><td>1,200</td></tr>
-                                <tr><td>Specific Gravity</td><td>600</td></tr>
-                                <tr><td>Proctor Compaction Test</td><td>1,500</td></tr>
-                                <tr><td>California Bearing Ratio (CBR)</td><td>2,500</td></tr>
-                                <tr><td>Direct Shear Test</td><td>1,800</td></tr>
-                                <tr><td>Triaxial Shear Test</td><td>3,000</td></tr>
+                                <tr><td>(i) Normal Consistency</td><td>400</td></tr>
+                                <tr><td>(ii) Initial & Final Setting Time</td><td>800</td></tr>
+                                <tr><td>(iii) Specific Gravity</td><td>400</td></tr>
+                                <tr><td>(iv) Fineness (Dry Sieving)</td><td>400</td></tr>
+                                <tr><td>Fineness (Air Permeability)</td><td>1,000</td></tr>
+                                <tr><td>(v) Soundness</td><td>1,000</td></tr>
+                                <tr><td>(vi) Compressive Strength (3 cubes)</td><td>2,400</td></tr>
                             </table>
                         </div>
+                        <p style="font-size:14px; color:#006400; margin-top:12px; font-weight:600;">Full Set: ₹5,000</p>
                     </div>
                 </div>
 
-                <!-- Sand -->
+                <!-- 2. Fine Aggregate Testing -->
                 <div class="service-card">
                     <img src="images/sand-testing.png" alt="Sand Testing">
                     <div class="service-card-content">
-                        <h3>Sand & Fine Aggregate Testing</h3>
+                        <h3>Fine Aggregate Testing</h3>
                         <p class="discount-note">Special Discount: Up to 25% off for house owners!</p>
                         <div class="table-wrapper">
                             <table>
                                 <tr><th>Test</th><th>Price (₹)</th></tr>
-                                <tr><td>Sieve Analysis</td><td>400</td></tr>
-                                <tr><td>Bulking</td><td>200</td></tr>
-                                <tr><td>Specific Gravity</td><td>300</td></tr>
-                                <tr><td>Organic Impurities</td><td>300</td></tr>
+                                <tr><td>(i) Particle Size Distribution</td><td>800</td></tr>
+                                <tr><td>(ii) Specific Gravity</td><td>400</td></tr>
+                                <tr><td>(iii) Water Absorption</td><td>400</td></tr>
+                                <tr><td>(iv) Bulking of Sand</td><td>500</td></tr>
+                                <tr><td>(v) Relative Density</td><td>700</td></tr>
+                                <tr><td>(vi) Silt Content</td><td>500</td></tr>
+                                <tr><td>(vii) Presence of Deleterious Materials</td><td>500</td></tr>
                             </table>
                         </div>
+                        <p style="font-size:14px; color:#006400; margin-top:12px; font-weight:600;">Full Set: ₹3,000</p>
                     </div>
                 </div>
 
-                <!-- Concrete -->
-                <div class="service-card">
-                    <img src="images/concrete.png" alt="Concrete Testing">
-                    <div class="service-card-content">
-                        <h3>Concrete Testing</h3>
-                        <p class="discount-note">Special Discount: Up to 25% off for house owners!</p>
-                        <div class="table-wrapper">
-                            <table>
-                                <tr><th>Test</th><th>Price (₹)</th></tr>
-                                <tr><td>Compressive Strength</td><td>1,100</td></tr>
-                                <tr><td>Slump Test</td><td>300</td></tr>
-                                <tr><td>Flexural Strength</td><td>900</td></tr>
-                                <tr><td>Rebound Hammer</td><td>500</td></tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Coarse Aggregate -->
+                <!-- 3. Coarse Aggregate Testing -->
                 <div class="service-card">
                     <img src="images/aggregate.png" alt="Coarse Aggregate Testing">
                     <div class="service-card-content">
@@ -271,33 +242,109 @@
                         <div class="table-wrapper">
                             <table>
                                 <tr><th>Test</th><th>Price (₹)</th></tr>
-                                <tr><td>Crushing Value</td><td>400</td></tr>
-                                <tr><td>Impact Value</td><td>400</td></tr>
-                                <tr><td>Los Angeles Abrasion</td><td>600</td></tr>
-                                <tr><td>Flakiness Index</td><td>300</td></tr>
+                                <tr><td>(i) Particle Size Distribution</td><td>800</td></tr>
+                                <tr><td>(ii) Specific Gravity</td><td>400</td></tr>
+                                <tr><td>(iii) Water Absorption</td><td>500</td></tr>
+                                <tr><td>(iv) Bulk Density & voids</td><td>450</td></tr>
+                                <tr><td>(v) Crushing Value</td><td>1,200</td></tr>
+                                <tr><td>(vi) Impact Value</td><td>1,000</td></tr>
+                                <tr><td>(vii) Presence of Deleterious Materials</td><td>500</td></tr>
+                                <tr><td>(viii) Abrasion Value</td><td>1,000</td></tr>
+                                <tr><td>(ix) Flakiness Index</td><td>600</td></tr>
+                                <tr><td>(x) Elongation Index</td><td>600</td></tr>
+                                <tr><td>(xi) Floor Tiles Abrasion Test</td><td>1,000</td></tr>
                             </table>
                         </div>
+                        <p style="font-size:14px; color:#006400; margin-top:12px; font-weight:600;">
+                            Full Set (i, ii, iii, v, vi, viii, ix, x): ₹6,000
+                        </p>
                     </div>
                 </div>
 
-                <!-- Brick -->
+                <!-- 4. Bricks Testing -->
                 <div class="service-card">
                     <img src="images/brick.png" alt="Brick Testing">
                     <div class="service-card-content">
-                        <h3>Brick & Block Testing</h3>
+                        <h3>Brick Testing</h3>
                         <p class="discount-note">Special Discount: Up to 25% off for house owners!</p>
                         <div class="table-wrapper">
                             <table>
                                 <tr><th>Test</th><th>Price (₹)</th></tr>
-                                <tr><td>Compressive Strength</td><td>900</td></tr>
-                                <tr><td>Water Absorption</td><td>400</td></tr>
-                                <tr><td>Efflorescence</td><td>300</td></tr>
+                                <tr><td>(i) Dimension Test</td><td>200</td></tr>
+                                <tr><td>(ii) Water Absorption Test</td><td>300</td></tr>
+                                <tr><td>(iii) Efflorescence Test</td><td>200</td></tr>
+                                <tr><td>(iv) Compressive Strength</td><td>500</td></tr>
+                            </table>
+                        </div>
+                        <p style="font-size:14px; color:#006400; margin-top:12px; font-weight:600;">Full Set (per brick): ₹1,000</p>
+                    </div>
+                </div>
+
+                <!-- 5. Steel Testing -->
+                <div class="service-card">
+                    <img src="images/rebar.png" alt="Rebar Testing">
+                    <div class="service-card-content">
+                        <h3>Tests on Steel (Per Diameter, per number)</h3>
+                        <p class="discount-note">Special Discount: Up to 25% off for house owners!</p>
+                        <div class="table-wrapper">
+                            <table>
+                                <tr><th>Test</th><th>Price (₹)</th></tr>
+                                <tr><td>(i) Ultimate Tensile Strength</td><td>1,000</td></tr>
+                                <tr><td>(ii) Bend & Re-bend Test</td><td>500</td></tr>
+                                <tr><td>(iii) Elongation Test</td><td>500</td></tr>
+                                <tr><td>(iv) Unit Weight</td><td>300</td></tr>
+                            </table>
+                        </div>
+                        <p style="font-size:14px; color:#006400; margin-top:12px; font-weight:600;">Full Set (per diameter): ₹2,000</p>
+                    </div>
+                </div>
+
+                <!-- 6. Soil Testing -->
+                <div class="service-card">
+                    <img src="images/soil-testing.png" alt="Soil Testing Lab">
+                    <div class="service-card-content">
+                        <h3>Tests on Soil (Per Sample)</h3>
+                        <p class="discount-note">Special Discount: 20-30% off for individual house owners!</p>
+                        <div class="table-wrapper">
+                            <table>
+                                <tr><th>Test</th><th>Price (₹)</th></tr>
+                                <tr><td>(i) CBR (in Lab)</td><td>2,500</td></tr>
+                                <tr><td>(ii) OMC & MDD</td><td>2,500</td></tr>
+                                <tr><td>(iii) Sieve Analysis</td><td>2,500</td></tr>
+                                <tr><td>(iv) Specific Gravity</td><td>1,000</td></tr>
+                                <tr><td>(v) Liquid Limit & Plastic Limit</td><td>600</td></tr>
+                                <tr><td>(vi) Field Density (Lab)</td><td>1,000 (per point)</td></tr>
+                                <tr><td>(vii) Field SPT</td><td>8,000 (per point)</td></tr>
                             </table>
                         </div>
                     </div>
                 </div>
 
-                <!-- Bitumen -->
+              <!-- 7. Concrete Testing -->
+<div class="service-card">
+    <img src="images/concrete.png" alt="Concrete Testing">
+    <div class="service-card-content">
+        <h3>Concrete Testing</h3>
+        <p class="discount-note">Special Discount: Up to 25% off for house owners!</p>
+        <div class="table-wrapper">
+            <table>
+                <tr><th>Test</th><th>Price (₹)</th></tr>
+                <tr><td>(i) Concrete Cube (3 nos.)</td><td>1,000</td></tr>
+                <tr><td>(ii) Concrete Mix Design (Up to M25)</td><td>10,000</td></tr>
+                <tr><td>(ii) Concrete Mix Design (Above M25)</td><td>12,000</td></tr>
+                <tr>
+                    <td colspan="2" style="color: #e63946; font-weight: 600; font-size: 14px; padding: 12px 12px; background: #fff0f0; border: 1px solid #ffcdd2;">
+                        If nos. of design is done for same materials and same site irrespective of grade, full payments for first design, then Rs.4000/- will be less for next grade design.
+                    </td>
+                </tr>
+                <tr><td>(iii) Compressive Strength Test of Cement (per block)</td><td>350</td></tr>
+            </table>
+        </div>
+        <p style="font-size:14px; color:#006400; margin-top:8px;">10% less on more than 9 sets</p>
+    </div>
+</div>
+
+                <!-- 8. Bitumen Testing -->
                 <div class="service-card">
                     <img src="images/bitumen.png" alt="Bitumen Testing">
                     <div class="service-card-content">
@@ -305,137 +352,39 @@
                         <div class="table-wrapper">
                             <table>
                                 <tr><th>Test</th><th>Price (₹)</th></tr>
-                                <tr><td>Penetration</td><td>500</td></tr>
-                                <tr><td>Softening Point</td><td>500</td></tr>
-                                <tr><td>Ductility</td><td>600</td></tr>
-                                <tr><td>Viscosity</td><td>700</td></tr>
+                                <tr><td>(i) Softening Point</td><td>1,000</td></tr>
+                                <tr><td>(ii) Viscosity Test</td><td>1,000</td></tr>
+                                <tr><td>(iii) Specific Gravity</td><td>1,000</td></tr>
+                                <tr><td>(iv) Boiling Point</td><td>600</td></tr>
+                                <tr><td>(v) Flash Point</td><td>600</td></tr>
+                                <tr><td>(vi) Marshall Stability</td><td>2,000</td></tr>
                             </table>
                         </div>
+                        <p style="font-size:14px; color:#006400; margin-top:12px; font-weight:600;">Full Set: ₹5,000</p>
                     </div>
                 </div>
 
-                <!-- Rebar -->
-                <div class="service-card">
-                    <img src="images/rebar.png" alt="Rebar Testing">
-                    <div class="service-card-content">
-                        <h3>Reinforcement Steel (TMT/Rebar) Testing</h3>
-                        <p class="discount-note">Special Discount: Up to 25% off for house owners!</p>
-                        <div class="table-wrapper">
-                            <table>
-                                <tr><th>Test</th><th>Price (₹)</th></tr>
-                                <tr><td>Tensile Strength</td><td>800</td></tr>
-                                <tr><td>Elongation</td><td>400</td></tr>
-                                <tr><td>Bend & Rebend</td><td>600</td></tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Paver -->
-                <div class="service-card">
-                    <img src="images/paver.png" alt="Paver Block Testing">
-                    <div class="service-card-content">
-                        <h3>Paver Block Testing</h3>
-                        <div class="table-wrapper">
-                            <table>
-                                <tr><th>Test</th><th>Price (₹)</th></tr>
-                                <tr><td>Compressive Strength</td><td>700</td></tr>
-                                <tr><td>Water Absorption</td><td>400</td></tr>
-                                <tr><td>Abrasion Resistance</td><td>500</td></tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Water -->
-                <div class="service-card">
-                    <img src="images/water.png" alt="Construction Water Testing">
-                    <div class="service-card-content">
-                        <h3>Construction Water Testing</h3>
-                        <p class="discount-note">Special Discount: Up to 25% off for house owners!</p>
-                        <div class="table-wrapper">
-                            <table>
-                                <tr><th>Test</th><th>Price (₹)</th></tr>
-                                <tr><td>pH</td><td>200</td></tr>
-                                <tr><td>Chloride & Sulphate</td><td>500</td></tr>
-                                <tr><td>Alkalinity</td><td>300</td></tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Structural Design -->
-                <div class="service-card">
-                    <img src="images/design.png" alt="Structural Design">
-                    <div class="service-card-content">
-                        <h3>Structural Design & Drawings</h3>
-                        <div class="table-wrapper">
-                            <table>
-                                <tr><th>Project Type</th><th>Rate</th></tr>
-                                <tr><td>Residential House/Villa (per sq ft built-up)</td><td>₹9 / sq ft</td></tr>
-                                <tr><td>Commercial/Institutional</td><td>₹14 / sq ft</td></tr>
-                                <tr><td>Minimum Charge (Small Project)</td><td>₹30,000</td></tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Consultancy -->
-                <div class="service-card">
-                    <img src="images/consultancy.png" alt="Civil Consultancy">
-                    <div class="service-card-content">
-                        <h3>Civil Engineering Consultancy</h3>
-                        <div class="table-wrapper">
-                            <table>
-                                <tr><th>Service</th><th>Price (₹)</th></tr>
-                                <tr><td>Proof Checking / Feasibility Study</td><td>25,000</td></tr>
-                                <tr><td>BOQ + Cost Estimation</td><td>₹6 / sq ft</td></tr>
-                                <tr><td>Statutory Approvals Assistance</td><td>20,000</td></tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Supervision -->
-                <div class="service-card">
-                    <img src="images/supervision.png" alt="Construction Supervision">
-                    <div class="service-card-content">
-                        <h3>Construction Supervision & Management</h3>
-                        <div class="table-wrapper">
-                            <table>
-                                <tr><th>Project Type</th><th>Rate</th></tr>
-                                <tr><td>Residential (Full till handover)</td><td>5.5% of construction cost</td></tr>
-                                <tr><td>Commercial/Institutional</td><td>6.5% of construction cost</td></tr>
-                                <tr><td>Monthly Limited Supervision</td><td>₹25,000 / month</td></tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Turnkey -->
-                <div class="service-card">
-                    <img src="images/execution.png" alt="Turnkey Construction">
-                    <div class="service-card-content">
-                        <h3>Project Execution & Turnkey Construction</h3>
-                        <div class="table-wrapper">
-                            <table>
-                                <tr><th>Project Type</th><th>Rate (₹ / sq ft)</th></tr>
-                                <tr><td>Residential House / Villa (Standard Finish)</td><td>2,400</td></tr>
-                                <tr><td>Premium Finish</td><td>3,200</td></tr>
-                                <tr><td>Commercial / Institutional Projects</td><td>On Request</td></tr>
-                                <tr><td>Includes</td><td>Labour, Material & Machinery</td></tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div style="text-align:center; margin-top:40px; font-size:16px; color:#555;">
-                <p><strong>All prices are indicative and subject to final scope, location, and current market rates.</strong><br>
-                Contact us for a customized, no-obligation quote.</p>
-            </div>
+                <!-- 9. Survey Instruments Hiring Charges -->
+<div class="service-card">
+    <img src="images/survey.png" alt="Survey Instruments Hiring">
+    <div class="service-card-content">
+        <h3>Survey Instruments Hiring Charges</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr><th>Instrument</th><th>Rate (₹ per day)</th></tr>
+                <tr><td>(i) Theodolite</td><td>2,000</td></tr>
+                <tr><td>(ii) Dumpy Level</td><td>2,000</td></tr>
+                <tr><td>(iii) Compass</td><td>1,000</td></tr>
+                <tr><td>(iv) Total Station</td><td>3,000</td></tr>
+            </table>
         </div>
+    </div>
+</div>
+
+
+              
+                  
+            
     </section>
 
     <!-- CTA -->
@@ -508,7 +457,6 @@
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
-
         document.addEventListener('click', function(event) {
             const navLinks = document.getElementById('navLinks');
             const navContainer = document.querySelector('.nav-container');
@@ -516,7 +464,6 @@
                 navLinks.classList.remove('active');
             }
         });
-
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', function() {
                 document.getElementById('navLinks').classList.remove('active');

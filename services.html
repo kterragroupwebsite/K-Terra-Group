@@ -135,7 +135,6 @@
             margin: 20px 0;
             font-size: 18px;
         }
-        /* Special Offer Banner Style */
         .special-offer {
             background: linear-gradient(135deg, #e63946, #f48c96);
             color: white;
@@ -241,7 +240,6 @@
             color: #666;
             margin-bottom: 25px;
         }
-        /* Special offer in CTA */
         .cta-offer {
             background: #fff3e0;
             border: 2px dashed #f57c00;
@@ -366,120 +364,44 @@
             font-size: 16px;
             color: #bae6fd;
         }
-        /* ==================== MOBILE OPTIMIZATIONS ==================== */
         @media (max-width: 900px) {
-            .section-title {
-                font-size: 28px;
-            }
-            .section-subtitle {
-                font-size: 15px;
-            }
-            .hero h1 {
-                font-size: 36px;
-            }
-            .hero p {
-                font-size: 16px;
-            }
+            .section-title { font-size: 28px; }
+            .section-subtitle { font-size: 15px; }
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 16px; }
         }
         @media (max-width: 768px) {
-            .menu-toggle {
-                display: flex;
-            }
+            .menu-toggle { display: flex; }
             .nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #ffffff;
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                position: absolute; top: 100%; left: 0; right: 0;
+                background: #ffffff; flex-direction: column; align-items: center;
+                padding: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
                 display: none;
             }
-            .nav-links.active {
-                display: flex;
-            }
-            .nav-links li {
-                margin: 12px 0;
-            }
-            .nav-links a {
-                font-size: 1.1rem;
-            }
-            .hero {
-                min-height: 50vh;
-                padding: 40px 0;
-            }
-            .hero h1 {
-                font-size: 32px;
-            }
-            .hero p {
-                font-size: 16px;
-                padding: 0 15px;
-            }
-            .special-offer {
-                font-size: 1.1rem;
-                padding: 14px 10px;
-            }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .service-card img {
-                height: 180px;
-            }
-            .cta {
-                padding: 50px 0;
-            }
-            .cta h2 {
-                font-size: 28px;
-            }
-            .cta-offer {
-                font-size: 1.1rem;
-                padding: 16px;
-                margin: 20px 15px;
-            }
-            .lab-footer-container {
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-            .lab-footer-map iframe {
-                height: 220px;
-            }
+            .nav-links.active { display: flex; }
+            .nav-links li { margin: 12px 0; }
+            .nav-links a { font-size: 1.1rem; }
+            .hero { min-height: 50vh; padding: 40px 0; }
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; padding: 0 15px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .service-card img { height: 180px; }
+            .cta { padding: 50px 0; }
+            .cta h2 { font-size: 28px; }
+            .lab-footer-container { grid-template-columns: 1fr; gap: 35px; }
+            .lab-footer-map iframe { height: 220px; }
         }
         @media (max-width: 550px) {
-            .logo img {
-                height: 45px;
-            }
-            .logo span {
-                font-size: 18px;
-            }
-            .section-title {
-                font-size: 26px;
-            }
-            .service-card h3 {
-                font-size: 20px;
-            }
-            .service-card li {
-                font-size: 14px;
-            }
-            .service-card img {
-                height: 160px;
-            }
-            .hero {
-                min-height: 45vh;
-            }
-            .special-offer span {
-                font-size: 1rem;
-            }
+            .logo img { height: 45px; }
+            .logo span { font-size: 18px; }
+            .section-title { font-size: 26px; }
+            .service-card h3 { font-size: 20px; }
+            .service-card img { height: 160px; }
+            .hero { min-height: 45vh; }
         }
         @media (max-width: 400px) {
-            .container {
-                width: 94%;
-            }
-            .btn-primary {
-                padding: 10px 20px;
-                font-size: 0.95rem;
-            }
+            .container { width: 94%; }
+            .btn-primary { padding: 10px 20px; font-size: 0.95rem; }
         }
     </style>
 </head>
@@ -505,6 +427,7 @@
             </ul>
         </div>
     </header>
+
     <!-- ========== HERO ========== -->
     <section class="hero">
         <div class="container">
@@ -512,204 +435,189 @@
             <p>From soil investigation and material testing to complete structural design, consultancy, construction supervision and turnkey project execution – we deliver end-to-end civil engineering solutions in North East India.</p>
         </div>
     </section>
-    <!-- SPECIAL OFFER NOTICE (after hero) -->
+
+    <!-- SPECIAL OFFER NOTICE -->
     <div class="special-offer">
         <span>🏠 Special Offer for Individual House Owners: Get Special Discount on Soil Testing & All Material Testing Services!</span>
     </div>
+
     <!-- ========== SERVICES ========== -->
     <section class="services-overview">
         <div class="container">
             <h2 class="section-title">Complete Civil Engineering & Construction Services</h2>
             <p class="section-subtitle">We offer full-spectrum services – accurate material testing, expert design & consultancy, and reliable construction delivery – tailored for residential, commercial, institutional and infrastructure projects in Assam and the North East.</p>
+
             <div class="services-grid">
-                <!-- Material Testing Services -->
+
+                <!-- 1. Cement Testing (PDF Section 1) -->
                 <div class="service-card">
-                    <img src="images/soil-testing.png" alt="Soil Testing">
+                    <img src="images/cement.png" alt="Cement Testing">
                     <div class="service-card-content">
-                        <h3>Soil Testing & Geotechnical Investigation</h3>
-                        <p>Foundation recommendation and site suitability studies.</p>
+                        <h3>Cement Testing</h3>
+                        <p>Full quality testing as per IS standards.</p>
                         <ul>
-                            <li>SPT (Standard Penetration Test)</li>
-                            <li>Atterberg Limits</li>
-                            <li>Grain Size Analysis</li>
-                            <li>Proctor Compaction</li>
-                            <li>CBR (California Bearing Ratio)</li>
+                            <li>(i) Normal Consistency</li>
+                            <li>(ii) Initial & Final Setting Time</li>
+                            <li>(iii) Specific Gravity</li>
+                            <li>(iv) Fineness (Dry Sieving)</li>
+                            <li>Fineness (Air Permeability)</li>
+                            <li>(v) Soundness</li>
+                            <li>(vi) Compressive Strength (3 cubes)</li>
                         </ul>
                     </div>
                 </div>
+
+                <!-- 2. Fine Aggregate Testing (PDF Section 2) -->
                 <div class="service-card">
                     <img src="images/sand-testing.png" alt="Sand Testing">
                     <div class="service-card-content">
-                        <h3>Sand & Fine Aggregate Testing</h3>
+                        <h3>Fine Aggregate Testing</h3>
                         <p>Quality checks for mortar and concrete works.</p>
                         <ul>
-                            <li>Sieve Analysis</li>
-                            <li>Bulking</li>
-                            <li>Specific Gravity</li>
-                            <li>Organic Impurities</li>
+                            <li>(i) Particle Size Distribution</li>
+                            <li>(ii) Specific Gravity</li>
+                            <li>(iii) Water Absorption</li>
+                            <li>(iv) Bulking of Sand</li>
+                            <li>(v) Relative Density</li>
+                            <li>(vi) Silt Content</li>
+                            <li>(vii) Presence of Deleterious Materials</li>
                         </ul>
                     </div>
                 </div>
+
+                <!-- 3. Coarse Aggregate Testing (PDF Section 3) -->
+                <div class="service-card">
+                    <img src="images/aggregate.png" alt="Coarse Aggregate Testing">
+                    <div class="service-card-content">
+                        <h3>Coarse Aggregate Testing</h3>
+                        <p>Durability & strength properties testing.</p>
+                        <ul>
+                            <li>(i) Particle Size Distribution</li>
+                            <li>(ii) Specific Gravity</li>
+                            <li>(iii) Water Absorption</li>
+                            <li>(iv) Bulk Density & voids</li>
+                            <li>(v) Crushing Value</li>
+                            <li>(vi) Impact Value</li>
+                            <li>(vii) Presence of Deleterious Materials</li>
+                            <li>(viii) Abrasion Value</li>
+                            <li>(ix) Flakiness Index</li>
+                            <li>(x) Elongation Index</li>
+                            <li>(xi) Floor Tiles Abrasion Test</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. Brick Testing (PDF Section 4) -->
+                <div class="service-card">
+                    <img src="images/brick.png" alt="Brick Testing">
+                    <div class="service-card-content">
+                        <h3>Brick Testing</h3>
+                        <p>Quality assessment of clay & fly ash bricks.</p>
+                        <ul>
+                            <li>(i) Dimension Test</li>
+                            <li>(ii) Water Absorption Test</li>
+                            <li>(iii) Efflorescence Test</li>
+                            <li>(iv) Compressive Strength</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. Steel Testing (PDF Section 5) -->
+                <div class="service-card">
+                    <img src="images/rebar.png" alt="Rebar Testing">
+                    <div class="service-card-content">
+                        <h3>Tests on Steel (Per Diameter, per number)</h3>
+                        <p>Mechanical & chemical compliance check.</p>
+                        <ul>
+                            <li>(i) Ultimate Tensile Strength</li>
+                            <li>(ii) Bend & Re-bend Test</li>
+                            <li>(iii) Elongation Test</li>
+                            <li>(iv) Unit Weight</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 6. Soil Testing (PDF Section 6) -->
+                <div class="service-card">
+                    <img src="images/soil-testing.png" alt="Soil Testing">
+                    <div class="service-card-content">
+                        <h3>Tests on Soil (Per Sample)</h3>
+                        <p>Foundation recommendation and site suitability studies.</p>
+                        <ul>
+                            <li>(i) CBR (in Lab)</li>
+                            <li>(ii) OMC & MDD</li>
+                            <li>(iii) Sieve Analysis</li>
+                            <li>(iv) Specific Gravity</li>
+                            <li>(v) Liquid Limit & Plastic Limit</li>
+                            <li>(vi) Field Density (Lab)</li>
+                            <li>(vii) Field SPT</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 7. Concrete Testing (PDF Section 7) -->
                 <div class="service-card">
                     <img src="images/concrete.png" alt="Concrete Testing">
                     <div class="service-card-content">
                         <h3>Concrete Testing</h3>
                         <p>Fresh & hardened concrete quality verification.</p>
                         <ul>
-                            <li>Compressive Strength</li>
-                            <li>Slump Test</li>
-                            <li>Flexural Strength</li>
-                            <li>Rebound Hammer</li>
+                            <li>(i) Concrete Cube (3 nos.)</li>
+                            <li>(ii) Concrete Mix Design (Up to M25)</li>
+                            <li>(ii) Concrete Mix Design (Above M25)</li>
+                            <li>(iii) Compressive Strength Test of Cement Concrete Paver Block</li>
                         </ul>
                     </div>
                 </div>
-                <div class="service-card">
-                    <img src="images/aggregate.png" alt="Aggregate Testing">
-                    <div class="service-card-content">
-                        <h3>Coarse Aggregate Testing</h3>
-                        <p>Durability & strength properties testing.</p>
-                        <ul>
-                            <li>Crushing Value</li>
-                            <li>Impact Value</li>
-                            <li>Los Angeles Abrasion</li>
-                            <li>Flakiness Index</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="images/brick.png" alt="Brick Testing">
-                    <div class="service-card-content">
-                        <h3>Brick & Block Testing</h3>
-                        <p>Quality assessment of clay & fly ash bricks.</p>
-                        <ul>
-                            <li>Compressive Strength</li>
-                            <li>Water Absorption</li>
-                            <li>Efflorescence</li>
-                        </ul>
-                    </div>
-                </div>
+
+                <!-- 8. Bitumen Testing (PDF Section 8) -->
                 <div class="service-card">
                     <img src="images/bitumen.png" alt="Bitumen Testing">
                     <div class="service-card-content">
                         <h3>Bitumen Testing</h3>
                         <p>Performance grading for roads & waterproofing.</p>
                         <ul>
-                            <li>Penetration</li>
-                            <li>Softening Point</li>
-                            <li>Ductility</li>
-                            <li>Viscosity</li>
+                            <li>(i) Softening Point</li>
+                            <li>(ii) Viscosity Test</li>
+                            <li>(iii) Specific Gravity</li>
+                            <li>(iv) Boiling Point</li>
+                            <li>(v) Flash Point</li>
+                            <li>(vi) Marshall Stability</li>
                         </ul>
                     </div>
                 </div>
+
+                <!-- 9. Survey Instruments Hiring (PDF Section 9) -->
                 <div class="service-card">
-                    <img src="images/rebar.png" alt="Rebar Testing">
+                    <img src="images/survey.png" alt="Survey Instruments Hiring">
                     <div class="service-card-content">
-                        <h3>Reinforcement Steel (TMT/Rebar) Testing</h3>
-                        <p>Mechanical & chemical compliance check.</p>
+                        <h3>Survey Instruments Hiring Charges</h3>
+                        <p>Daily rental of precision surveying equipment.</p>
                         <ul>
-                            <li>Tensile Strength</li>
-                            <li>Elongation</li>
-                            <li>Bend & Rebend</li>
+                            <li>(i) Hiring Charge of per Theodolite per day</li>
+                            <li>(ii) Hiring Charge of per Dumpy Level per day</li>
+                            <li>(iii) Hiring Charge of per Compass per day</li>
+                            <li>(iv) Hiring Charge of per Total Station per day</li>
                         </ul>
                     </div>
                 </div>
-                <div class="service-card">
-                    <img src="images/paver.png" alt="Paver Block Testing">
-                    <div class="service-card-content">
-                        <h3>Paver Block Testing</h3>
-                        <p>Strength & durability of precast pavers.</p>
-                        <ul>
-                            <li>Compressive Strength</li>
-                            <li>Water Absorption</li>
-                            <li>Abrasion Resistance</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="images/water.png" alt="Water Testing">
-                    <div class="service-card-content">
-                        <h3>Construction Water Testing</h3>
-                        <p>Chemical suitability for concrete mixing & curing.</p>
-                        <ul>
-                            <li>pH</li>
-                            <li>Chloride & Sulphate</li>
-                            <li>Alkalinity</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Design & Consultancy Services -->
-                <div class="service-card">
-                    <img src="images/design.png" alt="Structural Design">
-                    <div class="service-card-content">
-                        <h3>Structural Design & Drawings</h3>
-                        <p>Complete RCC / steel structural design and detailed working drawings as per latest IS codes & NBC.</p>
-                        <ul>
-                            <li>Residential & commercial buildings</li>
-                            <li>Foundation & superstructure design</li>
-                            <li>Seismic analysis & detailing</li>
-                            <li>Bar bending schedules (BBS)</li>
-                            <li>2D & 3D working drawings</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="images/consultancy.png" alt="Civil Consultancy">
-                    <div class="service-card-content">
-                        <h3>Civil Engineering Consultancy</h3>
-                        <p>Expert technical advice and third-party checking for quality & compliance.</p>
-                        <ul>
-                            <li>Feasibility studies</li>
-                            <li>Proof checking of designs</li>
-                            <li>Retrofitting & rehabilitation advice</li>
-                            <li>Cost estimation & BOQ preparation</li>
-                            <li>Statutory approvals assistance</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="images/supervision.png" alt="Construction Supervision">
-                    <div class="service-card-content">
-                        <h3>Construction Supervision & Management</h3>
-                        <p>Site supervision, quality control and project monitoring from foundation to handover.</p>
-                        <ul>
-                            <li>Daily progress monitoring</li>
-                            <li>Material & workmanship quality checks</li>
-                            <li>Stage-wise certification</li>
-                            <li>Contractor coordination</li>
-                            <li>Safety & site management</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="images/execution.png" alt="Project Execution">
-                    <div class="service-card-content">
-                        <h3>Project Execution & Turnkey Construction</h3>
-                        <p>Complete construction delivery – from planning to handover with full accountability.</p>
-                        <ul>
-                            <li>Residential houses & villas</li>
-                            <li>Commercial buildings</li>
-                            <li>Institutional projects</li>
-                            <li>Labour, material & machinery management</li>
-                            <li>Timely & budget-controlled delivery</li>
-                        </ul>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
+
     <!-- ========== CTA ========== -->
     <section class="cta">
         <div class="container">
             <h2>Ready to Start Your Project?</h2>
             <p>Contact us for material testing, structural design, consultancy, supervision or complete turnkey construction services.</p>
-           
-            <!-- Special offer in CTA section -->
             <div class="cta-offer">
                 🏠 Special discount in soil and material testings for individual house owners!
             </div>
             <a href="contact.html" class="btn-primary">Get in Touch</a>
         </div>
     </section>
+
     <!-- ========== FOOTER ========== -->
     <footer class="lab-footer">
         <div class="lab-footer-about">
@@ -772,6 +680,7 @@
             © 2026 Kterra North East Infra. All rights reserved.
         </div>
     </footer>
+
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
