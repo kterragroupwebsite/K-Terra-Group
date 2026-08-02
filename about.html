@@ -8,54 +8,175 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
-        body { line-height: 1.6; color: #333; background: #f8f9fa; }
-        .container { width: 90%; max-width: 1200px; margin: auto; }
-        h1, h2, h3 { margin-bottom: 15px; font-weight: 700; }
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        /* ===== BUTTONS ===== */
         .btn-primary {
-            display: inline-block; padding: 12px 25px; background: #0a6ebd; color: #fff;
-            text-decoration: none; border-radius: 4px; transition: background 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            padding: 12px 25px;
+            background: #0a6ebd;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s ease, transform 0.2s ease;
             font-weight: 500;
+            border: none;
+            cursor: pointer;
         }
-        .btn-primary:hover { background: #084f8c; transform: translateY(-2px); }
+
+        .btn-primary:hover {
+            background: #084f8c;
+            transform: translateY(-2px);
+        }
+
+        /* ===== HEADER ===== */
         .header {
-            padding: 8px 0; background: #ffffff; border-bottom: 1px solid #e5e5e5;
-            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 8px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { display: flex; align-items: center; gap: 10px; }
-        .logo img { height: 50px; border-radius: 50%; }
-        .logo span { font-size: 20px; font-weight: bold; color: #0a6ebd; white-space: nowrap; }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 50px;
+            border-radius: 50%;
+            width: 50px;
+            object-fit: cover;
+        }
+
+        .logo span {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0a6ebd;
+            white-space: nowrap;
+        }
+
         .nav-links {
-            list-style: none; display: flex; align-items: center;
+            list-style: none;
+            display: flex;
+            align-items: center;
         }
-        .nav-links li { margin-left: 25px; }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
         .nav-links a {
-            text-decoration: none; font-weight: 600; color: #333; position: relative;
-            padding-bottom: 4px; transition: color 0.3s ease;
+            text-decoration: none;
+            font-weight: 600;
+            color: #333;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s ease;
         }
-        .nav-links a:hover, .nav-links a.active { color: #0a6ebd; }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #0a6ebd;
+        }
+
         .nav-links a::after {
-            content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 2px;
-            background: #0a6ebd; transition: 0.3s;
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: #0a6ebd;
+            transition: 0.3s;
         }
-        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-        .menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
-        .menu-toggle span { width: 25px; height: 3px; background: #0a6ebd; border-radius: 2px; transition: 0.3s; }
 
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #0a6ebd;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* ===== HERO - Only Background Image (No Text) ===== */
         .hero {
-            min-height: 60vh;
-            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("images/about-hero.png") center/cover no-repeat;
-            color: #fff; display: flex; align-items: center; text-align: center;
+            min-height: 85vh;
+            padding: 120px 0;
+            background: url("images/about-hero.jpg") center center / cover no-repeat;
+            display: flex;
+            align-items: center;
+            text-align: center;
         }
-        .hero h1 { font-size: 42px; margin-bottom: 15px; }
-        .hero p { margin: 20px 0; font-size: 18px; }
 
-        .about-overview { padding: 80px 0; background: #f9f9f9; }
-        .section-title { font-size: 42px; color: #1f2d3d; text-align: center; margin-bottom: 20px; }
-        .section-subtitle { font-size: 18px; color: #555; text-align: center; max-width: 800px; margin: 0 auto 50px; }
+        /* ===== ABOUT OVERVIEW ===== */
+        .about-overview {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
 
-        /* Founder Section */
+        .section-title {
+            font-size: 42px;
+            color: #1f2d3d;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        /* ===== FOUNDER SECTION ===== */
         .founder {
             background: #fff;
             border-radius: 12px;
@@ -66,7 +187,11 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
-        .founder:hover { transform: translateY(-8px); }
+
+        .founder:hover {
+            transform: translateY(-8px);
+        }
+
         .founder img {
             width: 240px;
             height: 240px;
@@ -76,16 +201,28 @@
             margin-bottom: 25px;
             box-shadow: 0 4px 15px rgba(10,110,189,0.2);
         }
-        .founder h3 { font-size: 28px; color: #0a6ebd; margin-bottom: 10px; }
-        .position { font-size: 1.3rem; color: #555; font-weight: 500; margin-bottom: 20px; }
 
-        /* Mission / Vision / Commitment Cards */
+        .founder h3 {
+            font-size: 28px;
+            color: #0a6ebd;
+            margin-bottom: 10px;
+        }
+
+        .position {
+            font-size: 1.3rem;
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        /* ===== MISSION / VISION / COMMITMENT ===== */
         .mission-vision {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin: 70px 0;
         }
+
         .card {
             background: #ffffff;
             padding: 40px 25px;
@@ -94,114 +231,488 @@
             text-align: center;
             transition: all 0.3s ease;
         }
+
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 12px 30px rgba(0,0,0,0.15);
         }
-        .card i { margin-bottom: 15px; font-size: 3rem; }
 
-        /* CTA */
+        .card i {
+            margin-bottom: 15px;
+            font-size: 3rem;
+        }
+
+        /* ===== BOTTOM DESCRIPTION ===== */
+        .bottom-description {
+            text-align: center;
+            margin: 50px auto;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+            max-width: 900px;
+        }
+
+        .bottom-description i {
+            color: #0a6ebd;
+            font-size: 2.2rem;
+            margin-right: 12px;
+            vertical-align: middle;
+        }
+
+        /* ===== CTA SECTION ===== */
         .cta {
             padding: 60px 0;
             text-align: center;
             background: linear-gradient(135deg, #f8f9fa, #e9f5ff);
             border-top: 1px solid #e5e5e5;
         }
-        .cta h2 { font-size: 36px; color: #1f2d3d; margin-bottom: 20px; }
-        .cta p { font-size: 18px; color: #666; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; }
 
-        /* Footer */
-        .lab-footer { background: linear-gradient(135deg, #0b3c5d, #0f766e); color: #ffffff; text-align: center; }
-        .lab-footer-about { padding: 60px 0 35px; border-bottom: 1px solid rgba(255,255,255,0.15); }
-        .lab-footer-about h4 { font-size: 22px; margin-bottom: 15px; font-weight: 700; letter-spacing: 1px; }
-        .lab-footer-about h4::after { content: ""; width: 50px; height: 3px; background: #22d3ee; display: block; margin: 8px auto 0; }
-        .lab-footer-about p { max-width: 950px; font-size: 18px; line-height: 1.8; color: #e0f2fe; margin: 0 auto; }
-        .lab-footer-top { padding: 55px 5%; }
-        .lab-footer-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
-        .lab-footer-box h4 { font-size: 20px; margin-bottom: 15px; font-weight: 700; letter-spacing: 0.8px; }
-        .lab-footer-box h4::after { content: ""; width: 40px; height: 3px; background: #22d3ee; display: block; margin: 8px auto 0; }
-        .lab-footer-box ul { list-style: none; }
-        .lab-footer-box li, .lab-footer-box p { font-size: 17px; color: #e0f2fe; margin-bottom: 10px; line-height: 1.7; }
-        .lab-footer-box a { color: #e0f2fe; text-decoration: none; transition: 0.3s; }
-        .lab-footer-box a:hover { color: #ffffff; padding-left: 6px; }
-        .lab-social { display: flex; gap: 12px; margin-top: 15px; justify-content: center; }
-        .lab-social a {
-            width: 40px; height: 40px; background: #22d3ee; color: #083344; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center; transition: 0.3s; font-size: 16px;
+        .cta h2 {
+            font-size: 36px;
+            color: #1f2d3d;
+            margin-bottom: 20px;
         }
-        .lab-social a:hover { background: #ffffff; transform: translateY(-4px) scale(1.05); }
-        .lab-footer-map { padding: 40px 5%; background: #062a40; }
-        .lab-footer-map h4 { font-size: 22px; margin-bottom: 15px; }
-        .lab-footer-map iframe { width: 100%; height: 280px; border: 0; border-radius: 14px; }
-        .lab-footer-bottom { background: #041f2e; padding: 16px; font-size: 16px; color: #bae6fd; }
 
-        /* ───────────────────────────────────────────────
+        .cta p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta .btn-primary {
+            font-size: 1.2rem;
+            padding: 15px 40px;
+        }
+
+        /* ===== FOOTER ===== */
+        .lab-footer {
+            background: linear-gradient(135deg, #0b3c5d, #0f766e);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .lab-footer-about {
+            padding: 60px 0 35px;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .lab-footer-about h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .lab-footer-about h4::after {
+            content: "";
+            width: 50px;
+            height: 3px;
+            background: #22d3ee;
+            display: block;
+            margin: 8px auto 0;
+        }
+
+        .lab-footer-about p {
+            max-width: 950px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #e0f2fe;
+            margin: 0 auto;
+        }
+
+        .lab-footer-top {
+            padding: 55px 5%;
+        }
+
+        .lab-footer-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+
+        .lab-footer-box h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+        }
+
+        .lab-footer-box h4::after {
+            content: "";
+            width: 40px;
+            height: 3px;
+            background: #22d3ee;
+            display: block;
+            margin: 8px auto 0;
+        }
+
+        .lab-footer-box ul {
+            list-style: none;
+        }
+
+        .lab-footer-box li,
+        .lab-footer-box p {
+            font-size: 17px;
+            color: #e0f2fe;
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        .lab-footer-box a {
+            color: #e0f2fe;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .lab-footer-box a:hover {
+            color: #ffffff;
+            padding-left: 6px;
+        }
+
+        .lab-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .lab-social a {
+            width: 40px;
+            height: 40px;
+            background: #22d3ee;
+            color: #083344;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .lab-social a:hover {
+            background: #ffffff;
+            transform: translateY(-4px) scale(1.05);
+        }
+
+        .lab-footer-map {
+            padding: 40px 5%;
+            background: #062a40;
+        }
+
+        .lab-footer-map h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .lab-footer-map iframe {
+            width: 100%;
+            height: 280px;
+            border: 0;
+            border-radius: 14px;
+        }
+
+        .lab-footer-bottom {
+            background: #041f2e;
+            padding: 16px;
+            font-size: 16px;
+            color: #bae6fd;
+        }
+
+        /* =============================================
            RESPONSIVE STYLES
-        ─────────────────────────────────────────────── */
+        ============================================= */
+
         @media (max-width: 900px) {
-            .section-title { font-size: 36px; }
-            .hero h1 { font-size: 38px; }
-            .hero p { font-size: 16px; }
+            .section-title {
+                font-size: 36px;
+            }
+
+            .hero {
+                padding: 80px 0;
+                min-height: 60vh;
+            }
+
+            .cta h2 {
+                font-size: 30px;
+            }
         }
 
         @media (max-width: 768px) {
-            .menu-toggle { display: flex; }
+            /* Mobile Menu */
+            .menu-toggle {
+                display: flex;
+            }
+
             .nav-links {
-                position: absolute; top: 100%; left: 0; right: 0;
-                background: #ffffff; flex-direction: column; align-items: center;
-                padding: 20px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
                 display: none;
             }
-            .nav-links.active { display: flex; }
-            .nav-links li { margin: 12px 0; }
-            .nav-links a { font-size: 1.1rem; }
 
-            .hero { min-height: 50vh; padding: 40px 0; }
-            .hero h1 { font-size: 32px; }
-            .hero p { font-size: 16px; padding: 0 15px; }
+            .nav-links.active {
+                display: flex;
+            }
 
-            .founder { padding: 40px 20px; }
-            .founder img { width: 200px; height: 200px; }
+            .nav-links li {
+                margin: 12px 0;
+            }
 
-            .mission-vision { grid-template-columns: 1fr; }
+            .nav-links a {
+                font-size: 1.1rem;
+            }
 
-            .cta { padding: 50px 0; }
-            .cta h2 { font-size: 32px; }
+            /* Hero */
+            .hero {
+                padding: 60px 0;
+                min-height: 50vh;
+            }
 
-            .lab-footer-container { grid-template-columns: 1fr; gap: 35px; }
-            .lab-footer-map iframe { height: 220px; }
+            /* Founder */
+            .founder {
+                padding: 35px 20px;
+                margin: 30px 10px;
+            }
+
+            .founder img {
+                width: 180px;
+                height: 180px;
+            }
+
+            .founder h3 {
+                font-size: 24px;
+            }
+
+            .position {
+                font-size: 1.1rem;
+            }
+
+            /* Mission Cards */
+            .mission-vision {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin: 40px 0;
+            }
+
+            .card {
+                padding: 30px 20px;
+            }
+
+            /* CTA */
+            .cta {
+                padding: 40px 0;
+            }
+
+            .cta h2 {
+                font-size: 28px;
+            }
+
+            .cta p {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+
+            .cta .btn-primary {
+                font-size: 1rem;
+                padding: 12px 30px;
+            }
+
+            /* Bottom Description */
+            .bottom-description {
+                font-size: 16px;
+                padding: 0 15px;
+                margin: 30px auto;
+            }
+
+            .bottom-description i {
+                font-size: 1.8rem;
+            }
+
+            /* Footer */
+            .lab-footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .lab-footer-map iframe {
+                height: 200px;
+            }
+
+            .lab-footer-about p {
+                font-size: 16px;
+                padding: 0 15px;
+            }
         }
 
         @media (max-width: 550px) {
-            .logo img { height: 45px; }
-            .logo span { font-size: 18px; }
-            .section-title { font-size: 32px; }
-            .founder h3 { font-size: 24px; }
-            .founder img { width: 180px; height: 180px; }
-            .card { padding: 30px 20px; }
-            .hero { min-height: 45vh; }
+            .logo img {
+                height: 40px;
+                width: 40px;
+            }
+
+            .logo span {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-subtitle {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+
+            .founder {
+                padding: 25px 15px;
+                margin: 20px 5px;
+            }
+
+            .founder img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .founder h3 {
+                font-size: 20px;
+            }
+
+            .position {
+                font-size: 1rem;
+            }
+
+            .founder p {
+                font-size: 15px;
+            }
+
+            .card {
+                padding: 25px 15px;
+            }
+
+            .card i {
+                font-size: 2.5rem;
+            }
+
+            .card h3 {
+                font-size: 20px;
+            }
+
+            .card p {
+                font-size: 15px;
+            }
+
+            .hero {
+                padding: 30px 0;
+                min-height: 35vh;
+            }
+
+            .cta h2 {
+                font-size: 24px;
+            }
+
+            .cta p {
+                font-size: 15px;
+            }
+
+            .cta .btn-primary {
+                font-size: 0.95rem;
+                padding: 10px 25px;
+            }
+
+            .lab-footer-about h4 {
+                font-size: 18px;
+            }
+
+            .lab-footer-about p {
+                font-size: 15px;
+            }
+
+            .lab-footer-box h4 {
+                font-size: 17px;
+            }
+
+            .lab-footer-box li,
+            .lab-footer-box p {
+                font-size: 15px;
+            }
+
+            .lab-footer-map iframe {
+                height: 180px;
+            }
+
+            .lab-footer-bottom {
+                font-size: 14px;
+                padding: 12px;
+            }
         }
 
         @media (max-width: 400px) {
-            .container { width: 94%; }
-            .btn-primary { padding: 12px 30px; font-size: 1rem; }
-            .founder { padding: 30px 15px; }
+            .container {
+                width: 95%;
+            }
+
+            .btn-primary {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .founder {
+                padding: 20px 12px;
+            }
+
+            .founder img {
+                width: 130px;
+                height: 130px;
+            }
+
+            .hero {
+                padding: 25px 0;
+                min-height: 30vh;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .cta h2 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- ========== HEADER ========== -->
+
+    <!-- =============================================
+    HEADER
+    ============================================= -->
     <header class="header">
         <div class="container nav-container">
+
+            <!-- Logo -->
             <div class="logo">
                 <img src="images/logo.jpg" alt="Kterra Logo">
                 <span>Kterra North East Infra</span>
             </div>
+
+            <!-- Mobile Menu Toggle -->
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+
+            <!-- Navigation Links -->
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -209,80 +720,144 @@
                 <li><a href="about.html" class="active">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+
         </div>
     </header>
 
-    <!-- ========== HERO ========== -->
+    <!-- =============================================
+    HERO - Only Background Image (No Text)
+    ============================================= -->
     <section class="hero">
-        <div class="container">
-            <h1>About Kterra North East Infra</h1>
-            <p>Building trust, resilience, and a safer future through quality civil engineering solutions in North East India.</p>
-        </div>
+        <!-- Empty hero - only background image -->
     </section>
 
-    <!-- ========== ABOUT CONTENT ========== -->
+    <!-- =============================================
+    ABOUT OVERVIEW
+    ============================================= -->
     <section class="about-overview">
         <div class="container">
-            <h2 class="section-title">Who We Are</h2>
-            <p class="section-subtitle">A forward-thinking civil engineering company based in Tezpur, Assam, committed to transforming construction practices across the North East.</p>
 
+            <!-- Section Title -->
+            <h2 class="section-title">Who We Are</h2>
+            <p class="section-subtitle">
+                A forward-thinking civil engineering company based in Tezpur, Assam,
+                committed to transforming construction practices across the North East.
+            </p>
+
+            <!-- Founder Section -->
             <div class="founder">
                 <img src="images/founder-rekib-ahmed.jpg" alt="Rekib Ahmed, Founder & Managing Director">
-                <h3><i class="fas fa-user-tie" style="color: #0a6ebd; margin-right: 10px;"></i> Rekib Ahmed</h3>
+
+                <h3>
+                    <i class="fas fa-user-tie" style="color: #0a6ebd; margin-right: 10px;"></i>
+                    Rekib Ahmed
+                </h3>
+
                 <p class="position">Founder & Managing Director</p>
-                <p>With a strong vision for safe, innovative, and accessible construction, Rekib Ahmed leads Kterra North East Infra in delivering end-to-end civil engineering solutions. Passionate about promoting scientific construction practices in seismically active North East India, he drives the company's focus on quality material testing, structural integrity, and affordable services for individual homeowners.</p>
+
+                <p>
+                    With a strong vision for safe, innovative, and accessible construction,
+                    Rekib Ahmed leads Kterra North East Infra in delivering end-to-end civil
+                    engineering solutions. Passionate about promoting scientific construction
+                    practices in seismically active North East India, he drives the company's
+                    focus on quality material testing, structural integrity, and affordable
+                    services for individual homeowners.
+                </p>
             </div>
 
+            <!-- Mission / Vision / Commitment Cards -->
             <div class="mission-vision">
+
                 <div class="card">
                     <i class="fas fa-bullseye" style="color: #0a6ebd;"></i>
                     <h3>Our Mission</h3>
-                    <p>To deliver reliable, innovative, and accessible civil engineering solutions while promoting safety and quality construction practices across North East India.</p>
+                    <p>
+                        To deliver reliable, innovative, and accessible civil engineering
+                        solutions while promoting safety and quality construction practices
+                        across North East India.
+                    </p>
                 </div>
+
                 <div class="card">
                     <i class="fas fa-binoculars" style="color: #0a6ebd;"></i>
                     <h3>Our Vision</h3>
-                    <p>To become the most trusted and comprehensive civil engineering solutions provider in the region, setting new standards in quality, safety, and innovation.</p>
+                    <p>
+                        To become the most trusted and comprehensive civil engineering
+                        solutions provider in the region, setting new standards in quality,
+                        safety, and innovation.
+                    </p>
                 </div>
+
                 <div class="card">
                     <i class="fas fa-handshake" style="color: #0a6ebd;"></i>
                     <h3>Our Commitment</h3>
-                    <p>Safety, quality, transparency, and continuous improvement are at the heart of everything we do.</p>
+                    <p>
+                        Safety, quality, transparency, and continuous improvement are at the
+                        heart of everything we do.
+                    </p>
                 </div>
+
             </div>
 
-            <div style="text-align: center; margin: 50px auto; font-size: 18px; line-height: 1.8; color: #444; max-width: 900px;">
-                <i class="fas fa-hard-hat" style="color: #0a6ebd; font-size: 2.2rem; margin-right: 12px; vertical-align: middle;"></i>
-                Kterra North East Infra is dedicated to making essential services like soil investigation and material testing affordable and accessible — especially for individual house owners — while fostering innovation through research, internships, and training for aspiring engineers.
+            <!-- Bottom Description -->
+            <div class="bottom-description">
+                <i class="fas fa-hard-hat"></i>
+                Kterra North East Infra is dedicated to making essential services like soil
+                investigation and material testing affordable and accessible — especially for
+                individual house owners — while fostering innovation through research,
+                internships, and training for aspiring engineers.
             </div>
+
         </div>
     </section>
 
-    <!-- ========== CTA ========== -->
+    <!-- =============================================
+    CTA SECTION
+    ============================================= -->
     <section class="cta">
         <div class="container">
-            <h2><i class="fas fa-shield-alt" style="color: #0a6ebd; margin-right: 12px; vertical-align: middle;"></i> Join Us in Building a Safer North East</h2>
-            <p>Contact us to learn more about our vision or to discuss how we can support your next project with trusted, quality-driven civil engineering solutions.</p>
-            <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 15px 40px;">
-                <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> Get in Touch
+
+            <h2>
+                <i class="fas fa-shield-alt" style="color: #0a6ebd; margin-right: 12px; vertical-align: middle;"></i>
+                Join Us in Building a Safer North East
+            </h2>
+
+            <p>
+                Contact us to learn more about our vision or to discuss how we can support
+                your next project with trusted, quality-driven civil engineering solutions.
+            </p>
+
+            <a href="contact.html" class="btn-primary">
+                <i class="fas fa-phone-alt" style="margin-right: 10px;"></i>
+                Get in Touch
             </a>
+
         </div>
     </section>
 
-    <!-- ========== FOOTER ========== -->
+    <!-- =============================================
+    FOOTER
+    ============================================= -->
     <footer class="lab-footer">
+
+        <!-- About Footer -->
         <div class="lab-footer-about">
             <div class="container">
                 <h4>ABOUT US</h4>
                 <p>
-                    Kterra North East Infra is a forward-thinking civil engineering company based in Tezpur, Assam.
-                    We provide integrated solutions – from soil & material testing to structural design, consultancy,
-                    supervision and full project execution – with strong emphasis on safety, quality and affordability.
+                    Kterra North East Infra is a forward-thinking civil engineering company
+                    based in Tezpur, Assam. We provide integrated solutions – from soil &
+                    material testing to structural design, consultancy, supervision and full
+                    project execution – with strong emphasis on safety, quality and affordability.
                 </p>
             </div>
         </div>
+
+        <!-- Footer Links -->
         <div class="lab-footer-top">
             <div class="lab-footer-container">
+
+                <!-- Quick Links -->
                 <div class="lab-footer-box">
                     <h4>QUICK LINKS</h4>
                     <ul>
@@ -293,6 +868,8 @@
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
+
+                <!-- Our Services -->
                 <div class="lab-footer-box">
                     <h4>OUR SERVICES</h4>
                     <ul>
@@ -304,53 +881,80 @@
                         <li>Turnkey Project Execution</li>
                     </ul>
                 </div>
+
+                <!-- Contact Info -->
                 <div class="lab-footer-box">
                     <h4>CONTACT INFO</h4>
                     <p>📍 Kataki Chuburi,<br>Dekargaon, Tezpur, 784501</p>
-                     <p>📞 +91 94351 99270,<br>+91 9101111316</p>
-                    <p>✉️ kterragroup@gmail.com</p>
+                    <p>📞 +91 94351 99270,<br>+91 9101111316</p>
+                    <p>✉️ <a href="mailto:kterragroup@gmail.com">kterragroup@gmail.com</a></p>
+
                     <div class="lab-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-x-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+
             </div>
         </div>
+
+        <!-- Map -->
         <div class="lab-footer-map">
             <div class="container">
                 <h4>OUR LOCATION</h4>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.0!2d92.794!3d26.629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3744f0e0e0e0e0e0%3A0x0!2sKataki+Chuburi%2C+Dekargaon%2C+Tezpur%2C+Assam+784501!5e0!3m2!1sen!2sin!4v1730000000000"
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Kterra North East Infra Location Map">
                 </iframe>
             </div>
         </div>
+
+        <!-- Copyright -->
         <div class="lab-footer-bottom">
             © 2026 Kterra North East Infra. All rights reserved.
         </div>
+
     </footer>
 
+    <!-- =============================================
+    JAVASCRIPT
+    ============================================= -->
     <script>
+        // Toggle Mobile Menu
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
 
+        // Close Menu on Outside Click
         document.addEventListener('click', function(event) {
             const navLinks = document.getElementById('navLinks');
             const navContainer = document.querySelector('.nav-container');
-            if (!navContainer.contains(event.target)) {
+
+            if (navLinks && navContainer && !navContainer.contains(event.target)) {
                 navLinks.classList.remove('active');
             }
         });
 
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        // Close Menu on Link Click (Mobile)
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
             link.addEventListener('click', function() {
-                document.getElementById('navLinks').classList.remove('active');
+                const navLinks = document.getElementById('navLinks');
+                if (navLinks) {
+                    navLinks.classList.remove('active');
+                }
             });
         });
+
+        // Prevent menu toggle from closing immediately on click
+        document.querySelector('.menu-toggle')?.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
     </script>
+
 </body>
 </html>
