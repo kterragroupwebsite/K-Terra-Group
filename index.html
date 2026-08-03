@@ -39,8 +39,6 @@
             border-radius: 4px;
             transition: background 0.3s ease, transform 0.2s ease;
             font-weight: 500;
-            border: none;
-            cursor: pointer;
         }
         .btn-primary:hover {
             background: #084f8c;
@@ -82,9 +80,7 @@
         }
         .logo img {
             height: 50px;
-            width: 50px;
             border-radius: 50%;
-            object-fit: cover;
         }
         .logo span {
             font-size: 20px;
@@ -129,7 +125,6 @@
             flex-direction: column;
             cursor: pointer;
             gap: 5px;
-            z-index: 1001;
         }
         .menu-toggle span {
             width: 25px;
@@ -140,7 +135,8 @@
         }
         .hero {
             min-height: 100vh;
-            background: url("images/hero.png") center center / cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                        url("images/hero.png") center/cover no-repeat;
             color: #fff;
             display: flex;
             align-items: center;
@@ -150,20 +146,18 @@
             font-size: 56px;
             margin-bottom: 20px;
         }
-        .intro-section {
-            padding: 60px 0;
-            background: #ffffff;
-            text-align: center;
-            border-bottom: 1px solid #e5e5e5;
-        }
-        .intro-section p {
-            font-size: 22px;
-            color: #444;
-            max-width: 850px;
-            margin: 0 auto;
-            line-height: 1.7;
+        .hero p {
+            margin: 30px auto 60px;
+            font-size: 32px;
+            max-width: 950px;
+            line-height: 1.8;
             font-weight: 500;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.6px;
+        }
+        .hero .btn-primary {
+            margin-top: 20px;
+            padding: 14px 35px;
+            font-size: 18px;
         }
         .services-overview {
             padding: 80px 0;
@@ -316,7 +310,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 50px;
+            margin-top: 50px;  
         }
         .trust-right img {
             max-width: 100%;
@@ -378,6 +372,72 @@
             line-height: 1.6;
             margin: 0 20px 22px;
         }
+
+        /* ============================================= */
+        /* NEW SECTION: Our Explore Gallery CSS */
+        /* ============================================= */
+        .gallery-section {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            cursor: pointer;
+            height: 250px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 110, 189, 0.85);
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery-item:hover .overlay {
+            height: 100%;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-item .text {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .gallery-item:hover .text {
+            opacity: 1;
+        }
+        /* ============================================= */
+
         .lab-footer {
             background: linear-gradient(135deg, #0b3c5d, #0f766e);
             color: #ffffff;
@@ -454,7 +514,6 @@
             gap: 12px;
             margin-top: 15px;
             justify-content: center;
-            flex-wrap: wrap;
         }
         .lab-social a {
             width: 40px;
@@ -467,7 +526,6 @@
             justify-content: center;
             transition: 0.3s;
             font-size: 16px;
-            text-decoration: none;
         }
         .lab-social a:hover {
             background: #ffffff;
@@ -493,26 +551,17 @@
             font-size: 16px;
             color: #bae6fd;
         }
-
-        /* =============================================
-           RESPONSIVE STYLES
-        ============================================= */
-
         @media (max-width: 900px) {
             .section-title {
                 font-size: 32px;
             }
-            .hero {
-                min-height: 70vh;
+            .hero p {
+                font-size: 20px;
             }
             .lab-heading {
                 font-size: 32px;
             }
-            .intro-section p {
-                font-size: 18px;
-            }
         }
-
         @media (max-width: 768px) {
             .menu-toggle {
                 display: flex;
@@ -543,15 +592,11 @@
                 text-align: center;
             }
             .hero {
-                min-height: 50vh;
+                min-height: 70vh;
                 padding: 40px 0;
             }
-            .intro-section {
-                padding: 40px 0;
-            }
-            .intro-section p {
-                font-size: 16px;
-                padding: 0 15px;
+            .hero p {
+                font-size: 18px;
             }
             .services-grid {
                 grid-template-columns: 1fr;
@@ -573,15 +618,15 @@
                 display: block;
                 margin: 30px auto 0;
                 text-align: center;
-                width: 90%;
-                padding: 14px 20px;
-                font-size: 16px;
             }
             .lab-different-grid {
                 grid-template-columns: 1fr;
             }
             .lab-different-card img {
                 height: 180px;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr; /* Gallery mobile fix */
             }
             .lab-footer-container {
                 grid-template-columns: 1fr;
@@ -597,134 +642,59 @@
                 max-width: 68%;
             }
             .logo img {
-                height: 45px;
-                width: 45px;
+                height: 50px;
             }
             .logo span {
-                font-size: 18px;
+                font-size: 20px;
             }
             .menu-toggle {
                 margin-left: auto;
             }
         }
-
         @media (max-width: 550px) {
             .section-title {
-                font-size: 30px;
+                font-size: 36px;
             }
             .section-subtitle {
-                font-size: 15px;
-                padding: 0 15px;
+                font-size: 16px;
+            }
+            .logo img {
+                height: 45px;
+            }
+            .logo span {
+                font-size: 18px;
+            }
+            .lab-stats {
+                grid-template-columns: 1fr;
+            }
+            .hero p {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+            .trust-right img {
+                max-width: 160px;
+                width: 160px;
+            }
+        }
+        @media (max-width: 400px) {
+            .section-title {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
             }
             .logo img {
                 height: 40px;
-                width: 40px;
             }
             .logo span {
                 font-size: 16px;
             }
             .lab-stats {
                 grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            .lab-stat {
-                padding: 20px 15px;
-            }
-            .lab-stat h3 {
-                font-size: 28px;
-            }
-            .hero {
-                min-height: 40vh;
-                padding: 30px 0;
-            }
-            .intro-section p {
-                font-size: 15px;
-                padding: 0 15px;
-            }
-            .trust-right img {
-                max-width: 160px;
-                width: 160px;
-            }
-            .trust-points li {
-                font-size: 16px;
-            }
-            .why-title {
-                font-size: 24px;
-            }
-            .lab-heading {
-                font-size: 28px;
-            }
-            .lab-subtext {
-                font-size: 16px;
-                padding: 0 15px;
-            }
-            .lab-cta {
-                font-size: 15px;
-                padding: 12px 20px;
-            }
-            .lab-different-card img {
-                height: 160px;
-            }
-            .lab-different-card h3 {
-                font-size: 20px;
-                margin: 15px 15px 8px;
-            }
-            .lab-different-card p {
-                font-size: 14px;
-                margin: 0 15px 18px;
-            }
-            .lab-footer-about p {
-                font-size: 16px;
-                padding: 0 15px;
-            }
-            .lab-footer-box li,
-            .lab-footer-box p {
-                font-size: 15px;
-            }
-            .lab-footer-map iframe {
-                height: 180px;
-            }
-            .lab-footer-bottom {
-                font-size: 14px;
-                padding: 12px;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .container {
-                width: 94%;
-            }
-            .section-title {
-                font-size: 26px;
-            }
-            .hero {
-                min-height: 35vh;
-                padding: 20px 0;
-            }
-            .intro-section p {
-                font-size: 14px;
             }
             .trust-right img {
                 max-width: 140px;
                 width: 140px;
-            }
-            .lab-cta {
-                font-size: 14px;
-                padding: 10px 15px;
-            }
-            .lab-footer-about p {
-                font-size: 14px;
-            }
-            .lab-footer-box li,
-            .lab-footer-box p {
-                font-size: 14px;
-            }
-            .lab-footer-map iframe {
-                height: 160px;
-            }
-            .btn-secondary {
-                padding: 8px 16px;
-                font-size: 14px;
             }
         }
     </style>
@@ -750,19 +720,12 @@
             </ul>
         </div>
     </header>
-
-    <!-- Hero Section - Only Background Image (No Black Cover) -->
     <section class="hero">
-        <!-- Empty hero - only background image -->
-    </section>
-
-    <!-- Intro Section (Between Hero and Services) -->
-    <section class="intro-section">
         <div class="container">
             <p>Kterra North East Infra is your one-stop civil engineering solution in North East India, offering consultancy, design, construction, and in-house material & soil testing.</p>
+            <a href="contact.html" class="btn-primary">Get a Quote</a>
         </div>
     </section>
-
     <section class="services-overview">
         <div class="container">
             <h2 class="section-title">Our Services</h2>
@@ -801,7 +764,6 @@
             </div>
         </div>
     </section>
-
     <section class="lab-trust">
         <div class="lab-trust-container">
             <h2 class="lab-heading heading-line">
@@ -833,7 +795,7 @@
                 <div class="trust-left">
                     <h3 class="why-title">Why Choose Kterra North East Infra?</h3>
                     <ul class="trust-points">
-                        <li><strong>ISO 9001:2015 Certified – Ensuring Quality, Accuracy & Reliability in Every Test</strong></li>
+                        <li><strong>ISO 9001:2015 Certified </strong>– Ensuring Quality, Accuracy & Reliability in Every Test</li>
                         <li>Accurate & Reliable Test Reports</li>
                         <li>Experienced Laboratory Professionals</li>
                         <li>Modern Testing Equipment & Methods</li>
@@ -848,7 +810,6 @@
             <a href="contact.html" class="lab-cta">Request Testing Service</a>
         </div>
     </section>
-
     <section class="lab-different">
         <div class="container">
             <h2 class="section-title">How We Are Different</h2>
@@ -857,12 +818,11 @@
             </p>
             <div class="lab-different-grid">
                 <div class="lab-different-card">
-                    <img src="images/iso-certificate.png" alt="ISO 9001:2015 Certified" loading="lazy">
-                    <h3>ISO 9001:2015 Certified</h3>
+                    <img src="images/lab-testing.png" alt="Standard Based Testing" loading="lazy">
+                    <h3>Standard-Based Testing</h3>
                     <p>
-                        Proudly ISO 9001:2015 certified – ensuring quality, accuracy, and reliability 
-                        in every test we conduct. Our commitment to international standards sets us apart 
-                        as a trusted partner for engineers and contractors.
+                        All tests are conducted strictly as per IS codes and standard laboratory
+                        procedures to ensure reliable and accurate results.
                     </p>
                 </div>
                 <div class="lab-different-card">
@@ -892,6 +852,40 @@
             </div>
         </div>
     </section>
+
+    <!-- ============================================= -->
+    <!-- NEW SECTION: Our Explore Gallery               -->
+    <!-- ============================================= -->
+    <section id="explore-gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Our Explore Gallery</h2>
+            <p class="section-subtitle">
+                Take a look inside our state-of-the-art laboratory facilities
+            </p>
+            
+            <div class="gallery-grid">
+                <!-- Card 1: Replace src with Lab Photo 1 -->
+                <div class="gallery-item">
+                    <img src="images/g1.png" alt="Laboratory Equipment 1">
+            
+                </div>
+
+                <!-- Card 2: Replace src with Lab Photo 2 -->
+                <div class="gallery-item">
+                    <img src="images/g2.jpg" alt="Laboratory Equipment 2">
+                
+                </div>
+
+                <!-- Card 3: Replace src with Lab Photo 3 -->
+                <div class="gallery-item">
+                    <img src="images/g3.jpg" alt="Laboratory Workspace">
+                   
+                </div>
+             
+            </div>
+        </div>
+    </section>
+    <!-- ============================================= -->
 
     <footer class="lab-footer">
         <div class="lab-footer-about">
@@ -938,10 +932,10 @@
                         </a>
                     </p>
                     <div class="lab-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -952,8 +946,7 @@
                 <iframe
                     src="https://maps.google.com/maps?q=Kataki%20Chuburi%20Tezpur%20Assam&t=&z=13&ie=UTF8&iwloc=&output=embed"
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Kterra North East Infra Location Map">
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
         </div>
@@ -961,34 +954,17 @@
             © 2026 Kterra North East Infra. All rights reserved.
         </div>
     </footer>
-
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
-
         document.addEventListener('click', function(event) {
             const navLinks = document.getElementById('navLinks');
             const navContainer = document.querySelector('.nav-container');
-            if (navLinks && navContainer && !navContainer.contains(event.target)) {
+            if (!navContainer.contains(event.target)) {
                 navLinks.classList.remove('active');
             }
-        });
-
-        // Prevent menu toggle from closing immediately on click
-        document.querySelector('.menu-toggle')?.addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
-
-        // Close menu on link click (mobile)
-        document.querySelectorAll('.nav-links a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                const navLinks = document.getElementById('navLinks');
-                if (navLinks) {
-                    navLinks.classList.remove('active');
-                }
-            });
         });
     </script>
 </body>

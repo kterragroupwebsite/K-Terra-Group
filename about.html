@@ -43,8 +43,6 @@
             border-radius: 4px;
             transition: background 0.3s ease, transform 0.2s ease;
             font-weight: 500;
-            border: none;
-            cursor: pointer;
         }
 
         .btn-primary:hover {
@@ -78,8 +76,6 @@
         .logo img {
             height: 50px;
             border-radius: 50%;
-            width: 50px;
-            object-fit: cover;
         }
 
         .logo span {
@@ -134,7 +130,6 @@
             flex-direction: column;
             cursor: pointer;
             gap: 5px;
-            z-index: 1001;
         }
 
         .menu-toggle span {
@@ -149,7 +144,7 @@
         .hero {
             min-height: 85vh;
             padding: 120px 0;
-            background: url("images/about-hero.jpg") center center / cover no-repeat;
+            background: url("images/about-hero.jpg") center/cover no-repeat;
             display: flex;
             align-items: center;
             text-align: center;
@@ -377,7 +372,6 @@
             gap: 12px;
             margin-top: 15px;
             justify-content: center;
-            flex-wrap: wrap;
         }
 
         .lab-social a {
@@ -391,7 +385,6 @@
             justify-content: center;
             transition: 0.3s;
             font-size: 16px;
-            text-decoration: none;
         }
 
         .lab-social a:hover {
@@ -424,8 +417,8 @@
         }
 
         /* =============================================
-           RESPONSIVE STYLES
-        ============================================= */
+                   RESPONSIVE STYLES
+                ============================================= */
 
         @media (max-width: 900px) {
             .section-title {
@@ -435,10 +428,6 @@
             .hero {
                 padding: 80px 0;
                 min-height: 60vh;
-            }
-
-            .cta h2 {
-                font-size: 30px;
             }
         }
 
@@ -481,8 +470,54 @@
 
             /* Founder */
             .founder {
-                padding: 35px 20px;
-                margin: 30px 10px;
+                padding: 40px 20px;
+            }
+
+            .founder img {
+                width: 200px;
+                height: 200px;
+            }
+
+            /* Mission Cards */
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+
+            /* CTA */
+            .cta {
+                padding: 50px 0;
+            }
+
+            .cta h2 {
+                font-size: 32px;
+            }
+
+            /* Footer */
+            .lab-footer-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .lab-footer-map iframe {
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .logo img {
+                height: 45px;
+            }
+
+            .logo span {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .founder h3 {
+                font-size: 24px;
             }
 
             .founder img {
@@ -490,203 +525,37 @@
                 height: 180px;
             }
 
-            .founder h3 {
-                font-size: 24px;
-            }
-
-            .position {
-                font-size: 1.1rem;
-            }
-
-            /* Mission Cards */
-            .mission-vision {
-                grid-template-columns: 1fr;
-                gap: 20px;
-                margin: 40px 0;
-            }
-
             .card {
                 padding: 30px 20px;
             }
 
-            /* CTA */
-            .cta {
+            .hero {
                 padding: 40px 0;
+                min-height: 40vh;
             }
 
-            .cta h2 {
-                font-size: 28px;
-            }
-
-            .cta p {
-                font-size: 16px;
-                padding: 0 15px;
-            }
-
-            .cta .btn-primary {
-                font-size: 1rem;
-                padding: 12px 30px;
-            }
-
-            /* Bottom Description */
             .bottom-description {
                 font-size: 16px;
                 padding: 0 15px;
-                margin: 30px auto;
-            }
-
-            .bottom-description i {
-                font-size: 1.8rem;
-            }
-
-            /* Footer */
-            .lab-footer-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .lab-footer-map iframe {
-                height: 200px;
-            }
-
-            .lab-footer-about p {
-                font-size: 16px;
-                padding: 0 15px;
-            }
-        }
-
-        @media (max-width: 550px) {
-            .logo img {
-                height: 40px;
-                width: 40px;
-            }
-
-            .logo span {
-                font-size: 16px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .section-subtitle {
-                font-size: 16px;
-                padding: 0 15px;
-            }
-
-            .founder {
-                padding: 25px 15px;
-                margin: 20px 5px;
-            }
-
-            .founder img {
-                width: 150px;
-                height: 150px;
-            }
-
-            .founder h3 {
-                font-size: 20px;
-            }
-
-            .position {
-                font-size: 1rem;
-            }
-
-            .founder p {
-                font-size: 15px;
-            }
-
-            .card {
-                padding: 25px 15px;
-            }
-
-            .card i {
-                font-size: 2.5rem;
-            }
-
-            .card h3 {
-                font-size: 20px;
-            }
-
-            .card p {
-                font-size: 15px;
-            }
-
-            .hero {
-                padding: 30px 0;
-                min-height: 35vh;
-            }
-
-            .cta h2 {
-                font-size: 24px;
-            }
-
-            .cta p {
-                font-size: 15px;
-            }
-
-            .cta .btn-primary {
-                font-size: 0.95rem;
-                padding: 10px 25px;
-            }
-
-            .lab-footer-about h4 {
-                font-size: 18px;
-            }
-
-            .lab-footer-about p {
-                font-size: 15px;
-            }
-
-            .lab-footer-box h4 {
-                font-size: 17px;
-            }
-
-            .lab-footer-box li,
-            .lab-footer-box p {
-                font-size: 15px;
-            }
-
-            .lab-footer-map iframe {
-                height: 180px;
-            }
-
-            .lab-footer-bottom {
-                font-size: 14px;
-                padding: 12px;
             }
         }
 
         @media (max-width: 400px) {
             .container {
-                width: 95%;
+                width: 94%;
             }
 
             .btn-primary {
-                padding: 10px 20px;
-                font-size: 0.9rem;
+                padding: 12px 30px;
+                font-size: 1rem;
             }
 
             .founder {
-                padding: 20px 12px;
-            }
-
-            .founder img {
-                width: 130px;
-                height: 130px;
+                padding: 30px 15px;
             }
 
             .hero {
-                padding: 25px 0;
-                min-height: 30vh;
-            }
-
-            .section-title {
-                font-size: 24px;
-            }
-
-            .cta h2 {
-                font-size: 20px;
+                padding: 30px 0;
             }
         }
     </style>
@@ -890,10 +759,10 @@
                     <p>✉️ <a href="mailto:kterragroup@gmail.com">kterragroup@gmail.com</a></p>
 
                     <div class="lab-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
@@ -907,8 +776,7 @@
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.0!2d92.794!3d26.629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3744f0e0e0e0e0e0%3A0x0!2sKataki+Chuburi%2C+Dekargaon%2C+Tezpur%2C+Assam+784501!5e0!3m2!1sen!2sin!4v1730000000000"
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Kterra North East Infra Location Map">
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
         </div>
@@ -935,26 +803,17 @@
             const navLinks = document.getElementById('navLinks');
             const navContainer = document.querySelector('.nav-container');
 
-            if (navLinks && navContainer && !navContainer.contains(event.target)) {
+            if (!navContainer.contains(event.target)) {
                 navLinks.classList.remove('active');
             }
         });
 
-        // Close Menu on Link Click (Mobile)
+        // Close Menu on Link Click
         document.querySelectorAll('.nav-links a').forEach(function(link) {
             link.addEventListener('click', function() {
-                const navLinks = document.getElementById('navLinks');
-                if (navLinks) {
-                    navLinks.classList.remove('active');
-                }
+                document.getElementById('navLinks').classList.remove('active');
             });
-        });
-
-        // Prevent menu toggle from closing immediately on click
-        document.querySelector('.menu-toggle')?.addEventListener('click', function(e) {
-            e.stopPropagation();
         });
     </script>
 
 </body>
-</html>
