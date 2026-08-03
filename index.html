@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
     <title>Kterra North East Infra | Civil Engineering Solutions</title>
     <meta name="description" content="Kterra North East Infra is your one-stop civil engineering solution in North East India, offering consultancy, design, construction, and in-house material & soil testing services in Tezpur, Assam.">
     <meta name="keywords" content="civil engineering, material testing, soil testing, sand testing, concrete testing, aggregate testing, water testing, consultancy, design, construction, Tezpur, Assam, North East India">
@@ -372,17 +372,14 @@
             line-height: 1.6;
             margin: 0 20px 22px;
         }
-
-        /* ============================================= */
-        /* NEW SECTION: Our Explore Gallery CSS */
-        /* ============================================= */
+        /* Gallery */
         .gallery-section {
             padding: 80px 0;
             background: #ffffff;
         }
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-top: 40px;
         }
@@ -428,7 +425,6 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
             text-align: center;
             opacity: 0;
             transition: opacity 0.4s;
@@ -436,8 +432,8 @@
         .gallery-item:hover .text {
             opacity: 1;
         }
-        /* ============================================= */
 
+        /* footer */
         .lab-footer {
             background: linear-gradient(135deg, #0b3c5d, #0f766e);
             color: #ffffff;
@@ -551,17 +547,17 @@
             font-size: 16px;
             color: #bae6fd;
         }
-        @media (max-width: 900px) {
+
+        /* responsive */
+        @media (max-width: 992px) {
             .section-title {
-                font-size: 32px;
+                font-size: 36px;
             }
             .hero p {
-                font-size: 20px;
-            }
-            .lab-heading {
-                font-size: 32px;
+                font-size: 26px;
             }
         }
+
         @media (max-width: 768px) {
             .menu-toggle {
                 display: flex;
@@ -584,22 +580,24 @@
             .nav-links li {
                 margin: 8px 0;
                 margin-left: 0;
-                width: auto;
+                width: 100%;
+                text-align: center;
             }
             .nav-links a {
                 display: block;
                 padding: 10px 0;
-                text-align: center;
+                width: 100%;
             }
             .hero {
                 min-height: 70vh;
                 padding: 40px 0;
             }
             .hero p {
-                font-size: 18px;
+                font-size: 20px;
+                margin: 20px auto 40px;
             }
             .services-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
             .trust-content {
                 flex-direction: column;
@@ -614,20 +612,6 @@
                 max-width: 200px;
                 width: 200px;
             }
-            .lab-cta {
-                display: block;
-                margin: 30px auto 0;
-                text-align: center;
-            }
-            .lab-different-grid {
-                grid-template-columns: 1fr;
-            }
-            .lab-different-card img {
-                height: 180px;
-            }
-            .gallery-grid {
-                grid-template-columns: 1fr; /* Gallery mobile fix */
-            }
             .lab-footer-container {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -639,24 +623,7 @@
                 position: relative;
             }
             .logo {
-                max-width: 68%;
-            }
-            .logo img {
-                height: 50px;
-            }
-            .logo span {
-                font-size: 20px;
-            }
-            .menu-toggle {
-                margin-left: auto;
-            }
-        }
-        @media (max-width: 550px) {
-            .section-title {
-                font-size: 36px;
-            }
-            .section-subtitle {
-                font-size: 16px;
+                max-width: 70%;
             }
             .logo img {
                 height: 45px;
@@ -664,24 +631,40 @@
             .logo span {
                 font-size: 18px;
             }
+            .menu-toggle {
+                margin-left: auto;
+            }
             .lab-stats {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .section-title {
+                font-size: 32px;
+            }
+            .section-subtitle {
+                font-size: 16px;
             }
             .hero p {
-                font-size: 16px;
+                font-size: 18px;
                 padding: 0 10px;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .lab-stats {
+                grid-template-columns: 1fr;
             }
             .trust-right img {
                 max-width: 160px;
                 width: 160px;
             }
-        }
-        @media (max-width: 400px) {
-            .section-title {
-                font-size: 32px;
+            .lab-different-grid {
+                grid-template-columns: 1fr;
             }
-            .hero p {
-                font-size: 16px;
+            .gallery-grid {
+                grid-template-columns: 1fr;
             }
             .logo img {
                 height: 40px;
@@ -689,12 +672,26 @@
             .logo span {
                 font-size: 16px;
             }
-            .lab-stats {
-                grid-template-columns: 1fr;
+            .lab-cta {
+                display: block;
+                margin: 30px auto 0;
+                text-align: center;
+                width: fit-content;
             }
-            .trust-right img {
-                max-width: 140px;
-                width: 140px;
+        }
+
+        @media (max-width: 400px) {
+            .section-title {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .logo img {
+                height: 36px;
+            }
+            .logo span {
+                font-size: 14px;
             }
         }
     </style>
@@ -720,18 +717,18 @@
             </ul>
         </div>
     </header>
+
     <section class="hero">
         <div class="container">
             <p>Kterra North East Infra is your one-stop civil engineering solution in North East India, offering consultancy, design, construction, and in-house material & soil testing.</p>
             <a href="contact.html" class="btn-primary">Get a Quote</a>
         </div>
     </section>
+
     <section class="services-overview">
         <div class="container">
             <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">
-                Accurate and reliable material testing services to support safe construction
-            </p>
+            <p class="section-subtitle">Accurate and reliable material testing services to support safe construction</p>
             <div class="services-grid">
                 <div class="service-card">
                     <i class="fas fa-mountain"></i>
@@ -764,15 +761,11 @@
             </div>
         </div>
     </section>
+
     <section class="lab-trust">
         <div class="lab-trust-container">
-            <h2 class="lab-heading heading-line">
-                Most Trusted in Civil Material Testing
-            </h2>
-            <p class="lab-subtext">
-                Kterra North East Infra provides accurate, standard-compliant testing services
-                supporting safe and durable construction projects.
-            </p>
+            <h2 class="lab-heading heading-line">Most Trusted in Civil Material Testing</h2>
+            <p class="lab-subtext">Kterra North East Infra provides accurate, standard-compliant testing services supporting safe and durable construction projects.</p>
             <div class="lab-stats">
                 <div class="lab-stat">
                     <h3>1+</h3>
@@ -810,92 +803,60 @@
             <a href="contact.html" class="lab-cta">Request Testing Service</a>
         </div>
     </section>
+
     <section class="lab-different">
         <div class="container">
             <h2 class="section-title">How We Are Different</h2>
-            <p class="section-subtitle">
-                Reliable civil material testing built on accuracy, standards, and trust
-            </p>
+            <p class="section-subtitle">Reliable civil material testing built on accuracy, standards, and trust</p>
             <div class="lab-different-grid">
                 <div class="lab-different-card">
                     <img src="images/lab-testing.png" alt="Standard Based Testing" loading="lazy">
                     <h3>Standard-Based Testing</h3>
-                    <p>
-                        All tests are conducted strictly as per IS codes and standard laboratory
-                        procedures to ensure reliable and accurate results.
-                    </p>
+                    <p>All tests are conducted strictly as per IS codes and standard laboratory procedures to ensure reliable and accurate results.</p>
                 </div>
                 <div class="lab-different-card">
                     <img src="images/lab-planning.png" alt="Accurate Analysis & Reporting" loading="lazy">
                     <h3>Accurate Analysis & Reporting</h3>
-                    <p>
-                        Our detailed testing methods and precise analysis help engineers
-                        make informed and confident decisions.
-                    </p>
+                    <p>Our detailed testing methods and precise analysis help engineers make informed and confident decisions.</p>
                 </div>
                 <div class="lab-different-card">
                     <img src="images/lab-team.png" alt="Experienced Laboratory Team" loading="lazy">
                     <h3>Experienced Laboratory Team</h3>
-                    <p>
-                        Skilled laboratory professionals ensure quality control,
-                        consistency, and technical reliability in every test.
-                    </p>
+                    <p>Skilled laboratory professionals ensure quality control, consistency, and technical reliability in every test.</p>
                 </div>
                 <div class="lab-different-card">
                     <img src="images/lab-reporting.png" alt="Transparent & Timely Reports" loading="lazy">
                     <h3>Transparent & Timely Reports</h3>
-                    <p>
-                        Clear documentation, transparent processes, and timely delivery
-                        of test reports without delays.
-                    </p>
+                    <p>Clear documentation, transparent processes, and timely delivery of test reports without delays.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============================================= -->
-    <!-- NEW SECTION: Our Explore Gallery               -->
-    <!-- ============================================= -->
+    <!-- GALLERY SECTION -->
     <section id="explore-gallery" class="gallery-section">
         <div class="container">
             <h2 class="section-title">Our Explore Gallery</h2>
-            <p class="section-subtitle">
-                Take a look inside our state-of-the-art laboratory facilities
-            </p>
-            
+            <p class="section-subtitle">Take a look inside our state-of-the-art laboratory facilities</p>
             <div class="gallery-grid">
-                <!-- Card 1: Replace src with Lab Photo 1 -->
                 <div class="gallery-item">
                     <img src="images/g1.png" alt="Laboratory Equipment 1">
-            
                 </div>
-
-                <!-- Card 2: Replace src with Lab Photo 2 -->
                 <div class="gallery-item">
                     <img src="images/g2.jpg" alt="Laboratory Equipment 2">
-                
                 </div>
-
-                <!-- Card 3: Replace src with Lab Photo 3 -->
                 <div class="gallery-item">
                     <img src="images/g3.jpg" alt="Laboratory Workspace">
-                   
                 </div>
-             
             </div>
         </div>
     </section>
-    <!-- ============================================= -->
 
     <footer class="lab-footer">
         <div class="lab-footer-about">
             <div class="container">
                 <h4>ABOUT US</h4>
-                <p>
-                    Kterra North East Infra is a forward-thinking civil engineering company based in Tezpur, Assam.
-                    We provide integrated solutions – from soil & material testing to structural design, consultancy,
-                    supervision and full project execution – with strong emphasis on safety, quality and affordability.
-                </p>
+                <p>Kterra North East Infra is a forward-thinking civil engineering company based in Tezpur, Assam. We provide integrated solutions – from soil & material testing to structural design, consultancy, supervision and full project execution – with strong emphasis on safety, quality and affordability.</p>
             </div>
         </div>
         <div class="lab-footer-top">
@@ -925,12 +886,7 @@
                     <h4>CONTACT INFO</h4>
                     <p>📍 Kataki Chuburi,<br>Dekargaon, Tezpur, Assam - 784501</p>
                     <p>📞 +91 94351 99270,<br>+91 9101111316</p>
-                    <p>
-                        ✉️
-                        <a href="mailto:kterragroup@gmail.com">
-                            kterragroup@gmail.com
-                        </a>
-                    </p>
+                    <p>✉️ <a href="mailto:kterragroup@gmail.com">kterragroup@gmail.com</a></p>
                     <div class="lab-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-x-twitter"></i></a>
@@ -943,17 +899,14 @@
         <div class="lab-footer-map">
             <div class="container">
                 <h4>OUR LOCATION</h4>
-                <iframe
-                    src="https://maps.google.com/maps?q=Kataki%20Chuburi%20Tezpur%20Assam&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <iframe src="https://maps.google.com/maps?q=Kataki%20Chuburi%20Tezpur%20Assam&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <div class="lab-footer-bottom">
             © 2026 Kterra North East Infra. All rights reserved.
         </div>
     </footer>
+
     <script>
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
